@@ -6,6 +6,6 @@ poder introducir a alguien al desarrollo web mediante una serie de contenidos qu
 | step | contenido | link |
 |--|--|--|
 |*Editor de texto*|Instalación de editor de texto: **VS CODE**|[ir](./steps/editor-de-texto.md)|
-| *HTML* |  | [ir](./steps/HTML/HTML.md) |
+| *HTML* | Introducción a HTML. Etiquetas. Tipos de etiquetas. Estructuración básica. Concepto de HTML semántico. Errores comunes. | [ir](./steps/HTML/HTML.md) |
 | *CSS* |  | [ir](./steps/CSS/CSS.md) |
 | *Javascript* |  | [ir](./steps/Javascript/Javascript.md) |
