@@ -79,7 +79,7 @@ Dentro de las etiquetas body va todo lo que es visible para nosotros, la pagina 
 
 HTML es un lenguaje de marcado de hipertexto, como ya dijimos, pero no es un lenguaje de programación, sin embargo, a fin de cuentas, es un lenguaje. Por lo tanto, al igual que un lenguaje natural cualquiera hay formas correctas e incorrectas de comunicarnos, en HTML pasa lo mismo, hay formas correctas e incorrectas de escribir etiquetas. ¿Por ejemplo? Poner más de un h1 ¿Porqué? porque el h1 posiciona tu web en google (SEO). Por lo tanto, cuando hablamos de SEO estamos hablando nada mas ni nada menos de poner todos esos elementos o "cajitas" de manera correcta de tal manera que google o cualquier buscador nos posicione correctamente en el SEO.
 
-## Tipos de etiquetas
+## 1.Tipos de etiquetas
 
 ### Titulos
 
@@ -92,4 +92,28 @@ Tenemos distintos tipos de titulos...
     <h5>Hola mundo!</h5>
     <h6>Hola mundo!</h6>
 
-Todos son titulos y pueden utilizarse dependiendo cual sea su contexto. Por ejemplo, un h4 puede ir como titulo de secciones y demas, un h2 como subtitulo, etcetera
+Todos son titulos y pueden utilizarse dependiendo cual sea su contexto. Por ejemplo, un h4 puede ir como titulo de secciones y demas, un h2 como subtitulo, etcetera.
+
+### Parrafos
+
+Ademas de los titulos, existe otra etiqueta que es la etiqueta p, que sirve para hacer parrafos:
+
+`<p> Esto es un parrafo </p>`
+
+Cuando abras el documento y penses "ah pero es un texto, sigue siendo un texto más", si exactamente, es otro texto, pero este es el texto adecuado para trabajar y hacer parrafos
+
+### Otras etiquetas de texto
+
+La etiqueta b sirve para poner la letra contenida en negrita
+
+`<b> soy negrita </b>`
+
+La etiqueta i sirve para poner la letra contenida en italica
+
+`<i> soy italica </i>`
+
+La etiqueta strike sirve para tachar la letra contenida
+
+`<strike> estoy tachada </strike>`
+
+Y hay un MONTON más!
