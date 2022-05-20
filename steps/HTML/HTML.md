@@ -78,3 +78,18 @@ Dentro de las etiquetas body va todo lo que es visible para nosotros, la pagina 
 ## Introducción al HTML semantico
 
 HTML es un lenguaje de marcado de hipertexto, como ya dijimos, pero no es un lenguaje de programación, sin embargo, a fin de cuentas, es un lenguaje. Por lo tanto, al igual que un lenguaje natural cualquiera hay formas correctas e incorrectas de comunicarnos, en HTML pasa lo mismo, hay formas correctas e incorrectas de escribir etiquetas. ¿Por ejemplo? Poner más de un h1 ¿Porqué? porque el h1 posiciona tu web en google (SEO). Por lo tanto, cuando hablamos de SEO estamos hablando nada mas ni nada menos de poner todos esos elementos o "cajitas" de manera correcta de tal manera que google o cualquier buscador nos posicione correctamente en el SEO.
+
+## Tipos de etiquetas
+
+### Titulos
+
+Tenemos distintos tipos de titulos...
+
+    <h1>Hola mundo!</h1>
+    <h2>Hola mundo!</h2>
+    <h3>Hola mundo!</h3>
+    <h4>Hola mundo!</h4>
+    <h5>Hola mundo!</h5>
+    <h6>Hola mundo!</h6>
+
+Todos son titulos y pueden utilizarse dependiendo cual sea su contexto. Por ejemplo, un h4 puede ir como titulo de secciones y demas, un h2 como subtitulo, etcetera
