@@ -4,6 +4,7 @@ Las utilidades básicas de todos los editores de texto son las mismas. Todos ofr
 
 ### Entrá en la [página de descarga](https://code.visualstudio.com/Download) de VS Code
 
-Una vez dentro de la pagina de descarga de vs code, elegir versión en función de tu sistema operativo.
+Una vez dentro de la pagina de descarga de vs code, elegir versión en función de tu sistema operativo. Una vez tengas el instalador, abrilo y dale todo siguiente.
 
 ![VS Code Download page](https://user-images.githubusercontent.com/84806140/169602174-8d254c26-721a-48ee-9f10-c2f44209baab.png "VS Code Download page")
+
