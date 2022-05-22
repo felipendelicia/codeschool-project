@@ -148,3 +148,25 @@ O bien, podrias tener otro archivo HTML al cual quieras ingresar a traves del pr
 
 `<a href="./nombreDelOtroArchivo"> Esta etiqueta te lleva a un segundo archivo </a>`
 
+### Listas
+
+En primer lugar, cabe aclarar que hay dos tipos de listas: Las listas ordenadas y desordenadas. 
+Las listas desordenadas se abren con una etiqueta ul de esta manera:
+
+`<ul>  </ul>`
+
+Ahora bien ¿cómo agregamos elementos a la lista? la forma de agregar elementos a una lista independientemente de que sea ordenada o no, es mediante etiquetas li:
+
+    <ul>
+        <li>Este es el primer elemento</li>
+        <li>Este es el segundo elemento</li>
+    </ul>
+
+Podemos agregar tantos elementos como queramos...
+
+Las listas ordenadas, se diferencian unicamente en que se abren con una etiqueta ol, por lo tanto, usando el ejemplo anterior, seria de la siguiente manera:
+
+    <ol>
+        <li>Este es el primer elemento</li>
+        <li>Este es el segundo elemento</li>
+    </ol>
