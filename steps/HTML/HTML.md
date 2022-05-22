@@ -79,7 +79,7 @@ Dentro de las etiquetas body va todo lo que es visible para nosotros, la pagina 
 
 HTML es un lenguaje de marcado de hipertexto, como ya dijimos, pero no es un lenguaje de programación, sin embargo, a fin de cuentas, es un lenguaje. Por lo tanto, al igual que un lenguaje natural cualquiera hay formas correctas e incorrectas de comunicarnos, en HTML pasa lo mismo, hay formas correctas e incorrectas de escribir etiquetas. ¿Por ejemplo? Poner más de un h1 ¿Porqué? porque el h1 posiciona tu web en google (SEO). Por lo tanto, cuando hablamos de SEO estamos hablando nada mas ni nada menos de poner todos esos elementos o "cajitas" de manera correcta de tal manera que google o cualquier buscador nos posicione correctamente en el SEO.
 
-## 1.Tipos de etiquetas
+## 1. Tipos de etiquetas
 
 ### Titulos
 
@@ -131,3 +131,20 @@ En este caso la etiqueta b y la i. ¿Porqué ocurre esto? Esto pasa debido a que
 En el caso de las demas etiquetas, se adaptan al contenido, es decir, el tamaño de la caja esta regido unicamente por su contenido, estos se denominan en linea:
 
 ![displayInline](https://user-images.githubusercontent.com/84806140/169616280-53ce163f-fa4c-4f53-a597-617bbdfc325c.png "Display Inline")
+
+## 2. Tipos de etiquetas
+
+### Enlaces
+
+Esta es una etiqueta de texto que es importante. Esta etiqueta lo que hace es redirigirnos hacia otro lugar. ¿Vieron cuando a veces en una pagina dice "hace click aca" y cuando haces click ahi te manda a otra pagina? Y vos tipo: "Aaaah es magia", NO, no es magia, es la etiqueta a que nos redirige a otra pagina.
+
+`<a href=""> Esto es un enlace que no te lleva a ningun lado </a>`
+
+Esta etiqueta te redirige a la ruta descripta en el atributo "href". Por ejemplo:
+
+`<a href="https://github.com/felipendelicia"> Esta etiqueta te lleva a mi github </a>`
+
+O bien, podrias tener otro archivo HTML al cual quieras ingresar a traves del primero. Si se encuentra en la misma carpeta se puede acceder facilmente:
+
+`<a href="./nombreDelOtroArchivo"> Esta etiqueta te lleva a un segundo archivo </a>`
+
