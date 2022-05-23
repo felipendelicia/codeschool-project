@@ -170,3 +170,34 @@ Las listas ordenadas, se diferencian unicamente en que se abren con una etiqueta
         <li>Este es el primer elemento</li>
         <li>Este es el segundo elemento</li>
     </ol>
+
+### Multimedia
+
+Vamos con algo más divertido. Multimedia basicamente es imagenes, videos y demas. Empecemos con las imagenes. Las imagenes tienen una forma muy facil de colocarse mediante una etiqueta img. Esta etiqueta es del tipo que se cierra en su lugar, de la siguiente manera:
+
+`<img src=""/>`
+
+Como podras haber visto, esta etiqueta ademas de lo que te dije antes, tiene un atributo src, la cual sirve para indicar la ruta a la imagen en el proyecto (o bien fuera del proyecto, siendo una url):
+
+`<img src="https://avatars.githubusercontent.com/u/84806140?v=4"/>`
+
+Esta etiqueta, por ejemplo, trae mi foto de perfil de github.
+
+Arranquemos con los videos. Para los videos tambien existe una etiqueta, la etiqueta video:
+
+`<video src=""></video>`
+
+A diferencia de las imagenes, como podran haber visto se utiliza una etiqueta que se abre y se cierra. Dentro de src al igual que en las imagenes se coloca la ruta del video. Por ejemplo:
+
+    <video src="videoprueba.mp4">
+    </video>
+
+![Video tag](https://user-images.githubusercontent.com/84806140/169910467-03db0f3d-8536-42d3-af62-98eb9ff4ec29.png "video tag")
+
+Como podran ver, el video se muestra, pero , sin embargo, no se reproduce ni hay forma de que lo puedas reproducir.
+Para esto (para poder controlar el video) tenemos que agregar un atributo, el atributo controls, este atributo no tiene un valor, su valor esta configurado por el navegador.
+
+    <video src="videoprueba.mp4" controls>
+    </video>
+
+![Video tag](https://user-images.githubusercontent.com/84806140/169910912-87f75d31-01b8-4028-b32d-c0a4eedf5792.png "video tag")
