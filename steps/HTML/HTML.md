@@ -201,3 +201,24 @@ Para esto (para poder controlar el video) tenemos que agregar un atributo, el at
     </video>
 
 ![Video tag](https://user-images.githubusercontent.com/84806140/169910912-87f75d31-01b8-4028-b32d-c0a4eedf5792.png "video tag")
+
+### Divisores
+
+La etiqueta más importante los DIVS. Los divs sirven como su nombre lo dice para separar contenido, para separar partes de la pagina, componentes, en fin, una infinidad de cosas, su sintaxis es:
+
+`<div></div>`
+
+Un ejemplo de como pueden servirte los divs de alguna manera puede ser:
+
+    <div>
+        <div>
+            <h2>Producto n°1</h2>
+            <p>precio: 300$</p>
+        </div>
+        <div>
+            <h2>Producto n°2</h2>
+            <p>precio: 2030$</p>
+        </div>
+    </div>
+
+De esta manera separé cada producto en este "catalogo" de productos, por ejemplo.
