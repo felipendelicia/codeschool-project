@@ -320,3 +320,54 @@ Despues tenemos tambien una etiqueta meta, meta robots, que basicamente le decim
 Para no indexarla:
 
 `<meta name="robots" content="noindex">`
+
+### Etiquetas pertenecientes a la semantica de HTML
+
+Estas etiquetas son las que se utilizan para generar las estructuras principales de una pagina web y son utiliazdas para realizar esa tarea con una semantica correcta, existen etiquetas para encabezados, navegaciones, barras laterales, pies de pagina, etcetera.
+
+Los encabezados en HTML se describen con le etiqueta header:
+
+    <header>
+    </header>
+
+Las barras de navegación con la etiqueta nav. Ahora bien, supongamos que el encabezado en si es mi barra de navegacion, pues se haria de la siguiente manera:
+
+    <header>
+        <nav>
+        </nav>
+    </header>
+
+Y si le ponemos un poco mas de onda:
+
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="./inicio.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="./aboutUs.html">Acerca de nosotros</a>
+                </li>
+                <li>
+                    <a href="./contact.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+Despues, por ejemplo, se puede hacer un pie de pagina con la etiqueta footer:
+
+    <footer>
+    </footer>
+
+Aca generalmente se coloca contacto, para recibir feedback tambien, acerca de nosotros, etcetera:
+
+    <footer>
+        <h3>Todos los derechos reservados</h3>
+        <p> Seguinos en nuetras <b>redes</b> </p>
+        <a href="https://www.instagram.com/1felipo/">Instagram</a>
+        <a href="https://github.com/felipendelicia">Github</a>
+        <a href="https://twitter.com/felipendelicia">Twitter</a>
+    </footer>
+
+Y de esta manera tendremos una pagina semanticamente más correcta.
