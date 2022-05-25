@@ -23,3 +23,17 @@ Lo que debo hacer en el archivo html para arrancar a relacionar estos dos archiv
 `<link rel="stylesheet" href="./styles.css">`
 
 En href como sabemos va la ruta al archivo de estilos desde el archivo HTML.
+
+## Estructura de los estilos en CSS
+
+Basicamente en css los estilos se resuelven de la siguiente manera:
+
+    selector {
+        propiedad: valor;    
+    }
+
+El selector es el o los elementos que estoy seleccionando. Cuando tenemos seleccionado lo que queremos cambiar ¿Que le vamos a cambiar? El color de un texto, por ejemplo:
+
+    selector {
+        color: red;    
+    }
