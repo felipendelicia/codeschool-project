@@ -222,3 +222,51 @@ Un ejemplo de como pueden servirte los divs de alguna manera puede ser:
     </div>
 
 De esta manera separé cada producto en este "catalogo" de productos, por ejemplo.
+
+### Formularios
+
+Para crear un formulario, para que el usuario pueda ingresar (input) información, hay que crear un formulario con una etiqueta form y dentro de la misma van a estar las entradas de datos "input":
+
+`<form></form>`
+
+Esto es un formulario sin entrada alguna.
+
+Sin embargo, si quiero una entrada debo hacer lo siguiente:
+
+    <form>
+        <input type=""/>
+    <form>
+
+En este caso estamos requiriendole texto al usuario, esta es una entrada de texto, ¿Cómo lo sé? porque por defecto en navegadores cuando el "type" no tiene valor como en el ejemplo, por defecto es texto. Este ejemplo seria equivalente a:
+
+    <form>
+        <input type="text"/>
+    <form>
+
+Hay varios tipos de entradas que se le pueden requerir al usuario, por ejemplo: (Supongamos siempre un contexto dentro de una etiqueta form)
+
+    <input type="password"/>
+
+De esta manera estaremos requiriendo al usuario que ingrese una contraseña.
+
+Tambien podemos requerirle un numero al usuario de la siguiente manera:
+
+    <input type="number"/>
+
+Y de esta manera hay montones de entradas de datos, tales como: "email", "color", "range", "date", "time", "button", etcetera.
+
+Ahora bien, ya que vimos varios tipos de inputs, quiero que sepan que hay varios tipos de atributos para estos che! Por ejemplo, el atributo "name":
+
+    <form>
+        <input type="text" name="nombre"/>
+    <form>
+
+Supongamos un escenario como este, el atributo name es utilizado como "identificador" frente a un lenguaje de backend (del servidor) para poder identificar de que input nos estamos refiriendo.
+
+Otro atributo es el "required":
+
+    <form>
+        <input type="text" required=""/>
+    <form>
+
+Si este atributo se aparece en nuestro camino significa que es un campo obligatorio que debe ser llenado para darle al boton de submit.
