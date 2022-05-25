@@ -88,3 +88,5 @@ Y la hoja de estilos "styles.css" tiene el siguiente estilo:
 Tendriamos el siguiente resultado:
 
 ![universalSelector](https://user-images.githubusercontent.com/84806140/170365771-8702a490-e494-44bb-9d1b-931be7e80cf6.png "Universal Selector")
+
+Es decir, todos los elementos de la web pasan a ser rojos.
