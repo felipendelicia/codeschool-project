@@ -323,7 +323,7 @@ Para no indexarla:
 
 ### Etiquetas pertenecientes a la semantica de HTML
 
-Estas etiquetas son las que se utilizan para generar las estructuras principales de una pagina web y son utiliazdas para realizar esa tarea con una semantica correcta, existen etiquetas para encabezados, navegaciones, barras laterales, pies de pagina, etcetera.
+Estas etiquetas son las que se utilizan para generar las estructuras principales de una pagina web y son utilizadas para realizar esa tarea con una semantica correcta, existen etiquetas para encabezados, navegaciones, barras laterales, pies de pagina, etcetera.
 
 Los encabezados en HTML se describen con le etiqueta header:
 
@@ -371,3 +371,13 @@ Aca generalmente se coloca contacto, para recibir feedback tambien, acerca de no
     </footer>
 
 Y de esta manera tendremos una pagina semanticamente más correcta.
+
+## Errores comunes en HTML
+
+### Confundir CSS con HTML
+
+Empecemos con que HTML es un lenguaje de marcado de hipertexto, es decir, es un lenguaje con el cual se estructuran sitios, el primer error es que muchos confunden html con css, pero no me refiero a que se confudan en cuanto a sintaxis, sino al error de tratar de darle estilos a una pagina en el archivo de html, cuando uno debe tender a la modularizacion de sus estilos
+
+### Usar etiquetas obsoletas
+
+Hay etiquetas que ya no se usan y un error es que se sigan utilizando, por ejemplo, hgroup, y aunque sirvan o tenga algun sentido su uso, google castiga a las webs que tengan etiquetas antiguas.
