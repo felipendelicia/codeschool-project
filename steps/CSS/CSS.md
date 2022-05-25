@@ -37,3 +37,54 @@ El selector es el o los elementos que estoy seleccionando. Cuando tenemos selecc
     selector {
         color: red;    
     }
+
+## Selectores en CSS
+
+Bueno bien, ahora que tenemos esto en cuenta vamos a ver las distintas formas que tenemos de seleccionar.
+
+### Universal
+
+Para empezar tenemos el selector universal ¿Cuál es el selector universal? El que selecciona todos los elementos, se usa con un asterisco "*".
+
+    * {
+        propiedad: valor;
+    }
+
+Ahora vamos a ponerle la propiedad mas sensillita:
+
+    * {
+        color: red;
+    }
+
+Ya van a ver mas adelante que en realidad no hay que poner implicitamente red, sino que hay que hacer uso de codigos de color hexadecimales, que, para el rojo puede ser este:
+
+    * {
+        color: #f00;
+    }
+
+¿Cuál es la diferencia entre usar la forma implicita y los codigos hexadecimales? El hexadecimal es la definicion exacta del color que queremos mostrar, sin embargo, si le decis red, va a utilizar lo que es red por predeterminado para el navegador, asi, por ejemplo, vas a tener un rojo mas claro en un navegador que en otro.
+
+Supongamos que tenemos una pagina en HTML como esta:
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Learning CSS!</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Aprendiendo CSS</h1>
+        <p>Estamos aprendiendo css para hacer nuestras paginas mas lindas</p>
+    </body>
+    </html>
+
+Y la hoja de estilos "styles.css" tiene el siguiente estilo:
+
+    * {
+        color: #f00
+    }
+
+Tendriamos el siguiente resultado:
+
+![universalSelector](https://user-images.githubusercontent.com/84806140/170365771-8702a490-e494-44bb-9d1b-931be7e80cf6.png "Universal Selector")
