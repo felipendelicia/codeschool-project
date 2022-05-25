@@ -270,3 +270,53 @@ Otro atributo es el "required":
     <form>
 
 Si este atributo se aparece en nuestro camino significa que es un campo obligatorio que debe ser llenado para darle al boton de submit.
+
+Otra cosa que podemos hacer es darle a un input un valor por defecto al cargar la pagina con el atributo "value", por ejemplo:
+
+    <form>
+        <input type="text" name="nombre" value="Felipe"/>
+    <form>
+
+### Metadatos
+
+Los metadatos, literalmente, son datos que describen otros datos. En general, un grupo de metadatos se refiere a un grupo de datos que describen el contenido informativo de un objeto al que se denomina recurso (En este caso nuestra web).
+
+¿Y como trabajamos en HTML con metadatos? con la etiqueta meta (y se pone en el head).
+
+`<meta>`
+
+Por ejemplo, la meta mas basica es la que setea los caracteres segun las normas iso, me parece que ya la habia mencionado, pero aca va de nuevo:
+
+`<meta charset="utf-8">`
+
+Despues, generalmente los meta tienen la siguiente estructura:
+
+`<meta name="nombre" content="contenido">`
+
+Por ejemplo, este meta es utilizado para colocar keywords o palabras clave de la pagina:
+
+`<meta name="keywords" content="se colocan aca todas las palabras clave relevantes a la pagina web">`
+
+Supongamos que tenemos una panaderia:
+
+`<meta name="keywords" content="pan, panaderia, facturas, masas">`
+
+Tenemos tambien el meta description, que describen la pagina:
+
+`<meta name="description" content="La mejor panaderia de Argentina, Buenos Aires.">`
+
+Tambien hay un meta author, que lo que se hace basicamente es identificar quien es el autor de la pagina:
+
+`<meta name="author" content="Felipe N. Delicia">`
+
+Ahora supongamos que nuestra empresa esta registrada y tiene derechos de copyright:
+
+`<meta name="copyright" content="Nombre de la empresa registrada, dueña de los derechos de la misma">`
+
+Despues tenemos tambien una etiqueta meta, meta robots, que basicamente le decimos al buscador si la web debe o no debe ser indexada, significa si la web debe o no aparecer en busquedas. Para indexarla:
+
+`<meta name="robots" content="index">`
+
+Para no indexarla:
+
+`<meta name="robots" content="noindex">`
