@@ -1,5 +1,25 @@
 # **HTML**
 
+## Indice
+
+### [¿Qué es HTML?](#¿qué-carajo-es-html)
+
+### [¿Para que sirve HTML?](#¿para-qué-sirve-html)
+
+### [¿Cómo es la sintaxis en HTML?](#¿cómo-es-la-sintaxis-de-html)
+
+### [Estructura basica HTML](#estructura-básica-html)
+
+### [HTML semantico](#introducción-al-html-semantico)
+
+### [Tipos de etiquetas - 1](#1-tipos-de-etiquetas)
+
+### [Display por defecto](#display-por-defecto-de-algunas-etiquetas)
+
+### [Tipos de etiquetas - 2](#2-tipos-de-etiquetas)
+
+### [Errores comunes](#errores-comunes-en-html)
+
 ## ¿Qué **carajo** es HTML?
 
 HTML, con siglas en inglés es HyperText Markup Language (Lenguaje de marcado de hipertexto).
