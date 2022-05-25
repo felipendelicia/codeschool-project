@@ -102,3 +102,50 @@ Tendriamos el siguiente resultado:
 ![universalSelector](https://user-images.githubusercontent.com/84806140/170365771-8702a490-e494-44bb-9d1b-931be7e80cf6.png "Universal Selector")
 
 Es decir, todos los elementos de la web pasan a ser rojos.
+
+### Por tipo
+
+¿Cómo es el tema de seleccionar por tipo? es simple, seleccionas unicamente el tipo de elemento que vos definas, por ejemplo, los elementos p. De la siguiente manera:
+
+    p {
+        color: #f00;
+    }
+
+Suponiendo que mantenemos el codigo anterior y solo cambiamos los estilos, tendriamos un resultado asi:
+
+![porTipo](https://user-images.githubusercontent.com/84806140/170386969-7e8827ab-93fd-44ab-b766-4049e12a9a6c.png "Por tipo")
+
+Lo mismo pasa si en vez de poner p pongo h1 como selector:
+
+    h1 {
+        color: #f00;
+    }
+
+El titulo (h1) se volveria rojo.
+
+### Por clases
+
+Si queremos seleccionar un elemento por clase, es tan simple como agarrar el elemento que quieras estilizar de HTML y darle una clase personalizada:
+
+    <body>
+        <h1 class="titulo texto">Aprendiendo CSS</h1>
+        <p class="parrafo texto">Estamos aprendiendo css para hacer nuestras paginas mas lindas</p>
+    </body>
+
+Por tanto, yo aca defini que mi elemento h1 va a pertenecer a la clase de titulo y mi elemento p a mi clase parrafo. Ambos pertenecen a la clase texto. Ahora bien, yendo a styles.css ¿Cómo hago alusion a alguna clase? con un punto. De la siguiente manera:
+
+    .titulo {
+        color: red;
+    }
+
+    .parrafo{
+        color: blue;
+    }
+
+    .texto{
+        font-family: sans-serif
+    }
+
+Por tanto, defino que los elementos con la clase texto tengan una fuente sans-serif, los titulos un color rojo y los parrafos un color azul.
+
+![porClase](https://user-images.githubusercontent.com/84806140/170387912-b9d30fb0-75b0-40fd-ad6b-08684b6742a5.png "Por clase")
