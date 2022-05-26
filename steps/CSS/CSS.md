@@ -268,3 +268,4 @@ Y ahora si, ya tendriamos ese estilo deseado, al pasar el mouse por encima, seri
 
 ( No se si se aprecia en la imagen, sin embargo, creeme estoy pasandole el mouse :) )
 
+Hay más formas de seleccion, sin embargo, por ahora, en esta introduccion nos quedamos con las mas basicas. (Ver todos los selectores)[https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors]
