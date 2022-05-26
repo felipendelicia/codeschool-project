@@ -274,4 +274,4 @@ Hay más formas de seleccion, sin embargo, por ahora, en esta introduccion nos q
 
 ## Especificidad
 
-Bueno ahora, ya vistos los selectores vamos a ver especificidad 😈 
+Bueno ahora, ya vistos los selectores vamos a ver especificidad 😈. La especificidad se da generalmente cuando das estilos a diferentes cosas en una pagina web y surgen conflictos en los estilos, esto es algo muy comun cuando estas desarrollando una pagina. Suponete que tenes un parrafo con la clase "lala" y en algun punto de tu hoja de estilos das estilos tanto a la clase como a los parrafos ¿Que estilo deberia conservar? Bueno, esto lo resuelve la especificidad.
