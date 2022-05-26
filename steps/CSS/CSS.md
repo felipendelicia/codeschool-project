@@ -190,7 +190,7 @@ Y de esta manera nuestro querido h1..:
 
 Vale aclarar que no debe ser un atributo especifico, puede ser cualquier cosa.
 
-### Por Descendinte
+### Por Descendiente
 
 En este caso, se selecciona uno o varios elementos mediante la descendencia entre elementos. Supongamos por ejemplo este codigo:
 
@@ -216,3 +216,20 @@ Pero suponete que unicamente queremos darle estilo a los elemento p que estan de
 De esta manera tendriamos el resultado esperado:
 
 ![por descendiente](https://user-images.githubusercontent.com/84806140/170505343-37b6c86a-05b0-4220-9491-095659849661.png "por descendiente")
+
+De la misma manera puede hacerse pero utilizando clases, algo tal que asi:
+
+    <body>
+        <div class="container">
+            <p> Hola mundo! </p>
+        </div>
+        <p> Adios mundo cruel </p>
+    </body>
+
+Y en la hoja de estilos:
+
+    .container p{
+        color: #f00;
+    }
+    
+Y ocurriria exactamente lo mismo
