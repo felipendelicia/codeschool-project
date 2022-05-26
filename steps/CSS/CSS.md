@@ -189,3 +189,30 @@ Y de esta manera nuestro querido h1..:
 ![porAtributo](https://user-images.githubusercontent.com/84806140/170402127-6e753403-74f6-4893-8d94-485dcfb9431c.png "por Atributo")
 
 Vale aclarar que no debe ser un atributo especifico, puede ser cualquier cosa.
+
+### Por Descendinte
+
+En este caso, se selecciona uno o varios elementos mediante la descendencia entre elementos. Supongamos por ejemplo este codigo:
+
+    <body>
+        <div>
+            <p> Hola mundo! </p>
+        </div>
+        <p> Adios mundo cruel </p>
+    </body>
+    
+Ahora bien, imaginemos que queremos darle un estilo a las etiquetas p, facil, con un estilo por elemento:
+
+    p{
+        color: #f00;
+    }
+    
+Pero suponete que unicamente queremos darle estilo a los elemento p que estan dentro de un div (que son descendientes de un div). Para tal cosa deberiamos modificar el codigo un tanto asi:
+
+    div p{
+        color: #f00;
+    }
+
+De esta manera tendriamos el resultado esperado:
+
+![por descendiente](https://user-images.githubusercontent.com/84806140/170505343-37b6c86a-05b0-4220-9491-095659849661.png "por descendiente")
