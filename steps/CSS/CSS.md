@@ -152,7 +152,7 @@ Por tanto, defino que los elementos con la clase texto tengan una fuente sans-se
 
 ### Por ID
 
-Ahora, ¿Cuál es la diferencia entre un ID y una clase? Bueno, para empezar, a la hora de seleccionar un ID se utiliza el hashtag, el numeral, l almohadilla o como le digan en tu pais. En segundo termino, si queremos trabajar correctamente, tenemos que trabajar de tal manera que los ID sean unicos, porque un ID es eso, un identificador (identifier) de un elemento UNICO, es como tu DNI. Ahora que esto quedo claro, ¿Cómo se usa?
+Ahora, ¿Cuál es la diferencia entre un ID y una clase? Bueno, para empezar, a la hora de seleccionar un ID se utiliza el hashtag, el numeral, la almohadilla o como le digan en tu pais. En segundo termino, si queremos trabajar correctamente, tenemos que trabajar de tal manera que los ID sean unicos, porque un ID es eso, un identificador (identifier) de un elemento UNICO, es como tu DNI. Ahora que esto quedo claro, ¿Cómo se usa?
 
     <body>
         <h1 id="titulo-piola">Aprendiendo CSS</h1>
@@ -168,3 +168,24 @@ Volvemos a identificar a un elemento con el ID, dandole dicho atributo con su re
 Nos da un resultado como este:
 
 ![porID](https://user-images.githubusercontent.com/84806140/170402127-6e753403-74f6-4893-8d94-485dcfb9431c.png "por ID")
+
+### Por atributo
+
+Como su nombre lo indica, vamos a seleccionar elementos en funcion de su atributo-valor. Vamos a hacer un ejemplo:
+
+    <body>
+        <h1 lala="lele">Aprendiendo CSS</h1>
+        <p>Estamos aprendiendo css para hacer nuestras paginas mas lindas</p>
+    </body>
+
+Teniendo este codigo, con tales atributos, en este caso "lala" que equivale a "lele", vamos a identificar ese elemento mediante este codigo css:
+
+    [lala="lele"]{
+        color: #F47C7C;
+    }
+
+Y de esta manera nuestro querido h1..:
+
+![porAtributo](https://user-images.githubusercontent.com/84806140/170402127-6e753403-74f6-4893-8d94-485dcfb9431c.png "por Atributo")
+
+Vale aclarar que no debe ser un atributo especifico, puede ser cualquier cosa.
