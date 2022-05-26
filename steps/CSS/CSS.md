@@ -149,3 +149,22 @@ Por tanto, yo aca defini que mi elemento h1 va a pertenecer a la clase de titulo
 Por tanto, defino que los elementos con la clase texto tengan una fuente sans-serif, los titulos un color rojo y los parrafos un color azul.
 
 ![porClase](https://user-images.githubusercontent.com/84806140/170387912-b9d30fb0-75b0-40fd-ad6b-08684b6742a5.png "Por clase")
+
+### Por ID
+
+Ahora, ¿Cuál es la diferencia entre un ID y una clase? Bueno, para empezar, a la hora de seleccionar un ID se utiliza el hashtag, el numeral, l almohadilla o como le digan en tu pais. En segundo termino, si queremos trabajar correctamente, tenemos que trabajar de tal manera que los ID sean unicos, porque un ID es eso, un identificador (identifier) de un elemento UNICO, es como tu DNI. Ahora que esto quedo claro, ¿Cómo se usa?
+
+    <body>
+        <h1 id="titulo-piola">Aprendiendo CSS</h1>
+        <p>Estamos aprendiendo css para hacer nuestras paginas mas lindas</p>
+    </body>
+
+Volvemos a identificar a un elemento con el ID, dandole dicho atributo con su respectivo valor, y despues, en la hoja de estilos otro tanto:
+
+    #titulo-piola{
+        color: #F47C7C;
+    }
+
+Nos da un resultado como este:
+
+![porID](https://user-images.githubusercontent.com/84806140/170402127-6e753403-74f6-4893-8d94-485dcfb9431c.png "por ID")
