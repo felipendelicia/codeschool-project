@@ -232,4 +232,39 @@ Y en la hoja de estilos:
         color: #f00;
     }
     
-Y ocurriria exactamente lo mismo
+Y ocurriria exactamente lo mismo.
+
+### Por pseudo-clases
+
+Este selector lo vamos a ver mas a lo largo de esta introduccion, sin embargo, voy a explicar con la psudo-clase mas conocida para que por lo menos te quede el concepto capo. Una psudo-clase es que en un evento se genere una seleccion. Por ejemplo: supongamos el siguiente codigo:
+
+    <body>
+        <h1>Aprendiendo CSS</h1>
+        <p>Estamos aprendiendo css para hacer nuestras paginas mas lindas</p>
+    </body>
+    
+y supongamos la siguiente hoja de estilos:
+
+    p {
+        color: #f00;
+    }
+
+El resultado no seria ningun misterio:
+
+![porTipo](https://user-images.githubusercontent.com/84806140/170386969-7e8827ab-93fd-44ab-b766-4049e12a9a6c.png "Por tipo")
+
+Peeero, si queremos por ejemplo, que cuando pasemos el mouse por encima del parrafo se vuelva azul, deberiamos hacerlo mediante pseudo-clases, en este caso, hover, se aplican de esta manera:
+
+    p {
+        color: #f00;
+    }
+    p:hover {
+        color: blue;
+    }
+
+Y ahora si, ya tendriamos ese estilo deseado, al pasar el mouse por encima, seria azul:
+
+![for pseudo-clase](https://user-images.githubusercontent.com/84806140/170512247-71074006-4be7-4338-8ebd-0f285655b1b2.png "Por pseudo-clase")
+
+( No se si se aprecia en la imagen, sin embargo, creeme estoy pasandole el mouse :) )
+
