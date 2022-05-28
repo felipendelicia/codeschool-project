@@ -17,4 +17,3 @@ A pesar de esta extensa introduccion, mi recomendacion personal es investigar ta
 | *Node JS* |  | [ir]() |
 
 > Dedicado a [Natalí Machaca](https://github.com/nattmnnm)
-> Dedicado a [Natalí Machaca](https://github.com/nattmnnm)
