@@ -14,10 +14,10 @@ A pesar de esta extensa introduccion, mi recomendacion personal es investigar ta
 | *CSS* | Introducción a CSS. Estructura. Selectores. Especificidad. Unidades. | [ir](./steps/CSS/CSS.md) |
 | *Fundamentos de programación* |  | [ir](./steps/fundamentos-de-programacion.md) |
 | *Javascript* |  | [ir](./steps/Javascript/Javascript.md) |
-| *Bases de datos* |  | [ir]() |
-| *Node JS* |  | [ir]() |
-| *Express JS* |  | [ir]() |
-| *React JS* |  | [ir]() |
-| *Typescript* |  | [ir]() |
+| *Bases de datos* |  | [ir](./steps/bases-de-datos.md) |
+| *Node JS* |  | [ir](./steps/Node/NodeJS.md)) |
+| *Express JS* |  | [ir](./steps/Express/Express.md)) |
+| *React JS* |  | [ir](./steps/React/React.md) |
+| *Typescript* |  | [ir](./steps/Typescript/Typescript.md) |
 
 > Dedicado a [Natalí Machaca](https://github.com/nattmnnm)
