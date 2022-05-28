@@ -20,7 +20,7 @@
 
 [Propiedades de texto](#propiedades-de-texto)
 
-[¿Cómo usar tipografias externas?](#¿cómo-usar-tipografias-externas)
+[¿Cómo usar tipografias externas?](#tipografias-externas)
 
 ## ¿Qué es CSS?
 
@@ -453,7 +453,7 @@ Ni me gastaria en explicarlo de tanto que lo vimos, pero simplemente cambia el c
     }
 
 
-## ¿Cómo usar tipografias externas?
+## Tipografias externas
 
 Imaginate que queres poner una tipografia cualquiera ¿no? bueno, voy a mostrar un ejemplo con [google fonts](https://fonts.google.com/). Cuando vas a google fonts elegis una tipografia y copias el link de la tipografia:
 
