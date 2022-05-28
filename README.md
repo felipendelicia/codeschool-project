@@ -15,8 +15,8 @@ A pesar de esta extensa introduccion, mi recomendacion personal es investigar ta
 | *Fundamentos de programación* |  | [ir](./steps/fundamentos-de-programacion.md) |
 | *Javascript* |  | [ir](./steps/Javascript/Javascript.md) |
 | *Bases de datos* |  | [ir](./steps/bases-de-datos.md) |
-| *Node JS* |  | [ir](./steps/Node/NodeJS.md)) |
-| *Express JS* |  | [ir](./steps/Express/Express.md)) |
+| *Node JS* |  | [ir](./steps/Node/NodeJS.md) |
+| *Express JS* |  | [ir](./steps/Express/Express.md) |
 | *React JS* |  | [ir](./steps/React/React.md) |
 | *Typescript* |  | [ir](./steps/Typescript/Typescript.md) |
 
