@@ -479,4 +479,4 @@ Una vez pegado, ¿Como lo implementamos? Facil, google te dice como:
 
 ![google font css](https://user-images.githubusercontent.com/84806140/170845368-a436db51-d350-457c-8684-42459f0f5335.png "google font css")
 
-¿Porqué tiene sans-serif separado por coma? Debido a que si no se encuentra la primera tipografia por lo que sea, vamos a buscar la segunda
+¿Porqué tiene sans-serif separado por coma? Debido a que si no se encuentra la primera tipografia por lo que sea, vamos a buscar la segunda.
