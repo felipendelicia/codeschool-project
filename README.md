@@ -1,4 +1,4 @@
-# Introducción al desarrollo web
+# Introducción al desarrollo web 👨‍💻🥇
 
 Me puse como objetivo crear una serie de posibles pasos a seguir para
 poder introducir a alguien al desarrollo web mediante una serie de contenidos que permitan al usuario ser capaz de desempeñarse de forma autodidacta.
