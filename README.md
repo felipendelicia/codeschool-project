@@ -15,4 +15,4 @@ A pesar de esta extensa introduccion, mi recomendacion personal es investigar ta
 | *Fundamentos de programación* |  | [ir](./steps/fundamentos-de-programacion.md) |
 | *Javascript* |  | [ir](./steps/Javascript/Javascript.md) |
 
-> Dedicado para [Natalí Machaca](https://github.com/nattmnnm)
+> Dedicado a [Natalí Machaca](https://github.com/nattmnnm)
