@@ -10,4 +10,4 @@ Una vez dentro de la pagina de descarga de vs code, elegir versión en función 
 
 ![VS Code Download page](https://user-images.githubusercontent.com/84806140/169602174-8d254c26-721a-48ee-9f10-c2f44209baab.png "VS Code Download page")
 
-> [Set up Visual Studio Code](https://youtu.be/ITxcbrfEcIY) : Video oficial instalación y nociones basicas del editor.
+> [Set up Visual Studio Code](https://youtu.be/ITxcbrfEcIY) : Video oficial instalación y nociones basicas del editor 🤙.
