@@ -1,12 +1,5 @@
 .landing-container-main{
     width: 100vw;
     height: 100vh;
-    animation: gradient 2s infinite alternate linear;
-    background: hsl(0, 0%, 75%);
-}
-    
-@keyframes gradient {
-    100% {
-     background: hsl(0, 0%, 100%);
-    }
+    background: #ffffff
 }
