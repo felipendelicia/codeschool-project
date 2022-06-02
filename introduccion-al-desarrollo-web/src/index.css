@@ -3,3 +3,9 @@
   padding: 0;
   margin: 0;
 }
+
+button {
+  outline: inherit;
+  border: inherit;
+  background-color: inherit;
+}

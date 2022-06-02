@@ -1,5 +1,35 @@
 .landing-container-main{
     width: 100vw;
     height: 100vh;
-    background: #ffffff
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-container{
+    text-align: center;
+    width: 50vw;
+}
+
+.landing-container h1{
+    color: #4ed159;
+    font-weight: 800;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 2.3em;
+    margin-bottom: 0.5em;
+}
+
+.landing-container p{
+    font-size: 1.2em;
+    margin-bottom: 0.8em;
+}
+
+.landing-container button{
+    background-color: #4ed159;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 1.2em;
+    border-radius: 12px;
+    padding: 0.25em 1em;
 }
