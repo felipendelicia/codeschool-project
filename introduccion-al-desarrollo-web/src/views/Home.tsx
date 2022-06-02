@@ -1,6 +1,7 @@
 import React from 'react'
 import {motion} from "framer-motion"
 import animationStyles from '../config/animationStyles'
+import Landing from '../components/Landing'
 
 const Home = () => {
   return (
@@ -8,7 +9,7 @@ const Home = () => {
     initial={animationStyles.initial}
     animate={animationStyles.animate}
     exit={animationStyles.exit}>
-        Hola!
+        <Landing/>
     </motion.div>
   )
 }
