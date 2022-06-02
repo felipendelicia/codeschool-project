@@ -1,5 +1,4 @@
 import React from 'react'
-import config from '../config'
 import "../styles/Header.css"
 
 const Header = () => {

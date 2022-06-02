@@ -1,11 +1,14 @@
-import React from 'react';
-import Header from './components/Header';
-import './App.css';
+import { BrowserRouter as Router } from "react-router-dom";
+import AnimatedRoutes from "./components/AnimatedRoutes";
+import "./App.css";
 
 function App() {
+
   return (
     <div className="App">
-      <Header/>
+      <Router>
+        <AnimatedRoutes/>
+      </Router>
     </div>
   );
 }

@@ -1,8 +1,15 @@
 import React from 'react'
+import {motion} from "framer-motion"
+import animationStyles from '../config/animationStyles'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <motion.div
+    initial={animationStyles.initial}
+    animate={animationStyles.animate}
+    exit={animationStyles.exit}>
+        Hola!
+    </motion.div>
   )
 }
 
