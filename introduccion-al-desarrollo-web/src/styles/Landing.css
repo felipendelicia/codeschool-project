@@ -19,3 +19,12 @@
 .landing-container p{
     margin-bottom: 0.8em;
 }
+
+@media (max-width: 1000px){
+    .landing-container{
+        width: 80vw;
+    }
+    .landing-container p{
+        margin-bottom: 2em;
+    }
+}
