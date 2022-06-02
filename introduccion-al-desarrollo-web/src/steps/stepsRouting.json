@@ -1,0 +1,10 @@
+[
+    {
+        "name":"Introducción",
+        "path":"/introduccion"
+    },
+    {
+        "name":"Editor de texto",
+        "path":"/editor-de-texto"
+    }
+]
