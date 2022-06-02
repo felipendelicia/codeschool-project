@@ -1,0 +1,13 @@
+.step-container-main{
+    display: flex;
+    width: 100vw;
+}
+
+.step-content-container{
+    width: 70%;
+}
+
+
+.step-titles-container{
+    width: 30%;
+}

@@ -1,6 +1,7 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import {AnimatePresence} from "framer-motion"
 import Landing from "./views/Landing"
+import Step from "./views/Step";
 import stepsRouting from "./steps/stepsRouting.json"
 
 const AnimatedRoutes = () => {
@@ -14,7 +15,7 @@ const AnimatedRoutes = () => {
         {
             stepsRouting.map((step, i)=>{
                 return(
-                    <Route path={step.path} key={i} element={<p>{step.name}</p>}/>
+                    <Route path={step.path} key={i} element={<Step/>}/>
                 )
             })
         }
