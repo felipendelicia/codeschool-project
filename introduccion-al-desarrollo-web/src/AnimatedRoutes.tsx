@@ -3,6 +3,7 @@ import {AnimatePresence} from "framer-motion"
 import Landing from "./views/Landing"
 import Step from "./views/Step";
 import stepsRouting from "./steps/stepsRouting.json"
+import Content from "./components/Content";
 
 const AnimatedRoutes = () => {
 
@@ -15,7 +16,9 @@ const AnimatedRoutes = () => {
         {
             stepsRouting.map((step, i)=>{
                 return(
-                    <Route path={step.path} key={i} element={<Step/>}/>
+                    <Route path={step.path} key={i} element={
+                      <Content/>
+                    }/>
                 )
             })
         }
