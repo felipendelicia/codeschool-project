@@ -4,28 +4,22 @@
 
 ## Indice
 
-[¿Qué es CSS?](#¿qué-es-css)
+[Introducción a CSS](./content/Introduccion%20a%20CSS.md)
 
-[¿Para qué sirve CSS?](#¿para-qué-sirve-css)
+[Selectores](./content/Selectores.md)
 
-[¿Como arrancar con CSS?](#¿cómo-arrancar-a-trabajar-con-css)
+[Especificidad](./content/Especificidad.md)
 
-[Estructura de los estilos](#estructura-de-los-estilos-en-css)
+[Unidades](./content/Unidades%20de%20medida.md)
 
-[Selectores](#selectores-en-css)
+[Propiedades de texto](./content/Propiedades%20de%20texto.md)
 
-[Especificidad](#especificidad)
+[¿Cómo usar tipografias externas?](./content/Tipografias%20externas.md)
 
-[Unidades](#unidades-de-medida)
+[Normalize](./content/Normalize.md)
 
-[Propiedades de texto](#propiedades-de-texto)
+[Introducción al display](./content/Introduccion%20al%20display.md)
 
-[¿Cómo usar tipografias externas?](#tipografias-externas)
+[Propiedades de cajas](./content/Propiedades%20de%20cajas.md)
 
-[Normalize](#normalize)
-
-[Display](#cajas-display)
-
-[Propiedades de cajas](#propiedades-de-cajas)
-
-[Outline](#outline)
+[Outline](./content/Outline.md)
