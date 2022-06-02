@@ -1,5 +1,5 @@
 import { BrowserRouter as Router } from "react-router-dom";
-import AnimatedRoutes from "./components/AnimatedRoutes";
+import AnimatedRoutes from "./AnimatedRoutes";
 import "./App.css";
 
 function App() {
