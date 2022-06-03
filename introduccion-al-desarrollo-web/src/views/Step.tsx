@@ -7,7 +7,7 @@ import "../styles/Step.css";
 
 const Step = (props: { md: string }) => {
   const [md, setMd] = useState(props.md);
-  const [currentContentPage, setCurrentContentPage] = useState(0);
+  const [currentContentPage, setCurrentContentPage] = useState(1);
 
   let currentThemeContent = themes.find((theme) => {
     return theme.name === md;
