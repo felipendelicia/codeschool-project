@@ -4,7 +4,7 @@ const themes = [
     contents: [
       {
         id:0,
-        title: "Introduccion",
+        title: "👨‍💻🥇 Introduccion",
         content: `
                 <h2 id="introducci-n-al-desarrollo-web-">Introducción al desarrollo web 👨‍💻🥇</h2>
                 <p>Me puse como objetivo crear una serie de posibles pasos a seguir para
@@ -20,7 +20,7 @@ const themes = [
     contents: [
       {
         id:0,
-        title: "Instalacion del editor de texto",
+        title: "✍️ Instalacion del editor de texto",
         content: `
                 <h2 id="editor-de-texto-">Editor de texto ✍️</h2>
                 <p>Las utilidades básicas de todos los editores de texto son las mismas. Todos ofrecen un lugar para interactuar con el texto y la mayoría disponen de una opción de codificación de colores basada en la sintaxis. También proporcionan teclas de acceso rápido y funciones de texto intuitivas. A fin de cuentas, hacen que escribir codigo sea mas facil!</p>
@@ -39,16 +39,17 @@ const themes = [
     contents: [
       {
         id:0,
-        title: "Introducción al HTML",
+        title: "🧱👷 Introducción al HTML",
         content: `
-                <h2 id="-qu-carajo-es-html-">¿Qué <strong>carajo</strong> es HTML?</h2>
+                <h2>Introducción al HTML 🧱👷</h2>
+                <h3 id="-qu-carajo-es-html-">¿Qué carajo es HTML?</h3>
                 <p>HTML, con siglas en inglés es HyperText Markup Language (Lenguaje de marcado de hipertexto).</p>
-                <h2 id="-para-qu-sirve-html-">¿Para qué sirve HTML?</h2>
+                <h3 id="-para-qu-sirve-html-">¿Para qué sirve HTML?</h3>
                 <p>HTML es el lenguaje con el agarramos &quot;cajitas&quot; o elementos y las ponemos en distintos lugares de la pagina. Despues, con CSS agarramos y les damos un estilo, un color, un ancho, un posición. Es decir, la función de este lenguaje es meramente estrutural.</p>
                 <blockquote>
                 <p>&quot;Solamente ponemos las cajitas&quot;</p>
                 </blockquote>
-                <h2 id="-c-mo-es-la-sintaxis-de-html-">¿Cómo es la sintaxis de HTML?</h2>
+                <h3 id="-c-mo-es-la-sintaxis-de-html-">¿Cómo es la sintaxis de HTML?</h3>
                 <p>En HTML, las &quot;cajitas&quot; que colocamos se colocan mediante etiquetas o tags que escribimos en nuestro archivo HTML. Las etiquetas pueden abrirse y cerrarse con una etiqueta de cierre:</p>
                 <p><code>&lt;etiqueta&gt; Contenido &lt;/etiqueta&gt;</code></p>
                 <p>O bien abrirse y cerrarse en la misma etiqueta:</p>
@@ -62,9 +63,9 @@ const themes = [
       },
       {
         id:1,
-        title: "Estructura basica en HTML",
+        title: "🏠 Estructura basica en HTML",
         content: `
-                <h2 id="estructura-b-sica-html">Estructura básica HTML</h2>
+                <h2 id="estructura-b-sica-html">Estructura básica HTML 🏠</h2>
                 <p>En VSC hay una serie de &quot;atajos&quot; que se pueden utilizar para facilitar la tarea d escribir codigo, por ejemplo, existe una forma de escribir una plantilla de una pagina en HTML con un simple atajo :</p>
                 <p><code>html:5</code></p>
                 <p><img src="https://user-images.githubusercontent.com/84806140/169606310-5cedce55-be39-4927-9147-389ff64bf10e.png" alt="HTML shorthand" title="HTML shorthand"></p>
@@ -95,17 +96,17 @@ const themes = [
       },
       {
         id:2,
-        title: "Introducción al HTML semantico",
+        title: "👅 Introducción al HTML semantico",
         content: `
-                <h2 id="introducci-n-al-html-semantico">Introducción al HTML semantico</h2>
+                <h2 id="introducci-n-al-html-semantico">Introducción al HTML semantico 👅</h2>
                 <p>HTML es un lenguaje de marcado de hipertexto, como ya dijimos, pero no es un lenguaje de programación, sin embargo, a fin de cuentas, es un lenguaje. Por lo tanto, al igual que un lenguaje natural cualquiera hay formas correctas e incorrectas de comunicarnos, en HTML pasa lo mismo, hay formas correctas e incorrectas de escribir etiquetas. ¿Por ejemplo? Poner más de un h1 ¿Porqué? porque el h1 posiciona tu web en google (SEO). Por lo tanto, cuando hablamos de SEO estamos hablando nada mas ni nada menos de poner todos esos elementos o &quot;cajitas&quot; de manera correcta de tal manera que google o cualquier buscador nos posicione correctamente en el SEO.</p>
                 `,
       },
       {
         id:3,
-        title: "Tipos de etiquetas [1]",
+        title: "🏷️1️⃣ Tipos de etiquetas",
         content: `
-                <h2 id="1-tipos-de-etiquetas">1. Tipos de etiquetas</h2>
+                <h2 id="1-tipos-de-etiquetas">1. Tipos de etiquetas 🏷️1️⃣</h2>
                 <h3 id="titulos">Titulos</h3>
                 <p>Tenemos distintos tipos de titulos...</p>
                 <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hola mundo!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
@@ -131,9 +132,9 @@ const themes = [
       },
       {
         id:4,
-        title: "Display por defecto de los elementos",
+        title: "🖥️ Display por defecto de los elementos",
         content: `
-                <h2 id="display-por-defecto-de-algunas-etiquetas">Display por defecto de algunas etiquetas</h2>
+                <h2 id="display-por-defecto-de-algunas-etiquetas">Display por defecto de algunas etiquetas 🖥️</h2>
                 <p>Si venis escribiendo y probando el codigo que venimos escribiendo, te vas a dar cuenta que hay algunas etiquetas que salen &quot;una al lado de la otra&quot; por decirlo de alguna manera: </p>
                 <p><img src="https://user-images.githubusercontent.com/84806140/169615912-8e5fa8a5-b9b7-4289-86b7-1a4829b6a4ec.png" alt="diplay" title="Display"></p>
                 <p>En este caso la etiqueta b y la i. ¿Porqué ocurre esto? Esto pasa debido a que las etiquetas como h1,h2, h3 y los parrafos ocupan todo el ancho de la caja que los contiene (en este caso el body) independiente de su contenido. Estos elementos se denominan en bloque:</p>
@@ -144,9 +145,9 @@ const themes = [
       },
       {
         id:5,
-        title: "Tipos de etiquetas [2]",
+        title: "🏷️2️⃣ Tipos de etiquetas",
         content: `
-                <h2 id="2-tipos-de-etiquetas">2. Tipos de etiquetas</h2>
+                <h2 id="2-tipos-de-etiquetas">2. Tipos de etiquetas 🏷️2️⃣</h2>
                 <h3 id="enlaces">Enlaces</h3>
                 <p>Esta es una etiqueta de texto que es importante. Esta etiqueta lo que hace es redirigirnos hacia otro lugar. ¿Vieron cuando a veces en una pagina dice &quot;hace click aca&quot; y cuando haces click ahi te manda a otra pagina? Y vos tipo: &quot;Aaaah es magia&quot;, NO, no es magia, es la etiqueta a que nos redirige a otra pagina.</p>
                 <p><code>&lt;a href=&quot;&quot;&gt; Esto es un enlace que no te lleva a ningun lado &lt;/a&gt;</code></p>
@@ -297,9 +298,9 @@ const themes = [
       },
       {
         id:6,
-        title: "Errores comunes en HTML",
+        title: "❌ Errores comunes en HTML",
         content: `
-                <h2 id="errores-comunes-en-html">Errores comunes en HTML</h2>
+                <h2 id="errores-comunes-en-html">Errores comunes en HTML ❌</h2>
                 <h3 id="confundir-css-con-html">Confundir CSS con HTML</h3>
                 <p>Empecemos con que HTML es un lenguaje de marcado de hipertexto, es decir, es un lenguaje con el cual se estructuran sitios, el primer error es que muchos confunden html con css, pero no me refiero a que se confudan en cuanto a sintaxis, sino al error de tratar de darle estilos a una pagina en el archivo de html, cuando uno debe tender a la modularizacion de sus estilos</p>
                 <h3 id="usar-etiquetas-obsoletas">Usar etiquetas obsoletas</h3>
@@ -313,9 +314,9 @@ const themes = [
     contents: [
       {
         id:0,
-        title: "Introducción a CSS",
+        title: "🎨🍭 Introducción a CSS",
         content: `
-                <h2 id="introduccion-a-css">Introduccion a CSS</h2>
+                <h2 id="introduccion-a-css">Introduccion a CSS 🎨🍭</h2>
                 <h3 id="-qu-es-css-">¿Qué es CSS?</h3>
                 <p>CSS con siglas en inglés de Cascading Style Sheets, en español &quot;Hojas de estilo en cascada&quot;.</p>
                 <h3 id="-para-qu-sirve-css-">¿Para qué sirve CSS?</h3>
@@ -344,9 +345,9 @@ const themes = [
       },
       {
         id:1,
-        title: "Selectores",
+        title: "👉🙋 Selectores",
         content:`
-        <h2 id="selectores-en-css">Selectores en CSS</h2>
+        <h2 id="selectores-en-css">Selectores en CSS 🙋👈</h2>
         <p>Bueno bien, ahora que tenemos esto en cuenta vamos a ver las distintas formas que tenemos de seleccionar.</p>
         <h3 id="universal">Universal</h3>
         <p>Para empezar tenemos el selector universal ¿Cuál es el selector universal? El que selecciona todos los elementos, se usa con un asterisco &quot;*&quot;.</p>
@@ -496,8 +497,8 @@ const themes = [
       },
       {
         id:2,
-        title: "Especificidad",
-        content:`<h2 id="especificidad">Especificidad</h2>
+        title: "📍📎 Especificidad",
+        content:`<h2 id="especificidad">Especificidad 📍📎</h2>
         <p>Bueno ahora, ya vistos los selectores vamos a ver especificidad 😈. La especificidad se da generalmente cuando das estilos a diferentes cosas en una pagina web y surgen conflictos en los estilos, esto es algo muy comun cuando estas desarrollando una pagina. Suponete que tenes un parrafo con la clase &quot;lala&quot; y en algun punto de tu hoja de estilos das estilos tanto a la clase como a los parrafos ¿Que estilo deberia conservar? Bueno, esto lo resuelve la especificidad.</p>
         <p>Para solucionar este problema, te voy a mostrar las formas de seleccion de la menos especifica a la más especifica:</p>
         <blockquote>
@@ -547,8 +548,8 @@ const themes = [
     },
       {
         id:3,
-        title: "Unidades de medida",
-        content:`<h2 id="unidades-de-medida">Unidades de medida</h2>
+        title: "📏 Unidades de medida",
+        content:`<h2 id="unidades-de-medida">Unidades de medida 📏</h2>
         <p>Antes de ponernos a ver propiedades de texto, vamos a ver unidades de medida, seguro ya estas hasta el cuello de solo conocer la propiedad color, pero bueno, primero, antes de conocer propiedades que nos van a venir re bien y van a ser divertidas, tenemos que saber como medir, ¿Solo vamos a usar pixeles? obvio que no, por eso vamos a ver esto, presta atencion.</p>
         <p>Para el transcurso de este &quot;capitulo&quot; vamos a usar el siguiente codigo:</p>
         <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
@@ -584,8 +585,8 @@ const themes = [
     },
       {
         id:4,
-        title: "Propiedades de texto",
-        content: `<h2 id="propiedades-de-texto">Propiedades de texto</h2>
+        title: "✏️ Propiedades de texto",
+        content: `<h2 id="propiedades-de-texto">Propiedades de texto ✏️</h2>
                 <p>Aleluya! al fin vamos a ver propiedades copadas para estilizar nuestras webs. Atentis.</p>
                 <h3 id="font-size">font-size</h3>
                 <p>Esta ya tuvimos unos acercamientos a su definicion y demas, se trata de que tan grande sea la letra, el tamaño de letra, esta se define con las unidades que vimos recien. Seria una cosa como la siguiente:</p>
@@ -630,8 +631,8 @@ const themes = [
       },
       {
           id:5,
-          title:"Usar tipografias externas",
-          content:`<h2 id="tipografias-externas">Tipografias externas</h2>
+          title:"🅰️ Usar tipografias externas",
+          content:`<h2 id="tipografias-externas">Tipografias externas 🅰️</h2>
           <p>Imaginate que queres poner una tipografia cualquiera ¿no? bueno, voy a mostrar un ejemplo con <a href="https://fonts.google.com/">google fonts</a>. Cuando vas a google fonts elegis una tipografia y copias el link de la tipografia:</p>
           <p><img src="https://user-images.githubusercontent.com/84806140/170845328-7e49c268-d216-4ca0-8dd9-2ccb6f792dce.png" alt="google-fonts" title="google fonts"></p>
           <p>Una vez copiado lo pegas en el head:</p>
@@ -655,8 +656,8 @@ const themes = [
       },
       {
           id:6,
-          title:"Normalize",
-          content:`<h2 id="normalize">Normalize</h2>
+          title:"🪖🎖️ Normalize",
+          content:`<h2 id="normalize">Normalize 🪖🎖️</h2>
           <p>Los navegadores SIEMPRE traen un estilo por defecto. Por eso por ejemplo, cuando ponemos un h1 sin estilos, esta en negrita por defecto o tambien debido a eso es su tamaño. ¿Entonces que haces? usamos el normalize para reiniciar los estilos. ¿Como lo ponemos? googleamos <a href="https://necolas.github.io/normalize.css/">normalize.css</a> y abrimos el primero que nos salga. Descargamos el archivo y lo colocamos en el directorio del proyecto.</p>
           <p>Yo lo guardé como:</p>
           <blockquote>
@@ -715,8 +716,8 @@ const themes = [
       },
       {
           id:7,
-          title:"Introduccion al display",
-          content:`<h2 id="introduccion-al-display">Introduccion al display</h2>
+          title:"🖥️ Introduccion al display",
+          content:`<h2 id="introduccion-al-display">Introduccion al display 🖥️</h2>
           <p>¿Te acordas cuando te explique el tema de las cajas en bloque y en linea en la parte de HTML? Bueno, hay maneras de hacer que, por ejemplo, un h1 se comporte como un elemento en linea, haciendo que la caja se ajuste al contenido, algo como esto:</p>
           <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Aprendiendo CSS<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
@@ -751,8 +752,8 @@ const themes = [
       },
       {
           id:8,
-          title:"Propiedades de cajas",
-          content:`<h2 id="propiedades-de-cajas">Propiedades de cajas</h2>
+          title:"📦📝 Propiedades de cajas",
+          content:`<h2 id="propiedades-de-cajas">Propiedades de cajas 📦📝</h2>
           <h3 id="background-color">background-color</h3>
           <p>Ya habiamos mirado un poco lo que era background color. Background color es el color de fondo de determinada caja. Vamos a ver un ejemplo de como poner una caja color negro, por ejemplo:</p>
           <pre><code><span class="hljs-selector-tag">h1</span>{
@@ -926,8 +927,8 @@ const themes = [
       },
       {
           id:9,
-          title:"Outline",
-          content:`<h2 id="outline">Outline</h2>
+          title:"〽🔲 Outline",
+          content:`<h2 id="outline">Outline 〽🔲</h2>
           <p>¿Qué es el outline? Bueno, es un shorthand. Bueno ya sé, pero en si, ¿Qué es outline? Outline es como un border, pero sin afectar a las demas cajas ni a la misma caja, es decir, no ocupa un espacio real. Dicho de la manera correcta, no ocupa un espacio en el DOM ¿Qué es el DOM? Es el document object model, son todos los elementos que estan dentro de nuestra pagina.</p>
           <p><img src="https://www.freecodecamp.org/news/content/images/2021/09/Document.jpg" alt="dom" title="dom"></p>
           <p>Bueno vamos a aprenderlo con un ejemplo. Para empezar imaginate estos estilos y estructura:</p>
@@ -978,8 +979,11 @@ const themes = [
       contents:[
           {
               id:0,
-              title:"No hay",
-              content:"<h2>No la hice capo 😎</h2>"
+              title:"🤕🤒 No hay contenido",
+              content:`
+              <h2>No la hice capo 😎</h2>
+              <p>Proximamente vas a poder gozar de esta parte😈🧠.</p>
+              `
           }
       ]
   },
@@ -988,8 +992,11 @@ const themes = [
       contents:[
           {
               id:0,
-              title:"No hay",
-              content:"<h2>No la hice capo 😎</h2>"
+              title:"🤕🤒 No hay contenido",
+              content:`
+              <h2>No la hice capo 😎</h2>
+              <p>Proximamente vas a poder gozar de esta parte😈🧠.</p>
+              `
           }
       ]
   },
@@ -998,8 +1005,11 @@ const themes = [
       contents:[
           {
               id:0,
-              title:"No hay",
-              content:"<h2>No la hice capo 😎</h2>"
+              title:"🤕🤒 No hay contenido",
+              content:`
+              <h2>No la hice capo 😎</h2>
+              <p>Proximamente vas a poder gozar de esta parte😈🧠.</p>
+              `
           }
       ]
   },
@@ -1008,8 +1018,11 @@ const themes = [
       contents:[
           {
               id:0,
-              title:"No hay",
-              content:"<h2>No la hice capo 😎</h2>"
+              title:"🤕🤒 No hay contenido",
+              content:`
+              <h2>No la hice capo 😎</h2>
+              <p>Proximamente vas a poder gozar de esta parte😈🧠.</p>
+              `
           }
       ]
   },
@@ -1018,8 +1031,11 @@ const themes = [
       contents:[
           {
               id:0,
-              title:"No hay",
-              content:"<h2>No la hice capo 😎</h2>"
+              title:"🤕🤒 No hay contenido",
+              content:`
+              <h2>No la hice capo 😎</h2>
+              <p>Proximamente vas a poder gozar de esta parte😈🧠.</p>
+              `
           }
       ]
   },
@@ -1028,8 +1044,11 @@ const themes = [
       contents:[
           {
               id:0,
-              title:"No hay",
-              content:"<h2>No la hice capo 😎</h2>"
+              title:"🤕🤒 No hay contenido",
+              content:`
+              <h2>No la hice capo 😎</h2>
+              <p>Proximamente vas a poder gozar de esta parte😈🧠.</p>
+              `
           }
       ]
   },
@@ -1038,8 +1057,11 @@ const themes = [
       contents:[
           {
               id:0,
-              title:"No hay",
-              content:"<h2>No la hice capo 😎</h2>"
+              title:"🤕🤒 No hay contenido",
+              content:`
+              <h2>No la hice capo 😎</h2>
+              <p>Proximamente vas a poder gozar de esta parte😈🧠.</p>
+              `
           }
       ]
   }
