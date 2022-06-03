@@ -1,0 +1,30 @@
+.changemd-component-container{
+    margin: 2em auto 0;
+    padding-top: 2em;
+    border-top: 1px solid #4ed159;
+}
+
+.changemd-component-container p{
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+    padding-left: 0.5em;
+    color: #000000;
+    transition: all 200ms ease-in-out;
+}
+
+.changemd-component-container p:hover{
+    color: #4ed159;
+    font-size: 1.25em;
+}
+
+@media (max-width: 1000px){
+    .changemd-component-container p{
+        font-size: 2em;
+        margin-bottom: 0.5em;
+        padding-left: 0.5em;
+    }
+    
+    .changemd-component-container p:hover{
+        font-size: 2.2em;
+    }
+}

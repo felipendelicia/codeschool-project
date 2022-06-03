@@ -1,0 +1,14 @@
+.button-component-container{   
+    background-color: #4ed159;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 1.2em;
+    border-radius: 12px;
+    padding: 0.25em 1em;
+}
+
+@media (max-width: 1000px) {
+    .button-component-container{   
+        font-size: 2.5em;
+    }
+}

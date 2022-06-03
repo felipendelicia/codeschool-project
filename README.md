@@ -9,15 +9,16 @@ A pesar de esta extensa introduccion, mi recomendacion personal es investigar ta
 
 | step | contenido | link |
 |--|--|--|
-|*Editor de texto*|Instalación de editor de texto: **VS CODE**|[ir](./steps/editor-de-texto.md)|
-| *HTML* | Introducción a HTML. Etiquetas. Tipos de etiquetas. Estructuración básica. Concepto de HTML semántico. Errores comunes. | [ir](./steps/HTML/HTML.md) |
-| *CSS* | Introducción a CSS. Estructura. Selectores. Especificidad. Unidades. Propiedades de texto. Tipografias externas. Normalize. Display. Propiedades de caja. Outline. | [ir](./steps/CSS/CSS.md) |
-| *Fundamentos de programación* |  | [ir](./steps/fundamentos-de-programacion.md) |
-| *Javascript* |  | [ir](./steps/Javascript/Javascript.md) |
-| *Bases de datos* |  | [ir](./steps/bases-de-datos.md) |
-| *Node JS* |  | [ir](./steps/Node/NodeJS.md) |
-| *Express JS* |  | [ir](./steps/Express/Express.md) |
-| *React JS* |  | [ir](./steps/React/React.md) |
-| *Typescript* |  | [ir](./steps/Typescript/Typescript.md) |
+|*introducción*|Introducción.|[ir](http://introduccion-al-desarrollo-web.netlify.app/)|
+|*Editor de texto*|Instalación de editor de texto: **VS CODE**|[ir](http://introduccion-al-desarrollo-web.netlify.app/editor-de-texto)|
+| *HTML* | Introducción a HTML. Etiquetas. Tipos de etiquetas. Estructuración básica. Concepto de HTML semántico. Errores comunes. | [ir](http://introduccion-al-desarrollo-web.netlify.app/html) |
+| *CSS* | Introducción a CSS. Estructura. Selectores. Especificidad. Unidades. Propiedades de texto. Tipografias externas. Normalize. Display. Propiedades de caja. Outline. | [ir](http://introduccion-al-desarrollo-web.netlify.app/css) |
+| *Fundamentos de programación* |  | [ir](http://introduccion-al-desarrollo-web.netlify.app/fundamentos-de-programacion) |
+| *Javascript* |  | [ir](http://introduccion-al-desarrollo-web.netlify.app/javascript) |
+| *Bases de datos* |  | [ir](http://introduccion-al-desarrollo-web.netlify.app/bases-de-datos) |
+| *Node JS* |  | [ir](http://introduccion-al-desarrollo-web.netlify.app/nodejs) |
+| *Express JS* |  | [ir](http://introduccion-al-desarrollo-web.netlify.app/express) |
+| *React JS* |  | [ir](http://introduccion-al-desarrollo-web.netlify.app/react) |
+| *Typescript* |  | [ir](http://introduccion-al-desarrollo-web.netlify.app/typescript) |
 
 > Dedicado a [Natalí Machaca](https://github.com/nattmnnm)

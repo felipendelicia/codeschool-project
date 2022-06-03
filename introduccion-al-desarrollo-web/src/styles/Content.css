@@ -1,0 +1,61 @@
+.content-component-container h2{
+    color: #4ed159;
+    font-weight: 800;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 2.3em;
+    margin-bottom: 0.5em;
+}
+
+.content-component-container h3{
+    color: #4ed159;
+    font-weight: 700;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.content-component-container img{
+    display: block;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 0.5em;
+}
+
+.content-component-container p{
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.content-component-container pre{
+    background-color: #4ed159;
+    padding: 1em 2em;
+    border-radius: 12px;
+    margin-bottom: 1em;
+}
+
+.content-component-container code{
+    background-color: #4ed159;
+    padding: 0.2em 1em;
+    border-radius: 12px;
+    margin-bottom: 1em;
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.content-component-container pre code{
+    font-size: 1.2em;
+    background-color: rgba(0,0,0,0);
+    padding: 0;
+    border-radius: 0;
+    margin: 0;
+}
+
+.content-component-container a{
+    color: #4ed159;
+    font-weight: 600;
+}
+
+@media (max-width: 1000px){
+    
+}

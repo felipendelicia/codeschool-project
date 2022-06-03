@@ -1,0 +1,31 @@
+.step-container-main{
+    display: flex;
+    width: 100vw;
+}
+
+.step-see-modal{
+    display: none;
+}
+
+.step-content-container{
+    width: 70%;
+    padding: 2em 3em;
+}
+
+.step-titles-container{
+    width: 30%;
+    padding: 2em 2em;
+}
+
+@media (max-width: 1000px) {
+    .step-titles-container{
+        display: none;
+    }
+    .step-content-container{
+        width: 100%;
+        padding: 2em 3em;
+    }
+    .step-see-modal{
+        display: block;
+    }
+}
