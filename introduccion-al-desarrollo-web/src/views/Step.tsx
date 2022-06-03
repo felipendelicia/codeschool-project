@@ -6,30 +6,45 @@ import themes from "../steps/themes";
 import "../styles/Step.css";
 
 const Step = (props: { md: string }) => {
-  const [md, setMd] = useState(props.md);
-  const [currentContentPage, setCurrentContentPage] = useState(9);
+  const [currentContentPage, setCurrentContentPage] = useState(0);
 
   let currentThemeContent = themes.find((theme) => {
-    return theme.name === md;
+    return theme.name === props.md;
   });
+
+  const changeContent = (id: number) => setCurrentContentPage(id);
 
   return (
     <ViewContainer>
       <div className="step-container-main">
-        
         <div className="step-content-container">
           <Content
             currentContent={currentThemeContent!.contents[currentContentPage]}
+            nextContent={
+              currentThemeContent!.contents[currentContentPage].id+1 ===
+              currentThemeContent!.contents.length
+                ? undefined
+                : currentThemeContent!.contents[currentContentPage+1].title
+            }
+            previousContent={
+              currentThemeContent!.contents[currentContentPage].id === 0
+                ? undefined
+                : currentThemeContent!.contents[currentContentPage-1].title
+            }
+            currentContentPage={currentContentPage}
+            changeContent={(id: number) => changeContent(id)}
           />
         </div>
 
         <div className="step-titles-container">
-          <Titles 
-          currentMdContent={currentThemeContent!.contents} 
-          currentContent={currentThemeContent!.contents[currentContentPage].title}
+          <Titles
+            currentMdContent={currentThemeContent!.contents}
+            currentContent={
+              currentThemeContent!.contents[currentContentPage].title
+            }
+            changeContent={(id: number) => changeContent(id)}
           />
         </div>
-
       </div>
     </ViewContainer>
   );

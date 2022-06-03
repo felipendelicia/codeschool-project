@@ -3,6 +3,7 @@ const themes = [
     name: "introduccion",
     contents: [
       {
+        id:0,
         title: "Introduccion",
         content: `
                 <h2 id="introducci-n-al-desarrollo-web-">Introducción al desarrollo web 👨‍💻🥇</h2>
@@ -18,6 +19,7 @@ const themes = [
     name: "editor_de_texto",
     contents: [
       {
+        id:0,
         title: "Instalacion del editor de texto",
         content: `
                 <h1 id="editor-de-texto-">Editor de texto ✍️</h1>
@@ -36,6 +38,7 @@ const themes = [
     name: "html",
     contents: [
       {
+        id:0,
         title: "Introducción al HTML",
         content: `
                 <h2 id="-qu-carajo-es-html-">¿Qué <strong>carajo</strong> es HTML?</h2>
@@ -58,6 +61,7 @@ const themes = [
                 `,
       },
       {
+        id:1,
         title: "Estructura basica en HTML",
         content: `
                 <h2 id="estructura-b-sica-html">Estructura básica HTML</h2>
@@ -90,6 +94,7 @@ const themes = [
                 `,
       },
       {
+        id:2,
         title: "Introducción al HTML semantico",
         content: `
                 <h2 id="introducci-n-al-html-semantico">Introducción al HTML semantico</h2>
@@ -97,6 +102,7 @@ const themes = [
                 `,
       },
       {
+        id:3,
         title: "Tipos de etiquetas [1]",
         content: `
                 <h2 id="1-tipos-de-etiquetas">1. Tipos de etiquetas</h2>
@@ -124,6 +130,7 @@ const themes = [
                 `,
       },
       {
+        id:4,
         title: "Display por defecto de los elementos",
         content: `
                 <h2 id="display-por-defecto-de-algunas-etiquetas">Display por defecto de algunas etiquetas</h2>
@@ -136,6 +143,7 @@ const themes = [
                 `,
       },
       {
+        id:5,
         title: "Tipos de etiquetas [2]",
         content: `
                 <h2 id="2-tipos-de-etiquetas">2. Tipos de etiquetas</h2>
@@ -288,6 +296,7 @@ const themes = [
                 `,
       },
       {
+        id:6,
         title: "Errores comunes en HTML",
         content: `
                 <h2 id="errores-comunes-en-html">Errores comunes en HTML</h2>
@@ -303,6 +312,7 @@ const themes = [
     name: "css",
     contents: [
       {
+        id:0,
         title: "Introducción a CSS",
         content: `
                 <h2 id="introduccion-a-css">Introduccion a CSS</h2>
@@ -333,6 +343,7 @@ const themes = [
                 `,
       },
       {
+        id:1,
         title: "Selectores",
         content:`
         <h2 id="selectores-en-css">Selectores en CSS</h2>
@@ -484,6 +495,7 @@ const themes = [
         `
       },
       {
+        id:2,
         title: "Especificidad",
         content:`<h2 id="especificidad">Especificidad</h2>
         <p>Bueno ahora, ya vistos los selectores vamos a ver especificidad 😈. La especificidad se da generalmente cuando das estilos a diferentes cosas en una pagina web y surgen conflictos en los estilos, esto es algo muy comun cuando estas desarrollando una pagina. Suponete que tenes un parrafo con la clase &quot;lala&quot; y en algun punto de tu hoja de estilos das estilos tanto a la clase como a los parrafos ¿Que estilo deberia conservar? Bueno, esto lo resuelve la especificidad.</p>
@@ -534,6 +546,7 @@ const themes = [
         `
     },
       {
+        id:3,
         title: "Unidades de medida",
         content:`<h2 id="unidades-de-medida">Unidades de medida</h2>
         <p>Antes de ponernos a ver propiedades de texto, vamos a ver unidades de medida, seguro ya estas hasta el cuello de solo conocer la propiedad color, pero bueno, primero, antes de conocer propiedades que nos van a venir re bien y van a ser divertidas, tenemos que saber como medir, ¿Solo vamos a usar pixeles? obvio que no, por eso vamos a ver esto, presta atencion.</p>
@@ -570,6 +583,7 @@ const themes = [
         `
     },
       {
+        id:4,
         title: "Propiedades de texto",
         content: `<h2 id="propiedades-de-texto">Propiedades de texto</h2>
                 <p>Aleluya! al fin vamos a ver propiedades copadas para estilizar nuestras webs. Atentis.</p>
@@ -615,6 +629,7 @@ const themes = [
                 </code></pre>`,
       },
       {
+          id:5,
           title:"Usar tipografias externas",
           content:`<h2 id="tipografias-externas">Tipografias externas</h2>
           <p>Imaginate que queres poner una tipografia cualquiera ¿no? bueno, voy a mostrar un ejemplo con <a href="https://fonts.google.com/">google fonts</a>. Cuando vas a google fonts elegis una tipografia y copias el link de la tipografia:</p>
@@ -639,6 +654,7 @@ const themes = [
           `
       },
       {
+          id:6,
           title:"Normalize",
           content:`<h2 id="normalize">Normalize</h2>
           <p>Los navegadores SIEMPRE traen un estilo por defecto. Por eso por ejemplo, cuando ponemos un h1 sin estilos, esta en negrita por defecto o tambien debido a eso es su tamaño. ¿Entonces que haces? usamos el normalize para reiniciar los estilos. ¿Como lo ponemos? googleamos <a href="https://necolas.github.io/normalize.css/">normalize.css</a> y abrimos el primero que nos salga. Descargamos el archivo y lo colocamos en el directorio del proyecto.</p>
@@ -698,6 +714,7 @@ const themes = [
           `
       },
       {
+          id:7,
           title:"Introduccion al display",
           content:`<h2 id="introduccion-al-display">Introduccion al display</h2>
           <p>¿Te acordas cuando te explique el tema de las cajas en bloque y en linea en la parte de HTML? Bueno, hay maneras de hacer que, por ejemplo, un h1 se comporte como un elemento en linea, haciendo que la caja se ajuste al contenido, algo como esto:</p>
@@ -733,6 +750,7 @@ const themes = [
       `
       },
       {
+          id:8,
           title:"Propiedades de cajas",
           content:`<h2 id="propiedades-de-cajas">Propiedades de cajas</h2>
           <h3 id="background-color">background-color</h3>
@@ -907,6 +925,7 @@ const themes = [
           `
       },
       {
+          id:9,
           title:"Outline",
           content:`<h2 id="outline">Outline</h2>
           <p>¿Qué es el outline? Bueno, es un shorthand. Bueno ya sé, pero en si, ¿Qué es outline? Outline es como un border, pero sin afectar a las demas cajas ni a la misma caja, es decir, no ocupa un espacio real. Dicho de la manera correcta, no ocupa un espacio en el DOM ¿Qué es el DOM? Es el document object model, son todos los elementos que estan dentro de nuestra pagina.</p>

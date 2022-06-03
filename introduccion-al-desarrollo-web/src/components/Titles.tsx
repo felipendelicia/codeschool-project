@@ -1,21 +1,22 @@
 import "../styles/Titles.css";
 
 const Titles = (props: {
-  currentMdContent: { title: string; content: string }[];
+  currentMdContent: { id: number; title: string; content: string }[];
   currentContent: string;
+  changeContent: (id:number)=>void;
 }) => {
   return (
     <div className="title-component-container">
       {props.currentMdContent.map((content, i) => {
-        if (content.title === props.currentContent) {
-          return (
-            <p key={i} id="content-title-active">
-              {content.title}
-            </p>
-          );
-        } else {
-          return <p key={i}>{content.title}</p>;
-        }
+        return (
+          <p
+            key={i}
+            id={props.currentContent===content.title?"content-title-active":""}
+            onClick={()=>props.changeContent(content.id)}
+          >
+            {content.title}
+          </p>
+        );
       })}
     </div>
   );

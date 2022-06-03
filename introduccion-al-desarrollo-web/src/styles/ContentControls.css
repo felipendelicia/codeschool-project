@@ -1,0 +1,10 @@
+.content-component-controls{
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-component-controls span{
+    font-size: 1.2em;
+}
