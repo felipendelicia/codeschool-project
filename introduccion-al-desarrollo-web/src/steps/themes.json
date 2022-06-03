@@ -13,7 +13,16 @@
         "contents":[
             {
                 "title":"Instalacion del editor de texto",
-                "content":""
+                "content":"<div><h2>Instalación del editor de texto</h2><p>Las utilidades básicas de todos los editores de texto son las mismas. Todos ofrecen un lugar para interactuar con el texto y la mayoría disponen de una opción de codificación de colores basada en la sintaxis. También proporcionan teclas de acceso rápido y funciones de texto intuitivas. A fin de cuentas, hacen que escribir codigo sea mas facil!</p><h3>Entrá en la <a href='https://code.visualstudio.com/Download' target='_blank'>página de descarga</a> de VS Code</h3><p>Una vez dentro de la pagina de descarga de vs code, elegir versión en función de tu sistema operativo. Una vez tengas el instalador, abrilo y dale todo siguiente.</p><img src='https://user-images.githubusercontent.com/84806140/169602174-8d254c26-721a-48ee-9f10-c2f44209baab.png' alt='VS Code Download page'/><span><a href='https://youtu.be/ITxcbrfEcIY' target='_blank'>Set up Visual Studio Code</a> : Video oficial instalación y nociones basicas del editor 🤙.</span></div>"
+            }
+        ]
+    },
+    {
+        "name":"html",
+        "contents":[
+            {
+                "title":"Introducción al HTML",
+                "content":"<div><h2>Introducción a HTML</h2><h3>¿Qué carajo es HTML?</h3><p>HTML, con siglas en inglés es HyperText Markup Language (Lenguaje de marcado de hipertexto).</p><h3>¿Para qué sirve HTML?</h3><p>HTML es el lenguaje con el agarramos 'cajitas' o elementos y las ponemos en distintos lugares de la pagina. Despues, con CSS agarramos y les damos un estilo, un color, un ancho, un posición. Es decir, la función de este lenguaje es meramente estrutural.</p><span>'Solamente ponemos las cajitas'</span><h3>¿Cómo es la sintaxis de HTML?</h3><p>En HTML, las 'cajitas' que colocamos se colocan mediante etiquetas o tags que escribimos en nuestro archivo HTML. Las etiquetas pueden abrirse y cerrarse con una etiqueta de cierre:</p><linecode>&lt;etiqueta&gt; Contenido &lt;/etiqueta&gt;</linecode><p>O bien abrirse y cerrarse en la misma etiqueta:</p><linecode>&lt;etiqueta &gt;</linecode><p>Algunas de nuestras etiquetas pueden poseer atributos o propiedades con su propio valor:</p><linecode>&lt;etiqueta atributo='valor'&gt; Contenido &lt;/etiqueta&gt;</linecode><p>o</p><linecode>&lt;etiqueta atributo='valor'/&gt;</linecode></div>"
             }
         ]
     }
