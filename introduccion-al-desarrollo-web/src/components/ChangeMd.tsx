@@ -11,8 +11,8 @@ const ChangeMd = () => {
       {routes.map((route, i) => {
         let randomEmoji = emojis.split(" ")[Math.floor(Math.random()*emojis.split(" ").length)];
         return (
-          <Link to={route.path}>
-            <p key={i}>{(i+1).toString() + " " + randomEmoji + " " +route.title}</p>
+          <Link to={route.path} key={i}>
+            <p>{(i+1).toString() + " " + randomEmoji + " " +route.title}</p>
           </Link>
         );
       })}

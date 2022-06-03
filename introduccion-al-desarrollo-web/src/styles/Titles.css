@@ -19,3 +19,23 @@
 }
 
 .title-component-container #content-title-active:hover{font-size: 1.2em;}
+
+@media (max-width: 1000px){
+    .title-component-container p{
+        color:#000000;
+        font-size: 2em;
+        margin-bottom: 0.5em;
+    }
+    
+    .title-component-container p:hover{
+        font-size: 2.2em;
+    }
+    
+    .title-component-container #content-title-active{
+        border-left: 2px solid #4ed159;
+        font-weight: 700;
+        color: #4ed159;
+    }
+    
+    .title-component-container #content-title-active:hover{font-size: 2em;}
+}
