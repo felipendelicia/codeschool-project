@@ -2,12 +2,12 @@ import { useState } from "react";
 import ViewContainer from "../components/ViewContainer";
 import Content from "../components/Content";
 import Titles from "../components/Titles";
-import themes from "../steps/themes.json";
+import themes from "../steps/themes";
 import "../styles/Step.css";
 
 const Step = (props: { md: string }) => {
   const [md, setMd] = useState(props.md);
-  const [currentContentPage, setCurrentContentPage] = useState(1);
+  const [currentContentPage, setCurrentContentPage] = useState(9);
 
   let currentThemeContent = themes.find((theme) => {
     return theme.name === md;
