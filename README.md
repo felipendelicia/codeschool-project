@@ -9,15 +9,16 @@ A pesar de esta extensa introduccion, mi recomendacion personal es investigar ta
 
 | step | contenido | link |
 |--|--|--|
-|*Editor de texto*|Instalación de editor de texto: **VS CODE**|[ir](./introduccion-al-desarrollo-web/src/steps/md/Editor%20de%20texto/editorDeTextoIndex.md)|
-| *HTML* | Introducción a HTML. Etiquetas. Tipos de etiquetas. Estructuración básica. Concepto de HTML semántico. Errores comunes. | [ir](./introduccion-al-desarrollo-web/src/steps/md//htmlIndex.md) |
-| *CSS* | Introducción a CSS. Estructura. Selectores. Especificidad. Unidades. Propiedades de texto. Tipografias externas. Normalize. Display. Propiedades de caja. Outline. | [ir](./introduccion-al-desarrollo-web/src/steps/md/cssIndex.md) |
-| *Fundamentos de programación* |  | [ir](./introduccion-al-desarrollo-web/src/steps/md(md/Fundamentos%20de%20programacion/fundamentos-de-programacion.md)) |
-| *Javascript* |  | [ir](./introduccion-al-desarrollo-web/src/steps/md/Javascript/Javascript.md) |
-| *Bases de datos* |  | [ir](./introduccion-al-desarrollo-web/src/steps/md/Bases%20de%20datos/bases-de-datos.md) |
-| *Node JS* |  | [ir](./introduccion-al-desarrollo-web/src/steps/md/Node/NodeJS.md) |
-| *Express JS* |  | [ir](./introduccion-al-desarrollo-web/src/steps/md/Express/Express.md) |
-| *React JS* |  | [ir](./introduccion-al-desarrollo-web/src/steps/md/React/React.md) |
-| *Typescript* |  | [ir](./introduccion-al-desarrollo-web/src/steps/md/Typescript/Typescript.md) |
+|*introducción*|Introducción.|[ir](http://introduccion-al-desarrollo-web.netlify.app/)|
+|*Editor de texto*|Instalación de editor de texto: **VS CODE**|[ir](http://introduccion-al-desarrollo-web.netlify.app/editor-de-texto)|
+| *HTML* | Introducción a HTML. Etiquetas. Tipos de etiquetas. Estructuración básica. Concepto de HTML semántico. Errores comunes. | [ir](http://introduccion-al-desarrollo-web.netlify.app/html) |
+| *CSS* | Introducción a CSS. Estructura. Selectores. Especificidad. Unidades. Propiedades de texto. Tipografias externas. Normalize. Display. Propiedades de caja. Outline. | [ir](http://introduccion-al-desarrollo-web.netlify.app/css) |
+| *Fundamentos de programación* |  | [ir](http://introduccion-al-desarrollo-web.netlify.app/fundamentos-de-programacion) |
+| *Javascript* |  | [ir](http://introduccion-al-desarrollo-web.netlify.app/javascript) |
+| *Bases de datos* |  | [ir](http://introduccion-al-desarrollo-web.netlify.app/bases-de-datos) |
+| *Node JS* |  | [ir](http://introduccion-al-desarrollo-web.netlify.app/nodejs) |
+| *Express JS* |  | [ir](http://introduccion-al-desarrollo-web.netlify.app/express) |
+| *React JS* |  | [ir](http://introduccion-al-desarrollo-web.netlify.app/react) |
+| *Typescript* |  | [ir](http://introduccion-al-desarrollo-web.netlify.app/typescript) |
 
 > Dedicado a [Natalí Machaca](https://github.com/nattmnnm)
