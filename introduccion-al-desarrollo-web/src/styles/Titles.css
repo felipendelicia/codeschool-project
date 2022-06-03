@@ -1,0 +1,11 @@
+.title-component-container p{
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+    padding-left: 0.5em;
+}
+
+.title-component-container #content-title-active{
+    border-left: 2px solid #4ed159;
+    font-weight: 700;
+    color: #4ed159;
+}

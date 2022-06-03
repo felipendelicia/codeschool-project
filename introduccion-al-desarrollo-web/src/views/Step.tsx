@@ -24,7 +24,10 @@ const Step = (props: { md: string }) => {
         </div>
 
         <div className="step-titles-container">
-          <Titles currentMdContent={currentThemeContent!.contents} />
+          <Titles 
+          currentMdContent={currentThemeContent!.contents} 
+          currentContent={currentThemeContent!.contents[currentContentPage].title}
+          />
         </div>
 
       </div>

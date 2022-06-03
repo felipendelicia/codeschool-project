@@ -5,8 +5,10 @@
 
 .step-content-container{
     width: 70%;
+    padding: 2em 3em;
 }
 
 .step-titles-container{
     width: 30%;
+    padding: 1em 2em;
 }

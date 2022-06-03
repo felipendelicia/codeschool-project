@@ -6,7 +6,8 @@ const ViewContainer = (props:{children:JSX.Element}) => {
     <motion.div
     initial={animationStyles.initial}
     animate={animationStyles.animate}
-    exit={animationStyles.exit}>
+    exit={animationStyles.exit}
+    style={{overflow:"hidden"}}>
         {props.children}
     </motion.div>
   )
