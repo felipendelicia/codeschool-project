@@ -22,7 +22,7 @@ const themes = [
         id:0,
         title: "Instalacion del editor de texto",
         content: `
-                <h1 id="editor-de-texto-">Editor de texto ✍️</h1>
+                <h2 id="editor-de-texto-">Editor de texto ✍️</h2>
                 <p>Las utilidades básicas de todos los editores de texto son las mismas. Todos ofrecen un lugar para interactuar con el texto y la mayoría disponen de una opción de codificación de colores basada en la sintaxis. También proporcionan teclas de acceso rápido y funciones de texto intuitivas. A fin de cuentas, hacen que escribir codigo sea mas facil!</p>
                 <h3 id="entr-en-la-p-gina-de-descarga-https-code-visualstudio-com-download-de-vs-code">Entrá en la <a href="https://code.visualstudio.com/Download">página de descarga</a> de VS Code</h3>
                 <p>Una vez dentro de la pagina de descarga de vs code, elegir versión en función de tu sistema operativo. Una vez tengas el instalador, abrilo y dale todo siguiente.</p>
@@ -973,6 +973,76 @@ const themes = [
       
     ],
   },
+  {
+      name:"fundamentos_de_programacion",
+      contents:[
+          {
+              id:0,
+              title:"No hay",
+              content:"<h2>No la hice capo 😎</h2>"
+          }
+      ]
+  },
+  {
+      name:"javascript",
+      contents:[
+          {
+              id:0,
+              title:"No hay",
+              content:"<h2>No la hice capo 😎</h2>"
+          }
+      ]
+  },
+  {
+      name:"bases_de_datos",
+      contents:[
+          {
+              id:0,
+              title:"No hay",
+              content:"<h2>No la hice capo 😎</h2>"
+          }
+      ]
+  },
+  {
+      name:"nodejs",
+      contents:[
+          {
+              id:0,
+              title:"No hay",
+              content:"<h2>No la hice capo 😎</h2>"
+          }
+      ]
+  },
+  {
+      name:"express",
+      contents:[
+          {
+              id:0,
+              title:"No hay",
+              content:"<h2>No la hice capo 😎</h2>"
+          }
+      ]
+  },
+  {
+      name:"react",
+      contents:[
+          {
+              id:0,
+              title:"No hay",
+              content:"<h2>No la hice capo 😎</h2>"
+          }
+      ]
+  },
+  {
+      name:"typescript",
+      contents:[
+          {
+              id:0,
+              title:"No hay",
+              content:"<h2>No la hice capo 😎</h2>"
+          }
+      ]
+  }
 ];
 
 export default themes;

@@ -9,3 +9,8 @@ button {
   border: inherit;
   background-color: inherit;
 }
+
+a{
+  color: inherit;
+  text-decoration: inherit;
+}

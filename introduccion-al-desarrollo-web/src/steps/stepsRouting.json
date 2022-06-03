@@ -1,46 +1,57 @@
 [
     {
+        "title":"Introducción al proyecto",
         "name":"introduccion",
         "path":"/introduccion"
     },
     {
+        "title":"Editor de Texto",
         "name":"editor_de_texto",
         "path":"/editor-de-texto"
     },
     {
+        "title":"HTML",
         "name":"html",
         "path":"/html"
     },
     {
+        "title":"CSS",
         "name":"css",
         "path":"/css"
     },
     {
+        "title":"Fundamentos de Programación",
         "name":"fundamentos_de_programacion",
         "path":"/fundamentos-de-programacion"
     },
     {
+        "title":"Javascript",
         "name":"javascript",
         "path":"/javascript"
     },
     {
+        "title":"Bases de Datos",
         "name":"bases_de_datos",
         "path":"/bases-de-datos"
     },
     {
+        "title":"NodeJS",
         "name":"nodejs",
         "path":"/nodejs"
     },
     {
+        "title":"ExpressJS",
         "name":"express",
         "path":"/express"
     },
     {
+        "title":"ReactJS",
         "name":"react",
         "path":"/react"
     },
     {
-        "name":"Typescript",
+        "title":"Typescript",
+        "name":"typescript",
         "path":"/typescript"
     }
     

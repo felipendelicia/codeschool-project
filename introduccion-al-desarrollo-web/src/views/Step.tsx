@@ -2,6 +2,7 @@ import { useState } from "react";
 import ViewContainer from "../components/ViewContainer";
 import Content from "../components/Content";
 import Titles from "../components/Titles";
+import ChangeMd from "../components/ChangeMd";
 import themes from "../steps/themes";
 import "../styles/Step.css";
 
@@ -44,6 +45,7 @@ const Step = (props: { md: string }) => {
             }
             changeContent={(id: number) => changeContent(id)}
           />
+          <ChangeMd/>
         </div>
       </div>
     </ViewContainer>
