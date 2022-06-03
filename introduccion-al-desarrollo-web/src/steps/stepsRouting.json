@@ -1,42 +1,42 @@
 [
     {
-        "name":"Introducción",
+        "name":"introduccion",
         "path":"/introduccion"
     },
     {
-        "name":"Editor de texto",
+        "name":"editor_de_texto",
         "path":"/editor-de-texto"
     },
     {
-        "name":"HTML",
+        "name":"html",
         "path":"/html"
     },
     {
-        "name":"CSS",
+        "name":"css",
         "path":"/css"
     },
     {
-        "name":"Fundamentos de programación",
+        "name":"fundamentos_de_programacion",
         "path":"/fundamentos-de-programacion"
     },
     {
-        "name":"Javascript",
+        "name":"javascript",
         "path":"/javascript"
     },
     {
-        "name":"Bases de datos",
+        "name":"bases_de_datos",
         "path":"/bases-de-datos"
     },
     {
-        "name":"NodeJS",
+        "name":"nodejs",
         "path":"/nodejs"
     },
     {
-        "name":"Express",
+        "name":"express",
         "path":"/express"
     },
     {
-        "name":"React",
+        "name":"react",
         "path":"/react"
     },
     {

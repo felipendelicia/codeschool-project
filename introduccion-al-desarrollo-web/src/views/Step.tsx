@@ -1,19 +1,35 @@
-import ViewContainer from '../components/ViewContainer'
-import "../styles/Step.css"
+import { useState } from "react";
+import ViewContainer from "../components/ViewContainer";
+import Content from "../components/Content";
+import Titles from "../components/Titles";
+import themes from "../steps/themes.json";
+import "../styles/Step.css";
 
-const Step = () => {
+const Step = (props: { md: string }) => {
+  const [md, setMd] = useState(props.md);
+  const [currentContentPage, setCurrentContentPage] = useState(0);
+
+  let currentThemeContent = themes.find((theme) => {
+    return theme.name === md;
+  });
+
   return (
     <ViewContainer>
-        <div className="step-container-main">
-            <div className="step-content-container">
-                content
-            </div>
-            <div className="step-titles-container">
-                titles
-            </div>
+      <div className="step-container-main">
+        
+        <div className="step-content-container">
+          <Content
+            currentContent={currentThemeContent!.contents[currentContentPage]}
+          />
         </div>
-    </ViewContainer>
-  )
-}
 
-export default Step
+        <div className="step-titles-container">
+          <Titles currentMdContent={currentThemeContent!.contents} />
+        </div>
+
+      </div>
+    </ViewContainer>
+  );
+};
+
+export default Step;
