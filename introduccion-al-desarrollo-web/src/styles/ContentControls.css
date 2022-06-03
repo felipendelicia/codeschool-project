@@ -7,4 +7,12 @@
 
 .content-component-controls span{
     font-size: 1.2em;
+    color: #000000;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+.content-component-controls span:hover{
+    color: #4ed159;
+    font-size: 1.25em;
 }

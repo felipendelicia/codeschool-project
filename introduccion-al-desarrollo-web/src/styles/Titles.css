@@ -1,7 +1,15 @@
 .title-component-container p{
+    color:#000000;
     font-size: 1.2em;
     margin-bottom: 0.2em;
     padding-left: 0.5em;
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+}
+
+.title-component-container p:hover{
+    color: #4ed159;
+    font-size: 1.25em;
 }
 
 .title-component-container #content-title-active{
@@ -9,3 +17,5 @@
     font-weight: 700;
     color: #4ed159;
 }
+
+.title-component-container #content-title-active:hover{font-size: 1.2em;}

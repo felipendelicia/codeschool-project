@@ -8,4 +8,11 @@
     font-size: 1.2em;
     margin-bottom: 0.2em;
     padding-left: 0.5em;
+    color: #000000;
+    transition: all 200ms ease-in-out;
+}
+
+.changemd-component-container p:hover{
+    color: #4ed159;
+    font-size: 1.25em;
 }
