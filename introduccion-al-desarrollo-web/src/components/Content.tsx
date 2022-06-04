@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import "../styles/Content.css";
 import "../styles/ContentControls.css";
 

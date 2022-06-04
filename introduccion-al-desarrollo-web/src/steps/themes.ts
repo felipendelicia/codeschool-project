@@ -42,14 +42,14 @@ const themes = [
         title: "🧱👷 Introducción al HTML",
         content: `
                 <h2>Introducción al HTML 🧱👷</h2>
-                <h3 id="-qu-carajo-es-html-">¿Qué carajo es HTML?</h3>
+                <h3>¿Qué carajo es HTML?</h3>
                 <p>HTML, con siglas en inglés es HyperText Markup Language (Lenguaje de marcado de hipertexto).</p>
-                <h3 id="-para-qu-sirve-html-">¿Para qué sirve HTML?</h3>
+                <h3>¿Para qué sirve HTML?</h3>
                 <p>HTML es el lenguaje con el agarramos &quot;cajitas&quot; o elementos y las ponemos en distintos lugares de la pagina. Despues, con CSS agarramos y les damos un estilo, un color, un ancho, un posición. Es decir, la función de este lenguaje es meramente estrutural.</p>
                 <blockquote>
                 <p>&quot;Solamente ponemos las cajitas&quot;</p>
                 </blockquote>
-                <h3 id="-c-mo-es-la-sintaxis-de-html-">¿Cómo es la sintaxis de HTML?</h3>
+                <h3>¿Cómo es la sintaxis de HTML?</h3>
                 <p>En HTML, las &quot;cajitas&quot; que colocamos se colocan mediante etiquetas o tags que escribimos en nuestro archivo HTML. Las etiquetas pueden abrirse y cerrarse con una etiqueta de cierre:</p>
                 <p><code>&lt;etiqueta&gt; Contenido &lt;/etiqueta&gt;</code></p>
                 <p>O bien abrirse y cerrarse en la misma etiqueta:</p>
