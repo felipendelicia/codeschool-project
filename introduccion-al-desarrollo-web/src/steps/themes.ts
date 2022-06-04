@@ -3,7 +3,7 @@ const themes = [
     name: "introduccion",
     contents: [
       {
-        id:0,
+        id: 0,
         title: "👨‍💻🥇 Introduccion",
         content: `
                 <h2 id="introducci-n-al-desarrollo-web-">Introducción al desarrollo web 👨‍💻🥇</h2>
@@ -19,7 +19,7 @@ const themes = [
     name: "editor_de_texto",
     contents: [
       {
-        id:0,
+        id: 0,
         title: "✍️ Instalacion del editor de texto",
         content: `
                 <h2>Editor de texto ✍️</h2>
@@ -38,7 +38,7 @@ const themes = [
     name: "html",
     contents: [
       {
-        id:0,
+        id: 0,
         title: "🧱👷 Introducción al HTML",
         content: `
                 <h2>Introducción al HTML 🧱👷</h2>
@@ -62,7 +62,7 @@ const themes = [
                 `,
       },
       {
-        id:1,
+        id: 1,
         title: "🏠 Estructura basica en HTML",
         content: `
                 <h2 id="estructura-b-sica-html">Estructura básica HTML 🏠</h2>
@@ -95,7 +95,7 @@ const themes = [
                 `,
       },
       {
-        id:2,
+        id: 2,
         title: "👅 Introducción al HTML semantico",
         content: `
                 <h2 id="introducci-n-al-html-semantico">Introducción al HTML semantico 👅</h2>
@@ -103,7 +103,7 @@ const themes = [
                 `,
       },
       {
-        id:3,
+        id: 3,
         title: "🏷️1️⃣ Tipos de etiquetas",
         content: `
                 <h2 id="1-tipos-de-etiquetas">1. Tipos de etiquetas 🏷️1️⃣</h2>
@@ -131,7 +131,7 @@ const themes = [
                 `,
       },
       {
-        id:4,
+        id: 4,
         title: "🖥️ Display por defecto de los elementos",
         content: `
                 <h2 id="display-por-defecto-de-algunas-etiquetas">Display por defecto de algunas etiquetas 🖥️</h2>
@@ -144,7 +144,7 @@ const themes = [
                 `,
       },
       {
-        id:5,
+        id: 5,
         title: "🏷️2️⃣ Tipos de etiquetas",
         content: `
                 <h2 id="2-tipos-de-etiquetas">2. Tipos de etiquetas 🏷️2️⃣</h2>
@@ -297,7 +297,7 @@ const themes = [
                 `,
       },
       {
-        id:6,
+        id: 6,
         title: "❌ Errores comunes en HTML",
         content: `
                 <h2 id="errores-comunes-en-html">Errores comunes en HTML ❌</h2>
@@ -313,7 +313,7 @@ const themes = [
     name: "css",
     contents: [
       {
-        id:0,
+        id: 0,
         title: "🎨🍭 Introducción a CSS",
         content: `
                 <h2 id="introduccion-a-css">Introduccion a CSS 🎨🍭</h2>
@@ -344,9 +344,9 @@ const themes = [
                 `,
       },
       {
-        id:1,
+        id: 1,
         title: "👉🙋 Selectores",
-        content:`
+        content: `
         <h2 id="selectores-en-css">Selectores en CSS 🙋👈</h2>
         <p>Bueno bien, ahora que tenemos esto en cuenta vamos a ver las distintas formas que tenemos de seleccionar.</p>
         <h3 id="universal">Universal</h3>
@@ -493,12 +493,12 @@ const themes = [
         <p><img src="https://user-images.githubusercontent.com/84806140/170512247-71074006-4be7-4338-8ebd-0f285655b1b2.png" alt="for pseudo-clase" title="Por pseudo-clase"></p>
         <p>( No se si se aprecia en la imagen, sin embargo, creeme estoy pasandole el mouse :) )</p>
         <p>Hay más formas de seleccion, sin embargo, por ahora, en esta introduccion nos quedamos con las mas basicas. <a href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors">Ver todos los selectores.</a></p>
-        `
+        `,
       },
       {
-        id:2,
+        id: 2,
         title: "📍📎 Especificidad",
-        content:`<h2 id="especificidad">Especificidad 📍📎</h2>
+        content: `<h2 id="especificidad">Especificidad 📍📎</h2>
         <p>Bueno ahora, ya vistos los selectores vamos a ver especificidad 😈. La especificidad se da generalmente cuando das estilos a diferentes cosas en una pagina web y surgen conflictos en los estilos, esto es algo muy comun cuando estas desarrollando una pagina. Suponete que tenes un parrafo con la clase &quot;lala&quot; y en algun punto de tu hoja de estilos das estilos tanto a la clase como a los parrafos ¿Que estilo deberia conservar? Bueno, esto lo resuelve la especificidad.</p>
         <p>Para solucionar este problema, te voy a mostrar las formas de seleccion de la menos especifica a la más especifica:</p>
         <blockquote>
@@ -544,12 +544,12 @@ const themes = [
             <span class="hljs-attribute">color</span>:red <span class="hljs-meta">!important</span>
         }
         </code></pre><p>De esta manera, no hay manera de que los h1 no se hagan rojos.</p>
-        `
-    },
+        `,
+      },
       {
-        id:3,
+        id: 3,
         title: "📏 Unidades de medida",
-        content:`<h2 id="unidades-de-medida">Unidades de medida 📏</h2>
+        content: `<h2 id="unidades-de-medida">Unidades de medida 📏</h2>
         <p>Antes de ponernos a ver propiedades de texto, vamos a ver unidades de medida, seguro ya estas hasta el cuello de solo conocer la propiedad color, pero bueno, primero, antes de conocer propiedades que nos van a venir re bien y van a ser divertidas, tenemos que saber como medir, ¿Solo vamos a usar pixeles? obvio que no, por eso vamos a ver esto, presta atencion.</p>
         <p>Para el transcurso de este &quot;capitulo&quot; vamos a usar el siguiente codigo:</p>
         <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
@@ -581,10 +581,10 @@ const themes = [
         </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/170531241-bee46791-0ec3-4c63-bbf3-f07cd103d463.png" alt="vw" title="vw"></p>
         <p>Como pueden ver tiene un ancho de la mitad de la pantalla (contiene margin y padding, eso luego nos vamos a encargar de definirlo). De la misma manera puede trabajarse con el vh.</p>
         <p>Y finalmente, cuando hablamos de porcentaje, hacemos alucion al contenedor de nuestro elemento, es decir, por ejemplo, si te digo que le des un width (ancho) de 50% a un elemento, este va a adoptar un ancho del 50% de su contenedor. Asi de simple.</p>
-        `
-    },
+        `,
+      },
       {
-        id:4,
+        id: 4,
         title: "✏️ Propiedades de texto",
         content: `<h2 id="propiedades-de-texto">Propiedades de texto ✏️</h2>
                 <p>Aleluya! al fin vamos a ver propiedades copadas para estilizar nuestras webs. Atentis.</p>
@@ -630,9 +630,9 @@ const themes = [
                 </code></pre>`,
       },
       {
-          id:5,
-          title:"🅰️ Usar tipografias externas",
-          content:`<h2 id="tipografias-externas">Tipografias externas 🅰️</h2>
+        id: 5,
+        title: "🅰️ Usar tipografias externas",
+        content: `<h2 id="tipografias-externas">Tipografias externas 🅰️</h2>
           <p>Imaginate que queres poner una tipografia cualquiera ¿no? bueno, voy a mostrar un ejemplo con <a href="https://fonts.google.com/">google fonts</a>. Cuando vas a google fonts elegis una tipografia y copias el link de la tipografia:</p>
           <p><img src="https://user-images.githubusercontent.com/84806140/170845328-7e49c268-d216-4ca0-8dd9-2ccb6f792dce.png" alt="google-fonts" title="google fonts"></p>
           <p>Una vez copiado lo pegas en el head:</p>
@@ -652,12 +652,12 @@ const themes = [
           </code></pre><p>Una vez pegado, ¿Como lo implementamos? Facil, google te dice como:</p>
           <p><img src="https://user-images.githubusercontent.com/84806140/170845368-a436db51-d350-457c-8684-42459f0f5335.png" alt="google font css" title="google font css"></p>
           <p>¿Porqué tiene sans-serif separado por coma? Debido a que si no se encuentra la primera tipografia por lo que sea, vamos a buscar la segunda.</p>
-          `
+          `,
       },
       {
-          id:6,
-          title:"🪖🎖️ Normalize",
-          content:`<h2 id="normalize">Normalize 🪖🎖️</h2>
+        id: 6,
+        title: "🪖🎖️ Normalize",
+        content: `<h2 id="normalize">Normalize 🪖🎖️</h2>
           <p>Los navegadores SIEMPRE traen un estilo por defecto. Por eso por ejemplo, cuando ponemos un h1 sin estilos, esta en negrita por defecto o tambien debido a eso es su tamaño. ¿Entonces que haces? usamos el normalize para reiniciar los estilos. ¿Como lo ponemos? googleamos <a href="https://necolas.github.io/normalize.css/">normalize.css</a> y abrimos el primero que nos salga. Descargamos el archivo y lo colocamos en el directorio del proyecto.</p>
           <p>Yo lo guardé como:</p>
           <blockquote>
@@ -712,12 +712,12 @@ const themes = [
           }
           </code></pre><p>Mas adelante entenderemos que significan estos conceptos. Fue, nos quedaria una pagina como esta:</p>
           <p><img src="https://user-images.githubusercontent.com/84806140/170845853-bf913cda-ef91-4f87-a8f3-2109525fa997.png" alt="normalize" title="nomalize"></p>
-          `
+          `,
       },
       {
-          id:7,
-          title:"🖥️ Introduccion al display",
-          content:`<h2 id="introduccion-al-display">Introduccion al display 🖥️</h2>
+        id: 7,
+        title: "🖥️ Introduccion al display",
+        content: `<h2 id="introduccion-al-display">Introduccion al display 🖥️</h2>
           <p>¿Te acordas cuando te explique el tema de las cajas en bloque y en linea en la parte de HTML? Bueno, hay maneras de hacer que, por ejemplo, un h1 se comporte como un elemento en linea, haciendo que la caja se ajuste al contenido, algo como esto:</p>
           <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Aprendiendo CSS<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
@@ -748,12 +748,12 @@ const themes = [
               <span class="hljs-attribute">width</span>: <span class="hljs-number">300px</span>;
           }
           </code></pre><p>De esta manera, estaria funcionando. Mas adelante en esta introduccion seguiremos viendo distintos displays.</p>
-      `
+      `,
       },
       {
-          id:8,
-          title:"📦📝 Propiedades de cajas",
-          content:`<h2 id="propiedades-de-cajas">Propiedades de cajas 📦📝</h2>
+        id: 8,
+        title: "📦📝 Propiedades de cajas",
+        content: `<h2 id="propiedades-de-cajas">Propiedades de cajas 📦📝</h2>
           <h3 id="background-color">background-color</h3>
           <p>Ya habiamos mirado un poco lo que era background color. Background color es el color de fondo de determinada caja. Vamos a ver un ejemplo de como poner una caja color negro, por ejemplo:</p>
           <pre><code><span class="hljs-selector-tag">h1</span>{
@@ -923,12 +923,12 @@ const themes = [
           </tr>
           </tbody>
           </table>
-          `
+          `,
       },
       {
-          id:9,
-          title:"〽🔲 Outline",
-          content:`<h2 id="outline">Outline 〽🔲</h2>
+        id: 9,
+        title: "〽🔲 Outline",
+        content: `<h2 id="outline">Outline 〽🔲</h2>
           <p>¿Qué es el outline? Bueno, es un shorthand. Bueno ya sé, pero en si, ¿Qué es outline? Outline es como un border, pero sin afectar a las demas cajas ni a la misma caja, es decir, no ocupa un espacio real. Dicho de la manera correcta, no ocupa un espacio en el DOM ¿Qué es el DOM? Es el document object model, son todos los elementos que estan dentro de nuestra pagina.</p>
           <p><img src="https://www.freecodecamp.org/news/content/images/2021/09/Document.jpg" alt="dom" title="dom"></p>
           <p>Bueno vamos a aprenderlo con un ejemplo. Para empezar imaginate estos estilos y estructura:</p>
@@ -969,102 +969,336 @@ const themes = [
           }
           </code></pre><p>Si hacemos este minimo cambio, mira el resultado que logramos:</p>
           <p><img src="https://user-images.githubusercontent.com/84806140/170849104-7d558882-5d26-4f0c-87b0-1e0312e866c2.png" alt="outline" title="outline"></p>
-          `
-      }
-      
+          `,
+      },
+      {
+        id: 10,
+        title: "🧘‍♀️🙆🏻‍♂️ Position",
+        content: `<h2 id="position-">Position 🧘‍♀️🙆🏻‍♂️</h2>
+          <p>Bueno, lo que vamos a ver ahora es el position que es re importante en CSS, che. Asi que prestá atención. Para empezar te voy a decir que vamos a usar este codigo en el documento HTML:</p>
+          <pre><code>&lt;body&gt;
+              &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"caja-1"</span>&gt;Caja <span class="hljs-number">1</span> 📦&lt;/<span class="hljs-keyword">div</span>&gt;
+              &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"caja-2"</span>&gt;Caja <span class="hljs-number">2</span> 📦&lt;/<span class="hljs-keyword">div</span>&gt;
+              &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"caja-3"</span>&gt;Caja <span class="hljs-number">3</span> 📦&lt;/<span class="hljs-keyword">div</span>&gt;
+              &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"caja-4"</span>&gt;Caja <span class="hljs-number">4</span> 📦&lt;/<span class="hljs-keyword">div</span>&gt;
+          &lt;/body&gt;
+          </code></pre><p>Y para el codigo CSS vamos a usar algo asi, mirá:</p>
+          <pre><code><span class="hljs-selector-tag">div</span> {
+              <span class="hljs-attribute">font-weight</span>: bold;
+              <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.5em</span>;
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">120px</span>;
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">120px</span>;
+              <span class="hljs-attribute">display</span>: block;
+          }
+          
+          <span class="hljs-selector-class">.caja-1</span> {
+              <span class="hljs-attribute">background-color</span>:red;
+          }
+          <span class="hljs-selector-class">.caja-2</span> {
+              <span class="hljs-attribute">background-color</span>:lightblue;
+          }
+          <span class="hljs-selector-class">.caja-3</span> {
+              <span class="hljs-attribute">background-color</span>:yellow;
+          }
+          <span class="hljs-selector-class">.caja-4</span> {
+              <span class="hljs-attribute">background-color</span>:green;
+          }
+          </code></pre><p>Finalmente deberias tener un resultado asi:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172024006-3722ad49-9b5a-4377-ab0e-3631a13f00d3.png" alt="position" title="position"></p>
+          <p>Bueno ahora con esto asi, quiero que comprendamos la propiedad del position. Position lo que hace posicionar los elementos, tan simple como eso, agarramos un elemento y lo posicionamos ¿Qué significa que un elemento este posicionado? Simplemente significa que adquiere nuevas propiedades y va a afectar al flujo de HTML.</p>
+          <p>Estas propiedades que adquiere nos permiten hacer varias cosas, por ejemplo: &quot;top&quot;, &quot;right&quot;, &quot;left&quot;, &quot;bottom&quot;, &quot;z-index&quot;, que ahora las vamos a ver mas profundamente.</p>
+          <p>¿Qué valores puede recibir position?</p>
+          <h3 id="static">Static</h3>
+          <p>Que es el valor por defecto, osea, si le damos este valor, en realidad no estaria posicionado debido a que no adquiere las propiedades de un elemento si posicionado.</p>
+          <h3 id="relative">Relative</h3>
+          <p>Bien, vamos a arrancar por relative. Para empezar, cuando posicionas un elemento de forma relative, parece que no cambia nada, pero no es asi. Veamos, vamos a agarrar la caja 2 y la vamos a posicionar:</p>
+          <pre><code><span class="hljs-selector-class">.caja-2</span> {
+              <span class="hljs-attribute">background-color</span>:lightblue;
+              <span class="hljs-attribute">position</span>: relative;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172024006-3722ad49-9b5a-4377-ab0e-3631a13f00d3.png" alt="positionRelative" title="position relative"></p>
+          <p>Como ven, al agregar el position relative &quot;no cambia nada&quot;. Vamos a ver que cambio. Suponete que le damos la propiedad top a la caja 1, de la siquiente manera:</p>
+          <pre><code><span class="hljs-selector-class">.caja-1</span> {
+              <span class="hljs-attribute">background-color</span>:red;
+              <span class="hljs-attribute">top</span>: <span class="hljs-number">20px</span>;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172024006-3722ad49-9b5a-4377-ab0e-3631a13f00d3.png" alt="positionRelative" title="position relative"></p>
+          <p>Nuevamente, esta vez no paso nada. Sin embargo, si a nuestra caja <strong>posicionada</strong> le damos un top de 20px mirá lo que pasa:</p>
+          <pre><code><span class="hljs-selector-class">.caja-2</span> {
+              <span class="hljs-attribute">background-color</span>:lightblue;
+              <span class="hljs-attribute">position</span>: relative;
+              <span class="hljs-attribute">top</span>: <span class="hljs-number">20px</span>;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172024454-a211e121-5879-45b3-b632-09db14b317bc.png" alt="positionRelative" title="position relative"></p>
+          <p>Re zarpada esta propiedad, es buenisima para posicionar. Bueno... Todo muy lindo, pero ¿Porque paso esto? Esto paso porque cuando posicionamos un elemento adquiere cuatro propiedades nuevas: top, right, left, bottom. Las mas importantes son top y left. Si te fijas en el ejemplo, le di un top de 20px y se movio 20px para abajo. Otro detalle importantisimo es que el espacio reservado del DOM que ocupa la caja lo guardo y conservo. Este ultimo lo voy a explicar con otro ejemplo, suponete esto:</p>
+          <pre><code><span class="hljs-selector-class">.caja-2</span> {
+              <span class="hljs-attribute">background-color</span>:lightblue;
+              <span class="hljs-attribute">position</span>: relative;
+              <span class="hljs-attribute">top</span>: <span class="hljs-number">300px</span>;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172024611-17136d21-90e5-4a36-8d8c-a88e64ca6106.png" alt="positionRelative" title="position relative"></p>
+          <p>Fijate que la cajita 2 se va re lejos pero a pesar de posicionarse en cualquier lugar, esta conserva su espacio reservado.</p>
+          <p>Otra particularidad del position relative es que cuando posiciono con un top, por ejemplo, el punto de referencia es el mismo espacio reservado de la caja. En criollo, los 300px que bajo la caja 2 fue desde su espacio reservado:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172024712-e28bb382-968e-44a1-8fdf-d493170c4e21.png" alt="positionRelative" title="position relative"></p>
+          <p>Ahora hablemos un poco mas de left, right y bottom, es algo muy similar a lo que pasa con top, nada mas que en otra direccion, pongamos un ejemplo:</p>
+          <pre><code><span class="hljs-selector-class">.caja-2</span> {
+              <span class="hljs-attribute">background-color</span>:lightblue;
+              <span class="hljs-attribute">position</span>: relative;
+              <span class="hljs-attribute">bottom</span>: <span class="hljs-number">10px</span>;
+              <span class="hljs-attribute">left</span>: <span class="hljs-number">60px</span>;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172024780-cbfb08b4-f9d9-4d60-ab82-72a8e624b96b.png" alt="positionRelative" title="position relative"></p>
+          <p>Finalmente, lo que todos esperaban, ¿Qué pasa si a mi caja le doy un bottom y un top?</p>
+          <pre><code><span class="hljs-selector-class">.caja-2</span> {
+              <span class="hljs-attribute">background-color</span>:lightblue;
+              <span class="hljs-attribute">position</span>: relative;
+              <span class="hljs-attribute">top</span>: <span class="hljs-number">10px</span>;
+              <span class="hljs-attribute">bottom</span>: <span class="hljs-number">10px</span>;
+          }
+          </code></pre><p>¿Que creen que hara el navegador? ¿hacerle caso al bottom y al top? ¿hacerle caso a uno solo? veamos...</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172024857-10d06f69-0291-482f-bb37-59e648a04166.png" alt="positionRelative" title="position relative"></p>
+          <p>Basicamente, no le dió pelota al bottom y se quedo con el top. La explicacion de esto es que frente a las otras dos, top y left, tienen la prioridad.</p>
+          <p>Ademas de estas cuatro propiedades que te comenté que agrega el posicionamiento, tambien añade uno llamado <strong>z-index</strong>. El z-index es como la tercera dimension de las webs (por eso &quot;z&quot;-index, porque es el eje z de los elementos), es lo que define que elemento esta encima del otro, a mayor z-index, estara posicionado mas arriba de los demas elementos.</p>
+          <p>Vamos a explicar esto con un ejemplo, te tiro los estilos:</p>
+          <pre><code><span class="hljs-selector-class">.caja-2</span> {
+              <span class="hljs-attribute">background-color</span>:lightblue;
+              <span class="hljs-attribute">position</span>: relative;
+              <span class="hljs-attribute">top</span>: <span class="hljs-number">40px</span>;
+              <span class="hljs-attribute">left</span>: <span class="hljs-number">20px</span>;
+          }
+          </code></pre><p>Lo puse de esta manera para que nos quede la caja bien encimada a la otra:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172025055-1a5b4c76-711b-4d53-99bf-4160e0dc0bfe.png" alt="z-index" title="z-index"></p>
+          <p>Che! y mira si quiero poner la caja 3 por encima de la 2...¿Como hago? Bueno le damos un posicionamiento a la caja 3:</p>
+          <pre><code><span class="hljs-selector-class">.caja-3</span> {
+              <span class="hljs-attribute">background-color</span>:yellow;
+              <span class="hljs-attribute">position</span>: relative;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172025102-f62d5f80-2c63-4713-b5a8-048a4b591ab2.png" alt="z-index" title="z-index"></p>
+          <p>¿Porque pasa esto? Porque es el flujo con que se colocan los elementos en HTML, imaginate que el navegador dibuja la caja 1, despues dibuja la caja 2 y finalmente la 3. Claramente si dibujó la 3 despues de la caja 2 va a estar por encima. </p>
+          <p>Recapitulemos... El z-index funciona solamente cuando las cajas estan posicionadas. Si no esta posicionada, no va a funcionar. El z-index por defecto es 0. Osea que tanto la caja 2, como la 3 tienen un z-index de 0. Mirá, te voy a mostrar como poner la caja 2 nuevamente arriba sin importar que este posicionada la caja 3:</p>
+          <pre><code><span class="hljs-selector-class">.caja-2</span> {
+              <span class="hljs-attribute">background-color</span>:lightblue;
+              <span class="hljs-attribute">position</span>: relative;
+              <span class="hljs-attribute">top</span>: <span class="hljs-number">40px</span>;
+              <span class="hljs-attribute">left</span>: <span class="hljs-number">20px</span>;
+              <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172025055-1a5b4c76-711b-4d53-99bf-4160e0dc0bfe.png" alt="z-index" title="z-index"></p>
+          <p>Como caja 3 tiene un z-index de 0 y nuestra caja 2 tiene un z-index de 1 entonces se mostrara por encima, porque 1 es mayor que 0.</p>
+          <p>Te comento que ademas, suponete que tenes tu caja 3 asi y tenes que visualizar la caja 2 por ecima:</p>
+          <pre><code><span class="hljs-selector-class">.caja-3</span> {
+              <span class="hljs-attribute">background-color</span>:yellow;
+              <span class="hljs-attribute">position</span>: relative;
+              <span class="hljs-attribute">z-index</span>: <span class="hljs-number">10</span>;
+          }
+          </code></pre><p>Es simple, le doy un z-index de 11 a la caja 2. Si pero no, bastar, bastaria, pero suponete que en el futuro tenes un problema o queres agregar algo, no vas a tener un rango para poder agregar esa caja. Entonces, yo, Felipe, le daria un z-index de 60 a mi caja 2, por ejemplo.</p>
+          <h3 id="absolute">Absolute</h3>
+          <p>Position absolute es re parecido a position relative.</p>
+          <pre><code><span class="hljs-selector-class">.caja-1</span> {
+              <span class="hljs-attribute">background-color</span>:red;
+          }
+          <span class="hljs-selector-class">.caja-2</span> {
+              <span class="hljs-attribute">background-color</span>:lightblue;
+              <span class="hljs-attribute">position</span>: absolute;
+          }
+          <span class="hljs-selector-class">.caja-3</span> {
+              <span class="hljs-attribute">background-color</span>:yellow;
+          }
+          <span class="hljs-selector-class">.caja-4</span> {
+              <span class="hljs-attribute">background-color</span>:green;
+          }
+          </code></pre><p>Arranquemos asi ¿Que vemos?</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172025628-edc078b9-b2c5-4711-8af6-c2393df53281.png" alt="positionAbsolute" title="position absolute"></p>
+          <p>¿Como?¿Desaparecio la caja 3? Mmm... No, en realidad no desaparece. Vamos a darle una opacidad a la caja 2 para que podamos ver, la opacidad es basicamente la transparencia del elemento:</p>
+          <pre><code><span class="hljs-selector-class">.caja-2</span> {
+              <span class="hljs-attribute">background-color</span>:lightblue;
+              <span class="hljs-attribute">position</span>: absolute;
+              <span class="hljs-attribute">opacity</span>: .<span class="hljs-number">5</span>;
+          }
+          </code></pre><p>En CSS, cuando agrego una opacidad de .5 es lo mismo que decir 0.5, la opacidad vira entre 0 y 1, si doy opacidad 0, el elemento no se verá, si le doy opacidad 1, el elemento no tendra transparencia. En fin, esto es lo que vemos:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172025714-d07ade91-43f1-4bdc-9b4c-1b477bf51b93.png" alt="positionAbsolute" title="position absolute"></p>
+          <p>Como podemos ver esta la caja 3 ahi escondida atras de la caja 2 (puse la opacidad para que veas este detalle nada mas). Ahora bien ¿Porque se puso por debajo? Esto es porque el espacio reservado que se mantenia en el position relative, no se mantiene en position absolute. Por eso subió la caja 3, porque como no habia espacio de nadie donde estaba la caja dos, obvio que lo ocupó. </p>
+          <p>Ademas, ahora el punto de referencia cuando yo le doy un top 0px, por ejemplo, va a ser el contenedor o el viewport:</p>
+          <pre><code><span class="hljs-selector-class">.caja-2</span> {
+              <span class="hljs-attribute">background-color</span>:lightblue;
+              <span class="hljs-attribute">position</span>: absolute;
+              <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172025881-03619b8d-d1d1-4f85-859a-9ae98d459d45.png" alt="positionAbsolute" title="position absolute"></p>
+          <p>En este caso, el punto de referencia es el viewport, que es todo lo que podemos ver en la pagina:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172026002-7a53e67c-a5b7-4fef-aa18-55fa49bcc710.png" alt="viewport" title="viewport"></p>
+          <p>Ahora, ¿En que casos el contenedor se usa de referencia? Cuando está posicionado.</p>
+          <p>Vamos a usar este codigo:</p>
+          <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"contenedor"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span> hijo <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+          </code></pre><p>Y estos estilos:</p>
+          <pre><code><span class="hljs-selector-class">.contenedor</span>{
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">50vw</span>;
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">50vh</span>;
+              <span class="hljs-attribute">background-color</span>: blueviolet;
+          }
+          <span class="hljs-selector-class">.contenedor</span> <span class="hljs-selector-tag">div</span>{
+              <span class="hljs-attribute">position</span>: absolute;
+              <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+              <span class="hljs-attribute">color</span>: white;
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">20%</span>;
+              <span class="hljs-attribute">background-color</span>: black;
+          }
+          </code></pre><p>Va a pasar esto:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172026108-ce872e16-de05-44bb-8cb5-b13851ef318e.png" alt="positionAbsolute" title="position absolute"></p>
+          <p>Bueno, ya todos sabemos porque, simplemente esta usando el viewport como referencia porque el div contenedor no esta posicionado. ¿Y si posiciono?:</p>
+          <pre><code><span class="hljs-selector-class">.contenedor</span>{
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">50vw</span>;
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">50vh</span>;
+              <span class="hljs-attribute">background-color</span>: blueviolet;
+              <span class="hljs-attribute">position</span>: absolute;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172026153-585e5e13-190d-4bf4-928e-eeb8fcb21fae.png" alt="positionAbsolute" title="position absolute"></p>
+          <p>No digo mas. Está buenisimo.</p>
+          <h2 id="fixed">Fixed</h2>
+          <p>Fixed es igual que absolute pero queda &quot;fijado&quot;. Al igual que en absolute, fixed es sacado del flujo normal de HTML y pierde su lugar en el DOM. Vamos a ver un ejemplo:</p>
+          <pre><code>&lt;body&gt;
+              &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"fixed"</span>&gt; fijo!&lt;/<span class="hljs-keyword">div</span>&gt;
+              &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"contenido"</span>&gt;ESTE ES EL CONTENIDO DE ESTA PAGINA WEB&lt;/<span class="hljs-keyword">div</span>&gt;
+          &lt;/body&gt;
+          </code></pre><p>Estilos:</p>
+          <pre><code><span class="hljs-selector-class">.fixed</span>{
+              <span class="hljs-attribute">color</span>: <span class="hljs-number">#ffffff</span>;
+              <span class="hljs-attribute">background-color</span>: brown;
+              <span class="hljs-attribute">text-align</span>: center; <span class="hljs-comment">/* Centro el texto */</span>
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">100vw</span>;
+          }
+          
+          <span class="hljs-selector-class">.contenido</span>{
+              <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2em</span>;
+              <span class="hljs-attribute">text-align</span>: center;
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">300vh</span>;
+          }
+          </code></pre><p>Como pueden ver, doy un height bien grande para que podamos desarrollar mas scroll en la pagina y mostrar el ejemplo:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172026490-bba828ab-a4c8-40c1-8a16-f16f62d41254.png" alt="positionFixed" title="position fixed"></p>
+          <p>Ahora bien, si le doy un fixed al primer div pasará algo asi:</p>
+          <pre><code><span class="hljs-selector-class">.fixed</span>{
+              <span class="hljs-attribute">color</span>: <span class="hljs-number">#ffffff</span>;
+              <span class="hljs-attribute">background-color</span>: brown;
+              <span class="hljs-attribute">text-align</span>: center; <span class="hljs-comment">/* Centro el texto */</span>
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">100vw</span>;
+              <span class="hljs-attribute">position</span>: fixed;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172026562-8e666971-8c3f-43a2-9d2a-dccede128e3d.png" alt="positionFixed" title="position fixed"></p>
+          <p>Tal como un absolute, utiliza el viewport como referencia y se posiciono. Funciona tal como el absolute, la unica diferencia es que a medida que scrolleo en la pagina, mantendra su posicion fija:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172026590-f6cbca38-bd4c-4f9a-9894-403d922cec79.png" alt="positionFixed" title="position fixed"></p>
+          <h3 id="sticky">Sticky</h3>
+          <p>Es una mezcla rara de position fixed y position relative. Con sticky mantenemos el espacio del elemento en el DOM, al igual que el position relative. Y... ¿Porque fixed? Mirá:</p>
+          <p>Vamos a usar el codigo anterior, nomas cambié esto:</p>
+          <pre><code><span class="hljs-selector-class">.fixed</span>{
+              <span class="hljs-attribute">color</span>: <span class="hljs-number">#ffffff</span>;
+              <span class="hljs-attribute">background-color</span>: brown;
+              <span class="hljs-attribute">text-align</span>: center; <span class="hljs-comment">/* Centro el texto */</span>
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">100vw</span>;
+              <span class="hljs-attribute">position</span>: sticky;
+              <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+              <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">300px</span>;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172026773-8dc84a81-3c9c-4f9e-844f-088e829d08c8.png" alt="positionSticky" title="position sticky"></p>
+          <p>Ahora si scrolleamos hacia abajo y nos cruzamos con el div &quot;fixed&quot;, se quedará fijo en top 0px:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172026812-5265d3cd-5f04-4c81-a9d5-62cf4643a5ef.png" alt="positionSticky" title="position sticky"></p>`,
+      },
     ],
   },
   {
-      name:"fundamentos_de_programacion",
-      contents:[
-          {
-              id:0,
-              title:"🤕🤒 No hay contenido",
-              content:`
+    name: "fundamentos_de_programacion",
+    contents: [
+      {
+        id: 0,
+        title: "🤕🤒 No hay contenido",
+        content: `
               <h2>No la hice capo 😎</h2>
               <p>Proximamente vas a poder gozar de esta parte😈🧠.</p>
-              `
-          }
-      ]
+              `,
+      },
+    ],
   },
   {
-      name:"javascript",
-      contents:[
-          {
-              id:0,
-              title:"🤕🤒 No hay contenido",
-              content:`
+    name: "javascript",
+    contents: [
+      {
+        id: 0,
+        title: "🤕🤒 No hay contenido",
+        content: `
               <h2>No la hice capo 😎</h2>
               <p>Proximamente vas a poder gozar de esta parte😈🧠.</p>
-              `
-          }
-      ]
+              `,
+      },
+    ],
   },
   {
-      name:"bases_de_datos",
-      contents:[
-          {
-              id:0,
-              title:"🤕🤒 No hay contenido",
-              content:`
+    name: "bases_de_datos",
+    contents: [
+      {
+        id: 0,
+        title: "🤕🤒 No hay contenido",
+        content: `
               <h2>No la hice capo 😎</h2>
               <p>Proximamente vas a poder gozar de esta parte😈🧠.</p>
-              `
-          }
-      ]
+              `,
+      },
+    ],
   },
   {
-      name:"nodejs",
-      contents:[
-          {
-              id:0,
-              title:"🤕🤒 No hay contenido",
-              content:`
+    name: "nodejs",
+    contents: [
+      {
+        id: 0,
+        title: "🤕🤒 No hay contenido",
+        content: `
               <h2>No la hice capo 😎</h2>
               <p>Proximamente vas a poder gozar de esta parte😈🧠.</p>
-              `
-          }
-      ]
+              `,
+      },
+    ],
   },
   {
-      name:"express",
-      contents:[
-          {
-              id:0,
-              title:"🤕🤒 No hay contenido",
-              content:`
+    name: "express",
+    contents: [
+      {
+        id: 0,
+        title: "🤕🤒 No hay contenido",
+        content: `
               <h2>No la hice capo 😎</h2>
               <p>Proximamente vas a poder gozar de esta parte😈🧠.</p>
-              `
-          }
-      ]
+              `,
+      },
+    ],
   },
   {
-      name:"react",
-      contents:[
-          {
-              id:0,
-              title:"🤕🤒 No hay contenido",
-              content:`
+    name: "react",
+    contents: [
+      {
+        id: 0,
+        title: "🤕🤒 No hay contenido",
+        content: `
               <h2>No la hice capo 😎</h2>
               <p>Proximamente vas a poder gozar de esta parte😈🧠.</p>
-              `
-          }
-      ]
+              `,
+      },
+    ],
   },
   {
-      name:"typescript",
-      contents:[
-          {
-              id:0,
-              title:"🤕🤒 No hay contenido",
-              content:`
+    name: "typescript",
+    contents: [
+      {
+        id: 0,
+        title: "🤕🤒 No hay contenido",
+        content: `
               <h2>No la hice capo 😎</h2>
               <p>Proximamente vas a poder gozar de esta parte😈🧠.</p>
-              `
-          }
-      ]
-  }
+              `,
+      },
+    ],
+  },
 ];
 
 export default themes;
