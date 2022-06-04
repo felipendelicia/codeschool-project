@@ -46,7 +46,7 @@ const Modal = (props: {
             }
             changeContent={(id: number) => props.changeContent(id)}
           />
-          <ChangeMd />
+          <ChangeMd currentTheme={props.currentThemeContent!.name}/>
         </div>
       </motion.div>
     </motion.div>

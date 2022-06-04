@@ -30,6 +30,7 @@ const Step = (props: { md: string }) => {
         <SeeModal openModal={openModal}/>
         <div className="step-container-main">
           <div className="step-content-container">
+
             <Content
               currentContent={currentThemeContent!.contents[currentContentPage]}
               nextContent={
@@ -46,9 +47,11 @@ const Step = (props: { md: string }) => {
               currentContentPage={currentContentPage}
               changeContent={(id: number) => changeContent(id)}
             />
+
           </div>
 
           <div className="step-titles-container">
+
             <Titles
               currentMdContent={currentThemeContent!.contents}
               currentContent={
@@ -56,8 +59,11 @@ const Step = (props: { md: string }) => {
               }
               changeContent={(id: number) => changeContent(id)}
             />
-            <ChangeMd />
+
+            <ChangeMd currentTheme={currentThemeContent!.name}/>
+
           </div>
+
           {toggleModal ? (
             <Modal
               closeModal={() => closeModal}
@@ -68,6 +74,7 @@ const Step = (props: { md: string }) => {
           ) : (
             <></>
           )}
+
         </div>
       </div>
     </ViewContainer>
