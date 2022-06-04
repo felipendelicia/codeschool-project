@@ -19,6 +19,11 @@ const Step = (props: { md: string }) => {
   const changeContent = (id: number) => {
     setCurrentContentPage(id);
     setToggleModal(false);
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
   }
 
   const closeModal = () => setToggleModal(false);

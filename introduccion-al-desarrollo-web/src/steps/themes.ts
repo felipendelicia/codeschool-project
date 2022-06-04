@@ -7,7 +7,7 @@ const themes = [
         title: "👨‍💻🥇 Introduccion",
         content: `
                 <h2 id="introducci-n-al-desarrollo-web-">Introducción al desarrollo web 👨‍💻🥇</h2>
-                <p>Me puse como objetivo crear una serie de posibles pasos a seguir para
+                <p>Me puse como objetivo crear una serie de pasos a seguir para
                 poder introducir a alguien al desarrollo web mediante una serie de contenidos que permitan al usuario ser capaz de desempeñarse de forma autodidacta.</p>
                 <p>Para lograr esta tarea deberemos aprender e introducirnos en una serie de distintos lenguajes que van a servirnos para este fin, el desarrollo web. En primer lugar, vamos a ver de que manera se estructuran paginas web, como hacer cada parte de una pagina web. HTML es un lenguaje de marcado de hipertexto que va a ayudarnos con esa tarea. Una vez el esqueleto de la pagina este colocado podemos ocuparnos de darle un poco de estetica, colores, bordes, etcetera. Esto lo vamos a lograr con las hojas de estilo en CSS. Finalmente nos adentraremos en la programacion para darle funcionalidad a nuestro ya estilizado sitio.</p>
                 <p>A pesar de esta extensa introduccion, mi recomendacion personal es investigar tambien uno mismo los contenidos, detenerse a intentar las cosas, buscar mas recursos y nutrirse de varios sitios. Cuando leemos o vemos un contenido como este creemos que entendemos, y efectivamente, tal vez entendemos lo que vemos/oimos, sin embargo, cuando hacemos, aprendemos.</p>
@@ -22,13 +22,13 @@ const themes = [
         id:0,
         title: "✍️ Instalacion del editor de texto",
         content: `
-                <h2 id="editor-de-texto-">Editor de texto ✍️</h2>
+                <h2>Editor de texto ✍️</h2>
                 <p>Las utilidades básicas de todos los editores de texto son las mismas. Todos ofrecen un lugar para interactuar con el texto y la mayoría disponen de una opción de codificación de colores basada en la sintaxis. También proporcionan teclas de acceso rápido y funciones de texto intuitivas. A fin de cuentas, hacen que escribir codigo sea mas facil!</p>
-                <h3 id="entr-en-la-p-gina-de-descarga-https-code-visualstudio-com-download-de-vs-code">Entrá en la <a href="https://code.visualstudio.com/Download">página de descarga</a> de VS Code</h3>
+                <h3>Entrá en la <a href="https://code.visualstudio.com/Download" target="_blank">página de descarga</a> de VS Code</h3>
                 <p>Una vez dentro de la pagina de descarga de vs code, elegir versión en función de tu sistema operativo. Una vez tengas el instalador, abrilo y dale todo siguiente.</p>
                 <p><img src="https://user-images.githubusercontent.com/84806140/169602174-8d254c26-721a-48ee-9f10-c2f44209baab.png" alt="VS Code Download page" title="VS Code Download page"></p>
                 <blockquote>
-                <p><a href="https://youtu.be/ITxcbrfEcIY">Set up Visual Studio Code</a> : Video oficial instalación y nociones basicas del editor 🤙.</p>
+                <p><a href="https://youtu.be/ITxcbrfEcIY" target="_blank">Set up Visual Studio Code</a> : Video oficial instalación y nociones basicas del editor 🤙.</p>
                 </blockquote>
                 `,
       },

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "../styles/Content.css";
 import "../styles/ContentControls.css";
 
@@ -8,6 +9,7 @@ const Content = (props: {
   currentContentPage: number;
   changeContent: (id: number) => void;
 }) => {
+
   return (
     <>
       <div
