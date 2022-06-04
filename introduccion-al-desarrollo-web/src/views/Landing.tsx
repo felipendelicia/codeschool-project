@@ -12,10 +12,10 @@ const Landing = () => {
         <div className="landing-container">
           <BigTitle>Aprendé desarrollo web 👩‍💻</BigTitle>
           <Paragraph>
-            Hola! soy Felipe y mi objetivo es crear una serie de posibles pasos
-            a seguir para poder introducir a alguien al desarrollo web mediante
-            una serie de contenidos que te permitan ser capaz de desempeñarse de
-            forma autodidacta.
+            Hola! soy Felipe y el objetivo de este proyecto es crear una serie
+            de pasos a seguir para poder introducir a alguien al
+            desarrollo web mediante una serie de contenidos que te permitan ser
+            capaz de desempeñarte de manera autodidacta.
           </Paragraph>
           <Link to="/introduccion">
             <Button> Arranquemos! </Button>
