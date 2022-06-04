@@ -54,8 +54,31 @@
 .content-component-container a{
     color: #4ed159;
     font-weight: 600;
+    text-decoration: underline ;
+    transition: all 200ms ease-in-out;
 }
 
-@media (max-width: 1000px){
-    
+.content-component-container a:hover{
+    font-size: 1.02em;
 }
+
+.content-component-container table{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.content-component-container th, .content-component-container td{
+    padding: 0.2em 1em;
+}
+
+.content-component-container th{
+    background-color: #d0ffd4;
+}
+
+.content-component-container blockquote{
+    padding-left: 0.5em;
+    border-left: 2px solid #4ed159;
+    font-weight: 700;
+}
+
