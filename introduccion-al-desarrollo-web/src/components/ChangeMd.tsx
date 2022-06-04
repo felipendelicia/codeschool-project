@@ -1,11 +1,11 @@
 import "../styles/ChangeMd.css";
 import routes from "../steps/stepsRouting.json";
 import { Link } from "react-router-dom";
+import config from "../config/config";
 
 const ChangeMd = (props: { currentTheme: string }) => {
-  const emojis =
-    "😀 😃 😄 😁 😆 😅 😂 🤣 😇 😉 😊 🙂 🙃 ☺ 😋 😌 😍 🥰 😘 😗 😙 😚 🥲 🤪 😜 😝 😛 🤑 😎 🤓 🥸 🧐 🤠 🥳 🤡 😏 😶 😐 😑 😒 🙄 🤨 🤔 🤫 🤭 🤗 🤥 😳 😞 😟 😤 😠 😡 🤬 😔 😕 🙁 ☹ 😬 🥺 😣 😖 😫 😩 🥱 😪 😮‍💨 😮 😱 😨 😰 😥 😓 😯 😦 😧 😢 😭 🤤 🤩 😵 😵‍💫 🥴 😲 🤯 🤐 😷 🤕 🤒 🤮 🤢 🤧 🥵 🥶 😶‍🌫️ 😴 💤 😈 👿 👹 👺 💩 👻 💀 ☠ 👽 🤖 🎃 😺 😸 😹 😻 😼 😽 🙀 😿 😾 😾 👐 🤲 🙌 👏 🙏 🤝 👍 👎 👊 ✊ 🤛 🤜 🤞 ✌ 🤘 🤟 👌 🤌 🤏 👈 👉 👆 👇 ☝ ✋ 🤚 🖐 🖖 👋 🤙 💪 🦾 🖕 ✍ 🤳 💅 🦵 🦿 🦶 👄 🦷 👅 👂 🦻 👃 👁 👀 🧠 🫀 🫁 🦴 👤 👥 🗣 🫂";
-
+  const emojis = config.emojis
+    
   return (
     <div className="changemd-component-container">
       {routes.map((route, i) => {
