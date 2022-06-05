@@ -1206,6 +1206,297 @@ const themes = [
           <p>Ahora si scrolleamos hacia abajo y nos cruzamos con el div &quot;fixed&quot;, se quedará fijo en top 0px:</p>
           <p><img src="https://user-images.githubusercontent.com/84806140/172026812-5265d3cd-5f04-4c81-a9d5-62cf4643a5ef.png" alt="positionSticky" title="position sticky"></p>`,
       },
+      {
+          id:11,
+          title:"🦒🐍 Overflow",
+          content:`<h2 id="-overflow">🦒🐍 Overflow</h2>
+          <p>La propiedad overflow especifica, cuando por ejemplo, una caja desborda de contenido, recortarlo, agregar barras de desplazamiento (scroll), o mostrar el contenido excedente.</p>
+          <p>Por ejemplo, yo querria aplicar overflow en una situacion como esta:</p>
+          <pre><code><span class="hljs-section">&lt;div&gt;</span>
+              <span class="hljs-attribute">Lorem</span> ipsum, ... (mucho texto).
+          <span class="hljs-section">&lt;/div&gt;</span>
+          </code></pre><p>con estos estilos:</p>
+          <pre><code><span class="hljs-selector-tag">div</span> {
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">200px</span>;
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">200px</span>;
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">3em</span>;
+              <span class="hljs-attribute">padding</span>: <span class="hljs-number">2em</span>;
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid red;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172031452-9208a666-e283-4619-8464-39a13a0c4f17.png" alt="overflow" title="overflow"></p>
+          <blockquote>
+          <p>Basicamente lo que voy a hacer con overflow ahora es decirle que hacer con lo que &quot;sobra&quot; </p>
+          </blockquote>
+          <p>Por defecto la propiedad tiene un valor &quot;visible&quot;, lo cual hace que el excedente sea visible, justamente.</p>
+          <p>Existe el valor &quot;auto&quot; la cual detecta si el contenido posee o no excedente, si lo posee, coloca una scroll bar (barra de desplazamiento).</p>
+          <p>Despues tenemos el valor &quot;scroll&quot; la cual obligatoriamente pone la scroll bar, a pesar de que el contenido no se sobrepase.</p>
+          <p>Un detalle, supongamos el siguiente codigo:</p>
+          <pre><code><span class="hljs-selector-tag">div</span> {
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">200px</span>;
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">200px</span>;
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">3em</span>;
+              <span class="hljs-attribute">padding</span>: <span class="hljs-number">2em</span>;
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid red;
+              <span class="hljs-attribute">overflow</span>: scroll;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172031619-47f00087-927a-4a22-9ec7-27399b3a0c23.png" alt="overflow" title="overflow"></p>
+          <p>Como pueden ver, se agrega como les dije, la scroll bar. Sin embargo... ¿Porque se agrega la scrollbar en el eje x (abajo)? Esto es porque overflow es un shorthand, es una propiedad acortada. Overflow abrevia las propiedades: overflow-y e overflow-x.</p>
+          `
+      },
+      {
+          id:12,
+          title:"📱🔍 Pseudoelementos",
+          content:`<h2 id="-pseudoelementos">📱🔍 Pseudoelementos</h2>
+          <p>Para empezar fuerte: Un pseudoelemento es un elemento que no es un elemento. ¿Que? Exacto, es un elemento que no es un elemento por el hecho de que no forma parte del DOM, pero si podemos ver cambios visuales, es una movida parecida al outline, podemos ver un cambio visual pero no afecta al DOM.</p>
+          <h3 id="-first-line">::first-line</h3>
+          <p>Primero les voy a presentar este pseudoelemento, el cual no funciona en los elementos en linea (inline). Como su nombre lo dice, este sirve para modificar la primera linea de elemento que contiene texto.</p>
+          <p>Como ya lo esperas, si, vamos con ejemplos que es lo que mejor se entiende.</p>
+          <pre><code><span class="hljs-section">&lt;div&gt;</span>
+              <span class="hljs-attribute">Lorem</span> ipsum, ... (mucho texto).
+          <span class="hljs-section">&lt;/div&gt;</span>
+          </code></pre><p>Y mis estilos:</p>
+          <pre><code><span class="hljs-selector-tag">div</span> {
+              <span class="hljs-attribute">padding</span>: <span class="hljs-number">2em</span>;
+          }
+          
+          <span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">::first-line</span> {
+              <span class="hljs-attribute">color</span>: violet;
+              <span class="hljs-attribute">font-weight</span>: bold;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172031901-18c3db92-9b29-459d-b5d8-4785b827e1d7.png" alt="first-line" title="first line"></p>
+          <p>Esto obtenemos. Está buenisimo, a mi particularmente me encanta. Tiene una gran utilidad debido a que la primera linea de texto cambia segun el dispositivo donde nos encontremos, esto debido al viewport. Entonces el pseudoelemento first-line nos viene como anillo al dedo. Mirá, te doy un ejemplo:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172032007-5120d2d1-0b0f-45bf-a234-45a751795365.png" alt="first-line" title="first-line"></p>
+          <h3 id="-first-letter">::first-letter</h3>
+          <p>Es exactamente lo mismo que first-line, con la diferencia que en vez de aplicar a toda la primera linea, afecta unicamente a la primera letra.</p>
+          <pre><code><span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">::first-letter</span> {
+              <span class="hljs-attribute">color</span>: red;
+              <span class="hljs-attribute">font-weight</span>: bold;
+              <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2em</span>;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172032064-b6563817-a64c-48ce-82fa-34dc0374dcd7.png" alt="first-letter" title="first letter"></p>
+          <p>Como se habran podido dar cuenta, en este caso, first-line y first-letter si hacen parte del DOM.</p>
+          <h3 id="-placeholder">::placeholder</h3>
+          <p>¿Que era el placeholder? El placeholder es esto mirá:</p>
+          <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Inserte su nombre"</span>/&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+          </code></pre><p>estilos:</p>
+          <pre><code><span class="hljs-selector-tag">form</span>{
+              <span class="hljs-attribute">text-align</span>: center; <span class="hljs-comment">/* Centro el input */</span>
+              <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">3em</span>;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172032244-c62464cb-da73-4fd6-a730-d06092ab7b24.png" alt="placeholder" title="placeholder"></p>
+          <p>Ese &quot;inserte su nombre&quot; es nuestro placeholder.</p>
+          <p>El placeholder por defecto tiene ciertas propiedades, que, las cuales podemos modificar con este pseudoelemento:</p>
+          <pre><code><span class="hljs-selector-tag">form</span> <span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">::placeholder</span>{
+              <span class="hljs-attribute">color</span>: brown;
+              <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2em</span>;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172032314-17543589-bbdc-4c62-ad22-62b54ef77ce8.png" alt="placeholder" title="placeholder"></p>
+          <h3 id="-selection">::selection</h3>
+          <p>Primero que nada voy a aclarar que voy a utilizar el mismo codigo que en el placeholder para explicar el selection 😂.</p>
+          <p>Selection es un pseudoelemento que nos va a ayudar a modificar las propiedades de nuestra propia seleccion. ¿Que es la seleccion?</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172032387-e09256dc-3ea7-4595-a7d4-c7b3297d4e1d.png" alt="selection" title="selection"></p>
+          <pre><code><span class="hljs-selector-tag">form</span> <span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">::selection</span>{
+              <span class="hljs-attribute">background-color</span>: green;
+              <span class="hljs-attribute">color</span>: <span class="hljs-number">#ffffff</span>;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172032443-b0021949-0f25-4fc6-bbda-0a576773783f.png" alt="selection" title="selection"></p>
+          <h3 id="-before">::before</h3>
+          <p>After y before (el que viene despues) los deje al final porque tienen una particularidad. La particularidad es que los elementos after y before son &quot;hijos&quot; de los elementos a los que se le aplica. Necesitan necesariamente la propiedad content que ya vamos a ver. Y ademas, son elementos en linea.</p>
+          <pre><code><span class="hljs-section">&lt;body&gt;</span>
+              <span class="hljs-section">&lt;b&gt;</span>
+              <span class="hljs-attribute">program</span>é
+              <span class="hljs-section">&lt;/b&gt;</span>
+          <span class="hljs-section">&lt;/body&gt;</span>
+          </code></pre><p>¿Como hago para poner &quot;Ayer <strong>programé</strong> una web&quot; con tan solo tener &quot;programé&quot;? Bueno, seguí leyendo... Como espero que sepas, before, en español significa &quot;antes&quot;:</p>
+          <pre><code><span class="hljs-selector-tag">body</span> {
+              <span class="hljs-attribute">text-align</span>: center;
+          }
+          
+          <span class="hljs-selector-tag">b</span><span class="hljs-selector-pseudo">::before</span>{
+              <span class="hljs-attribute">content</span>: <span class="hljs-string">"Ayer"</span>;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172032673-a3347ffe-7642-45d4-8e43-30a8c09c634d.png" alt="before" title="before"></p>
+          <p>Y vos me diras &quot;Pero, Felipe, ese contenido que agregaste a la etiqueta b pertenece al DOM&quot;, y no, no pertenece al DOM, como veran si tratan de seleccionarla no podran:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172032746-b3b92426-00cc-4e4d-a3e2-b3832aa4f5b6.png" alt="before" title="before"></p>
+          <p>Un ultimo tip seria que, ademas de la propiedad content, podemos agregar mas propiedades, como color, para cambiar el color del content, probalo!</p>
+          <h3 id="-after">::after</h3>
+          <p>Es exactamente que el before, nada mas que en vez de &quot;antes&quot;, es &quot;despues&quot;:</p>
+          <pre><code><span class="hljs-selector-tag">body</span> {
+              <span class="hljs-attribute">text-align</span>: center;
+          }
+          
+          <span class="hljs-selector-tag">b</span><span class="hljs-selector-pseudo">::before</span>{
+              <span class="hljs-attribute">content</span>: <span class="hljs-string">"Ayer"</span>;
+          }
+          
+          <span class="hljs-selector-tag">b</span><span class="hljs-selector-pseudo">::after</span>{
+              <span class="hljs-attribute">content</span>: <span class="hljs-string">"una web"</span>;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172032828-bc8452e3-59c5-4f8d-acf7-0a25d7276792.png" alt="after" title="after"></p>
+          `
+      },
+      {
+          id:13,
+          title:"🔘🆕 Pseudoclases",
+          content:`<h2 id="-pseudoclases">🔘🆕 Pseudoclases</h2>
+          <p>Cuando trabajamos con pseudoclases, es algo similar a los pseudoelementos en el sentido de que se aplican a &quot;x&quot; selector. Son como selecciones que se generan tras un evento, algo asi como escuchas (si sabes algo de programacion te vas a dar una idea).</p>
+          <h3 id="-hover">:hover</h3>
+          <p>Creo que ya habia hablado de hover, hover realiza una seleccion en cuanto el mouse pase por encima del elemento al cual se aplica.</p>
+          <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span> Pasá el mouse por encima mio! <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+          </code></pre><p>y lo de siempre:</p>
+          <pre><code><span class="hljs-selector-tag">body</span> {
+              <span class="hljs-attribute">text-align</span>: center;
+          }
+          
+          <span class="hljs-selector-tag">p</span> {
+              <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">5em</span>;
+              <span class="hljs-attribute">background-color</span>: brown;
+              <span class="hljs-attribute">display</span>: inline-block;
+              <span class="hljs-attribute">padding</span>: <span class="hljs-number">1em</span> <span class="hljs-number">3em</span>;
+              <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">12px</span>;
+              <span class="hljs-attribute">color</span>: <span class="hljs-number">#ffffff</span>;
+              <span class="hljs-attribute">font-weight</span>: bold;
+          }
+          
+          <span class="hljs-selector-tag">p</span><span class="hljs-selector-pseudo">:hover</span> {
+              <span class="hljs-attribute">background-color</span>: blueviolet;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172033014-41d648c9-22b3-4c27-af0a-baa06afbaf4a.png" alt="hover" title="hover"></p>
+          <blockquote>
+          <p>No se aprecia, sin embargo si estoy con el mouse sobre el parrafo.</p>
+          </blockquote>
+          <p>Como podes ver che, al pasar el mouse por encima del parrafo ya no es mas brown, sino blueviolet.</p>
+          <h3 id="-link">:link</h3>
+          <p>Lo que hace es modificar las propiedades de un link (etiqueta a) al cual todavia no visitamos.</p>
+          <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://avatars.githubusercontent.com/u/84806140?s=80&amp;v=4"</span>&gt;</span> 
+                  Mi foto!
+              <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+          </code></pre><p>Y no puede faltar:</p>
+          <pre><code><span class="hljs-selector-tag">body</span> {
+              <span class="hljs-attribute">text-align</span>: center;
+          }
+          
+          <span class="hljs-selector-tag">a</span> {
+              <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">5em</span>;
+              <span class="hljs-attribute">display</span>: inline-block;
+              <span class="hljs-attribute">padding</span>: <span class="hljs-number">1em</span> <span class="hljs-number">3em</span>;
+              <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">12px</span>;
+              <span class="hljs-attribute">font-weight</span>: bold;
+          }
+          
+          <span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:link</span>{
+              <span class="hljs-attribute">background-color</span>: blue;
+              <span class="hljs-attribute">color</span>: <span class="hljs-number">#ffffff</span>;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172033250-1d841b02-8382-4eef-bb33-1164a1f43d54.png" alt="link" title="link"></p>
+          <p>Como podes ver, no visité aun el link y tengo los estilos declarados dentro de la pseudoclase :link.</p>
+          <h3 id="-visited">:visited</h3>
+          <p>Es exactamente lo mismo que la pseudoclase :link, con la diferencia de que afecta no a los links no visitados, afecta a los links si visitados.</p>
+          <pre><code><span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:visited</span>{
+              <span class="hljs-attribute">background-color</span>: gold;
+              <span class="hljs-attribute">color</span>: <span class="hljs-number">#000000</span>;
+          }
+          </code></pre><p>Este es un ejemplo de visited.</p>
+          <h3 id="-active">:active</h3>
+          <p>Afecta a los elementos que esten siendo presionados. Por ejemplo, imaginate que tenes una etiqueta button y que estas manteniendo presionado sobre ella el click, la pseudoclase active estaria funcionando.</p>
+          <pre><code><span class="hljs-section">&lt;body&gt;</span>
+              <span class="hljs-section">&lt;button&gt;</span>
+              <span class="hljs-attribute">Boton</span>
+              <span class="hljs-section">&lt;/button&gt;</span>
+          <span class="hljs-section">&lt;/body&gt;</span>
+          </code></pre><p>y:</p>
+          <pre><code><span class="hljs-selector-tag">body</span>{
+              <span class="hljs-attribute">text-align</span>: center;
+          }
+          
+          <span class="hljs-selector-tag">button</span> {
+              <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">4em</span>;
+              <span class="hljs-attribute">color</span>: red;
+          }
+          
+          <span class="hljs-selector-tag">button</span><span class="hljs-selector-pseudo">:active</span>{
+              <span class="hljs-attribute">color</span>: blue;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172033450-b557bfeb-b239-45aa-bddc-c8b5e008ce4c.png" alt="active" title="active"></p>
+          <blockquote>
+          <p>Aunque no se vea, estoy manteniendo presionado el boton</p>
+          </blockquote>
+          <p>Como pueden ver, active se activa 😂 cuando mantengo presionado el mismo.</p>
+          <h3 id="-focus">:focus</h3>
+          <p>Este generalmente funciona con inputs y etiquetas relacionadas. Lo que hace es seleccionar el elemento cuando este siendo &quot;enfocado&quot;, por ejemplo, en el caso de los inputs, estarian siendo seleccionados cuando los presionas para escribir.</p>
+          <pre><code><span class="hljs-section">&lt;body&gt;</span>
+              <span class="hljs-section">&lt;input/&gt;</span>
+          <span class="hljs-section">&lt;/body&gt;</span>
+          </code></pre><p>y:</p>
+          <pre><code><span class="hljs-selector-tag">body</span>{
+              <span class="hljs-attribute">text-align</span>: center;
+          }
+          
+          <span class="hljs-selector-tag">input</span> {
+              <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">4em</span>;
+              <span class="hljs-attribute">background-color</span>: red;
+              <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+          }
+          
+          <span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:focus</span>{
+              <span class="hljs-attribute">background-color</span>: blue;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172033580-51db44c2-c12a-43d9-b8d1-8872f9b95717.png" alt="focus" title="focus"></p>
+          `
+      },
+      {
+          id:14,
+          title:"🏋️‍♂️🖼️ Object fit",
+          content:`<h2>Todavia no disponible 💩</h2>`
+      },
+      {
+          id:15,
+          title:"📲 Responsive design",
+          content:`<h2>Todavia no disponible 💩</h2>`
+      },
+      {
+          id:16,
+          title:"📈🥊 Flexbox",
+          content:`<h2>Todavia no disponible 💩</h2>`
+      },
+      {
+          id:17,
+          title:"📅 Grid",
+          content:`<h2>Todavia no disponible 💩</h2>`
+      },
+      {
+          id:18,
+          title:"🌓🌔 Transition",
+          content:`<h2>Todavia no disponible 💩</h2>`
+      },
+      {
+          id:19,
+          title:"🎮 Animation",
+          content:`<h2>Todavia no disponible 💩</h2>`
+      },
+      {
+          id:20,
+          title:"💧🍷 Transform",
+          content:`<h2>Todavia no disponible 💩</h2>`
+      },
+      {
+          id:21,
+          title:"🔴 Background",
+          content:`<h2>Todavia no disponible 💩</h2>`
+      },
+      {
+          id:22,
+          title:"💖 Filter",
+          content:`<h2>Todavia no disponible 💩</h2>`
+      }
     ],
   },
   {
