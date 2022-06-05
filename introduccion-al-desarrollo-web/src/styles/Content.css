@@ -32,24 +32,22 @@
     padding: 1em 2em;
     border-radius: 12px;
     margin-bottom: 1em;
+    overflow-x: auto;
 }
 
-.content-component-container code{
+.content-component-container p code{
     background-color: #4ed159;
     padding: 0.2em 1em;
     border-radius: 12px;
     margin-bottom: 1em;
     color: #ffffff;
     font-size: 1em;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .content-component-container pre code{
     font-size: 1.2em;
-    background-color: rgba(0,0,0,0);
-    padding: 0;
-    border-radius: 0;
-    margin: 0;
+    color: #ffffff;
 }
 
 .content-component-container a{
@@ -83,3 +81,40 @@
     font-weight: 700;
 }
 
+@media (max-width:1000px) {
+    .content-component-container h2{
+        font-size: 3em;
+        margin-bottom: 1em;
+    }
+    
+    .content-component-container h3{
+        font-size: 2.5em;
+        margin-bottom: 1em;
+    }
+    
+    .content-component-container img{
+        display: block;
+        width: 100%;
+        margin: auto;
+        margin-bottom: 2em;
+        border-radius: 12px;
+    }
+    
+    .content-component-container p{
+        font-size: 2em;
+        margin-bottom: 1.5em;
+    }
+    
+    .content-component-container pre{
+        margin-bottom: 2em;
+    }
+    
+    .content-component-container table{
+        margin-bottom: 2em;
+    }
+
+    .content-component-container pre code{
+        font-size: 2em;
+    }
+    
+}

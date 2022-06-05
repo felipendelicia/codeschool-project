@@ -1,6 +1,5 @@
 .step-see-modal{
-    border-radius: 99999px;
     position: fixed;
-    top:0.5em;
-    right: 2em;
+    bottom:1em;
+    right: 0.5em;
 }
