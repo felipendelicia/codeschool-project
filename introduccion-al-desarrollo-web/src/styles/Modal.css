@@ -1,11 +1,17 @@
 .modal-container{
     width: 90vw;
-    height: 100vh;
+    height: 80vh;
+    border-radius: 12px;
     margin: auto;
     padding: 2em 0em;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #fff;
-    overflow-y: auto;
+}
+
+.modal-container-overflow{
+    padding: 5em 0;
+    padding-right: 5em;
+    overflow-y: scroll;
 }

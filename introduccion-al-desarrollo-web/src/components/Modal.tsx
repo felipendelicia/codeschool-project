@@ -37,7 +37,7 @@ const Modal = (props: {
         }}
         exit={{ y: "100vh", opacity: 0 }}
       >
-        <div>
+        <div className="modal-container-overflow">
           <Titles
             currentMdContent={props.currentThemeContent!.contents}
             currentContent={
