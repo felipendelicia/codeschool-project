@@ -1209,7 +1209,7 @@ const themes = [
       {
           id:11,
           title:"🦒🐍 Overflow",
-          content:`<h2 id="-overflow">🦒🐍 Overflow</h2>
+          content:`<h2 id="-overflow">Overflow 🦒🐍</h2>
           <p>La propiedad overflow especifica, cuando por ejemplo, una caja desborda de contenido, recortarlo, agregar barras de desplazamiento (scroll), o mostrar el contenido excedente.</p>
           <p>Por ejemplo, yo querria aplicar overflow en una situacion como esta:</p>
           <pre><code><span class="hljs-section">&lt;div&gt;</span>
@@ -1246,7 +1246,7 @@ const themes = [
       {
           id:12,
           title:"📱🔍 Pseudoelementos",
-          content:`<h2 id="-pseudoelementos">📱🔍 Pseudoelementos</h2>
+          content:`<h2 id="-pseudoelementos">Pseudoelementos 📱🔍</h2>
           <p>Para empezar fuerte: Un pseudoelemento es un elemento que no es un elemento. ¿Que? Exacto, es un elemento que no es un elemento por el hecho de que no forma parte del DOM, pero si podemos ver cambios visuales, es una movida parecida al outline, podemos ver un cambio visual pero no afecta al DOM.</p>
           <h3 id="-first-line">::first-line</h3>
           <p>Primero les voy a presentar este pseudoelemento, el cual no funciona en los elementos en linea (inline). Como su nombre lo dice, este sirve para modificar la primera linea de elemento que contiene texto.</p>
@@ -1342,7 +1342,7 @@ const themes = [
       {
           id:13,
           title:"🔘🆕 Pseudoclases",
-          content:`<h2 id="-pseudoclases">🔘🆕 Pseudoclases</h2>
+          content:`<h2 id="-pseudoclases">Pseudoclases 🔘🆕</h2>
           <p>Cuando trabajamos con pseudoclases, es algo similar a los pseudoelementos en el sentido de que se aplican a &quot;x&quot; selector. Son como selecciones que se generan tras un evento, algo asi como escuchas (si sabes algo de programacion te vas a dar una idea).</p>
           <h3 id="-hover">:hover</h3>
           <p>Creo que ya habia hablado de hover, hover realiza una seleccion en cuanto el mouse pase por encima del elemento al cual se aplica.</p>
@@ -1455,12 +1455,223 @@ const themes = [
       {
           id:14,
           title:"🏋️‍♂️🖼️ Object fit",
-          content:`<h2>Todavia no disponible 💩</h2>`
+          content:`<h2 id="object-fit-">Object fit 🏋️‍♂️🖼️</h2>
+          <p>Es una propiedad que se aplica a imagenes y hay que aprenderla para trabajar con imagenes, galerias y cosas asi, porque es importante y muy interesante.</p>
+          <p>Antes de arrancar de lleno con object-fit vamos a ver cuales son los problemones que nos soluciona esta propiedad. </p>
+          <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"caja"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://user-images.githubusercontent.com/84806140/172066533-5bb7e0d5-5ea7-452f-8616-a209f5f8960a.jpg"</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+          </code></pre><p>Vamos a usar este codigo HTML, y vos te preguntaras... &quot;Felipe, ¿Que es ese source que elegiste para la imagen?&quot; Es una de mis fotos de instagram 😂:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172066533-5bb7e0d5-5ea7-452f-8616-a209f5f8960a.jpg" alt="Felipe" title="Felipe"></p>
+          <pre><code><span class="hljs-selector-class">.caja</span> <span class="hljs-selector-tag">img</span>{
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">20em</span>;
+          }
+          
+          <span class="hljs-selector-class">.caja</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">3em</span>;
+          }
+          </code></pre><p>Solo le cambie el ancho para que podamos visualizar mejor mi fantastico rostro:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172066749-d180702e-2c4e-40b0-92bc-93b8e7848189.png" alt="object-fit" title="object-fit"></p>
+          <p>Pero ahora mira lo que pasa si hago esto:</p>
+          <pre><code><span class="hljs-selector-class">.caja</span>{
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">1000px</span>;
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">500px</span>;
+          }
+          
+          <span class="hljs-selector-class">.caja</span> <span class="hljs-selector-tag">img</span>{
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+          }
+          </code></pre><p>Me hago mas gordo todavia 😂:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172066939-96d613c4-07af-4138-b7cc-3132d3045c55.png" alt="object-fit" title="object-fit"></p>
+          <p>Bueno, ¿como hacemos para volver a mi normalidad? Bueno, aca es donde entra object-fit: Object fit tiene los siguientes valores: fill, contain, cover, none, scale-down.</p>
+          <h3 id="fill">fill</h3>
+          <p>Fill es simplemente el valor por defecto de object-fit.</p>
+          <h3 id="contain">contain</h3>
+          <p>Contain lo que hace es que las resoluciones de la imagen se ajusten al contenedor.</p>
+          <pre><code><span class="hljs-selector-class">.caja</span>{
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">1000px</span>;
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">500px</span>;
+          }
+          
+          <span class="hljs-selector-class">.caja</span> <span class="hljs-selector-tag">img</span>{
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid blue;
+              <span class="hljs-attribute">object-fit</span>: contain;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172067188-ecd1c034-fd78-486e-bd49-441d65e1ee14.png" alt="contain" title="contain"></p>
+          <p>Me quede como tiene que ser pero se ajustan las resoluciones a las reales.</p>
+          <h3 id="cover">cover</h3>
+          <p>Pero, ¿Que pasa si nosotros queremos una galeria con items y necesitamos que si o si ocupe todo ese tamaño? Queremos que el contenedor sea de 1000px por 500px y no hay tu tia, queremos que sea asi o asi, entonces le damos object-fit cover.</p>
+          <pre><code><span class="hljs-selector-class">.caja</span>{
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">1000px</span>;
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">500px</span>;
+          }
+          
+          <span class="hljs-selector-class">.caja</span> <span class="hljs-selector-tag">img</span>{
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid blue;
+              <span class="hljs-attribute">object-fit</span>: cover;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172067323-29a4c377-d5af-4fa3-a083-ccad4c3c58c9.png" alt="cover" title="cover"></p>
+          <p>De esta forma, la imagen se ajusta al contenedor y recorta lo que &quot;sobra&quot; para ajustarse al tamaño. Mira, te doy otro ejemplo con una caja cuadrada:</p>
+          <pre><code><span class="hljs-selector-class">.caja</span>{
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">500px</span>;
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">500px</span>;
+          }
+          
+          <span class="hljs-selector-class">.caja</span> <span class="hljs-selector-tag">img</span>{
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid blue;
+              <span class="hljs-attribute">object-fit</span>: cover;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172067385-b9155469-8cf6-49cf-b39f-159add8e6598.png" alt="cover" title="cover"></p>
+          <p>De esta manera, con una caja cuadrada, se ajusta igual! Increible propiedad.</p>
+          <h3 id="none">none</h3>
+          <p>None lo que hace es mantener las resoluciones reales de la imagen a pesar de todo. En este caso mi imagen es de 640x800 px:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172067569-d25e7c5b-195e-4f9e-ac64-f184a9e28648.png" alt="resolution" title="resolution"></p>
+          <p>Y si hago algo asi:</p>
+          <pre><code><span class="hljs-selector-class">.caja</span>{
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">800px</span>;
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">500px</span>;
+          }
+          
+          <span class="hljs-selector-class">.caja</span> <span class="hljs-selector-tag">img</span>{
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid blue;
+              <span class="hljs-attribute">object-fit</span>: none;
+          }
+          </code></pre><p>Va a tener las mismas resoluciones que las reales, pero se va a recortar lo que sea excedente, asi:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172067642-d7e5140d-618c-4eab-b3fe-b23b833902f0.png" alt="none" title="none"></p>
+          <p>Entonces, la diferencia entre none y cover es que none se queda con las resoluciones originales sin importar nada, mientras que cover hace que sean proporcionales a las originales pero agrandandolas.</p>
+          <h3 id="scale-down">scale-down</h3>
+          <p>Despues tenemos a scale-down, que lo que hace es analizar, ¿Que es mas chiquito? ¿contain? ¿o none? Si none es mas chiquito, entonces dejo none, si contain es mas chico, entonces dejo contain.</p>
+          <p>Imaginemos esta caja:</p>
+          <pre><code><span class="hljs-selector-class">.caja</span>{
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">200px</span>;
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">300px</span>;
+          }
+          </code></pre><p>Con object-fit none:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172067847-a18a5c1c-f687-4f84-943b-455f5d90bb5a.png" alt="none" title="none"></p>
+          <p>Con object-fit contain:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172067873-3d8228c9-7508-4911-ad4a-323c6664d6fb.png" alt="contain" title="contain"></p>
+          <p>Y con object-fit scale-down:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172067873-3d8228c9-7508-4911-ad4a-323c6664d6fb.png" alt="scale-down" title="scale down"></p>
+          <p>Como pueden ver, en este caso se queda con contain, porque es la imagen mas chiquita, pero en el caso de que hagamos la caja suficientemente grande como para que la imagen contain sea mas grande, va a usar none como object-fit</p>
+          <h3 id="object-position">object-position</h3>
+          <p>Por ultimo, te voy a tirar un tip de como posicionar la imagen en ciertas situaciones cuando ya tiene la propiedad object fit:</p>
+          <pre><code><span class="hljs-selector-class">.caja</span>{
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">300px</span>;
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">600px</span>;
+          }
+          
+          <span class="hljs-selector-class">.caja</span> <span class="hljs-selector-tag">img</span>{
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid blue;
+              <span class="hljs-attribute">object-fit</span>: cover;
+          }
+          </code></pre><p>Suponete esta situacion, que se veria asi:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172068132-9db8c55e-7d9e-4fe9-a613-16e5df13b5ae.png" alt="object-position" title="object-position"></p>
+          <p>Imaginate que quiero que la imagen se ajuste y se posicione del lado izquierdo de mi rostro, ¿Como hacemos? con object-position, el cual tiene cuatro posibles valores: top, bottom, left y right.</p>
+          <pre><code><span class="hljs-selector-class">.caja</span> <span class="hljs-selector-tag">img</span>{
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid blue;
+              <span class="hljs-attribute">object-fit</span>: cover;
+              <span class="hljs-attribute">object-position</span>: left;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172068207-add2addc-1042-4fe7-a68e-52be78db800e.png" alt="object-position" title="object-position"></p>
+          <p>De esta manera trabajan los cuatro valores, para reposicionar la imagen.</p>
+          `
       },
       {
           id:15,
           title:"📲 Responsive design",
-          content:`<h2>Todavia no disponible 💩</h2>`
+          content:`<h2 id="responsive-design-">Responsive design 📲</h2>
+          <p>Bueno, lo que vamos a ver ahora es un par de conceptos que son el Responsive design y Mobile first. </p>
+          <p>Responsive design lo que hace es trabajar con las distintas resoluciones, lo que hacemos es adaptar nuestra web a varios dispositivos. Voy a esquematizar este concepto:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172068502-6fd21361-23f2-4ea7-ae80-c2c0e712a736.png" alt="responsive-design" title="responsive design"></p>
+          <p>Imaginate que tenes esta web, con un header que funciona de barra de navegacion, un contenido principal, cualquier cosa, una barra lateral (aside) con mas items para navegar y un footer con informacion de contacto. ¿Que pasa si se achica la resolucion?</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172068573-733aad26-0c5f-4692-90f5-6567afb5b117.png" alt="responsive-design" title="responsive-design"></p>
+          <p>Ahora imaginate que los enlaces y el contenido no entrarian en el achicado header, aside y asi. Por tanto, podemos deducir que no es optimo tener el mismo estilo en una web para desktop (escritorio) que para mobile. ¿Como se puede arreglar?</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172068738-e62cdbd5-facf-4d37-a411-8174908bdfbf.png" alt="responsive-design" title="responsive-design"></p>
+          <p>Lo que se puede hacer es ajustar la web a diferentes resoluciones, de esta manera todo el contenido se visualizara correctamente estemos donde estemos, es re importante dar una buena experiencia tanto en desktop como en mobile. Este es el concepto de responsive design.</p>
+          <p>Despues tenemos el concepto de mobile first que es lo contrario, es adaptar el contenido de un mobile a un desktop, de resoluciones pequeñas a mas grandes. Es decir, crearlo especialmente para mobile y despues adaptarlo para desktop. </p>
+          <p>Ahora, ¿De donde salio esto? Esto salio porque google premia y posiciona mejor a las paginas que tienen esto, mobile first.</p>
+          <p>Para trabajar con temas de resolucion se usa algo que no es una propiedad, es una particularidad de css que es @media, que permite detectar la resolucion y adaptar las etiquetas. </p>
+          <p>Vamos a probarlo con este ejemplo:</p>
+          <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"seccion-1"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Seccion 1<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem, ipsum... (Mucho texto)<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"seccion-2"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Seccion 2<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem, ipsum... (Mucho texto)<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+          </code></pre><p>y:</p>
+          <pre><code><span class="hljs-selector-tag">div</span> <span class="hljs-selector-tag">h2</span> {
+              <span class="hljs-attribute">color</span>: red;
+          }
+          
+          <span class="hljs-selector-tag">div</span> {
+              <span class="hljs-attribute">display</span>: inline-block;
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">45%</span>;
+              <span class="hljs-attribute">background-color</span>: grey;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172069101-78e0d0c8-0875-419f-9a10-a8875a5903af.png" alt="responsive-design" title="responsive design"></p>
+          <p>Como pueden ver, todo bien en desktop, pero si achico las resoluciones pasa esto:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172069155-ec9eb906-f755-47de-8b59-65b127fd8f76.png" alt="responsive-design" title="responsive design"></p>
+          <p>Lo cual no está del todo bien... ¿Como lo arreglamos? Facil, con @media, asi:</p>
+          <pre><code><span class="hljs-selector-tag">div</span> <span class="hljs-selector-tag">h2</span> {
+              <span class="hljs-attribute">color</span>: red;
+          }
+          
+          <span class="hljs-selector-tag">div</span> {
+              <span class="hljs-attribute">display</span>: inline-block;
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">45%</span>;
+              <span class="hljs-attribute">background-color</span>: grey;
+          }
+          
+          @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-number">800px</span>) {
+              <span class="hljs-selector-tag">div</span> {
+                  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+              } 
+          }
+          </code></pre><p>Lo que hace este codigo css es leer todo hasta el @media y ahi se para y se pregunta ¿Tiene esta pantalla menos de 800px de ancho? Si tiene menos de 800px de ancho se ejecuta lo que esta dentro del media, en caso contrario, no. Osea, si tenemos una pantalla de menos de 800px va a sobreescribirse la propiedad width de arriba que dice que el ancho sea del 45% por un ancho de 100%:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172069337-996cd951-8869-4308-bf98-309a5a7b787f.png" alt="responsive-design" title="responsive-design"></p>
+          <p>Y si volvemos a desktop:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172069101-78e0d0c8-0875-419f-9a10-a8875a5903af.png" alt="responsive-design" title="responsive design"></p>
+          <p>Nuestra web tiene responsive design!</p>
+          <p>Mirá este tip que te tiro eh:</p>
+          <p>Si tocas f12 en el navegador ingresas a las herramientas del desarrollador, si tocas aca:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172069595-c224ca27-06fc-4f24-87bb-63718216e0bf.png" alt="responsive-design" title="responsive design"></p>
+          <p>Vas a tener la visualizacion de tu pagina en distintos dispositivos predeterminados:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172069629-bd9a09cd-cd6d-4304-9b47-39f14b2fd1c0.png" alt="responsive-design" title="responsive design"></p>
+          <p>Che! ¿¡pero porque no me sale responsive en el celular!? En nuestro caso, es porque en la etiqueta head de nuestra web no tengo incluida la etiqueta <a href="https://www.w3schools.com/css/css_rwd_viewport.asp">meta viewport.</a></p>
+          <p><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</code></p>
+          <p>Si la incluimos en el head:</p>
+          <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span> /&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">link</span>
+              <span class="hljs-attr">href</span>=<span class="hljs-string">"https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&amp;display=swap"</span>
+              <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>
+              /&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"./estilos.css"</span> /&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+          </code></pre><p>Veremos este cambio:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172069765-229b1800-e92c-404f-8735-87fee189510c.png" alt="responsive-design" title="responsive design"></p>
+          <p>Cuando ponemos esta etiqueta, el viewport se ajusta automaticamente a la resolucion donde efectivamente esté.</p>
+          `
       },
       {
           id:16,
