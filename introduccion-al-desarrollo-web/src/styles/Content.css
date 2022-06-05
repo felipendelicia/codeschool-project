@@ -16,9 +16,10 @@
 
 .content-component-container img{
     display: block;
-    width: 50%;
+    width: 100%;
     margin: auto;
     margin-bottom: 0.5em;
+    border-radius: 12px;
 }
 
 .content-component-container p{

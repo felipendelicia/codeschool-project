@@ -1085,7 +1085,7 @@ const themes = [
           }
           </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172025055-1a5b4c76-711b-4d53-99bf-4160e0dc0bfe.png" alt="z-index" title="z-index"></p>
           <p>Como caja 3 tiene un z-index de 0 y nuestra caja 2 tiene un z-index de 1 entonces se mostrara por encima, porque 1 es mayor que 0.</p>
-          <p>Te comento que ademas, suponete que tenes tu caja 3 asi y tenes que visualizar la caja 2 por ecima:</p>
+          <p>Te comento que ademas, suponete que tenes tu caja 3 asi y tenes que visualizar la caja 2 por encima:</p>
           <pre><code><span class="hljs-selector-class">.caja-3</span> {
               <span class="hljs-attribute">background-color</span>:yellow;
               <span class="hljs-attribute">position</span>: relative;

@@ -3,10 +3,10 @@ import ViewContainer from "../components/ViewContainer";
 import Content from "../components/Content";
 import Titles from "../components/Titles";
 import ChangeMd from "../components/ChangeMd";
+import Modal from "../components/Modal";
 import SeeModal from "../components/SeeModal";
 import themes from "../steps/themes";
 import "../styles/Step.css";
-import Modal from "../components/Modal";
 
 const Step = (props: { md: string }) => {
   const [currentContentPage, setCurrentContentPage] = useState(0);
@@ -22,20 +22,18 @@ const Step = (props: { md: string }) => {
     window.scroll({
       top: 0,
       left: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
-  }
-
+  };
   const closeModal = () => setToggleModal(false);
   const openModal = () => setToggleModal(true);
 
   return (
     <ViewContainer>
       <div>
-        <SeeModal openModal={openModal}/>
+        <SeeModal openModal={openModal} />
         <div className="step-container-main">
           <div className="step-content-container">
-
             <Content
               currentContent={currentThemeContent!.contents[currentContentPage]}
               nextContent={
@@ -52,11 +50,9 @@ const Step = (props: { md: string }) => {
               currentContentPage={currentContentPage}
               changeContent={(id: number) => changeContent(id)}
             />
-
           </div>
 
           <div className="step-titles-container">
-
             <Titles
               currentMdContent={currentThemeContent!.contents}
               currentContent={
@@ -65,8 +61,7 @@ const Step = (props: { md: string }) => {
               changeContent={(id: number) => changeContent(id)}
             />
 
-            <ChangeMd currentTheme={currentThemeContent!.name}/>
-
+            <ChangeMd currentTheme={currentThemeContent!.name} />
           </div>
 
           {toggleModal ? (
@@ -79,7 +74,6 @@ const Step = (props: { md: string }) => {
           ) : (
             <></>
           )}
-
         </div>
       </div>
     </ViewContainer>

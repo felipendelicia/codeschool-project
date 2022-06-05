@@ -14,3 +14,20 @@ a{
   color: inherit;
   text-decoration: inherit;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(255, 255, 255);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #b5ffbb; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #97ffa0; 
+}
