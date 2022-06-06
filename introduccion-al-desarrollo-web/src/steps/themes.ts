@@ -1676,7 +1676,425 @@ const themes = [
       {
           id:16,
           title:"📈🥊 Flexbox",
-          content:`<h2>Todavia no disponible 💩</h2>`
+          content:`<h2 id="-flexbox">Flexbox 📈🥊</h2>
+          <p>Este tema esta re zarpado y va a cambiar la manera en que haces webs. Hace referencia a cajas flexibles, por eso &quot;flex&quot; + &quot;box&quot;.</p>
+          <p>En el pasado las webs se contruian a base de tablas, se maquetaba a base de tablas. Donde todo era una tabla con filas, columnas, celdas, y hasta habia tablas dentro de tablas!. Locuras. Hoy en dia las cosas cambiaron, hoy en dia las cosas se hacen de otras maneras.</p>
+          <p>Estas nuevas formas de maquetar son con flex y grid, los cuales son nuevos displays que vamos a ver! Flex cambio completamente en escenario de maquetado de webs, fue una revolucion gigante. Despues aparecio grid y le paso el trapo a flex y la revolucion fue todavia mayor.</p>
+          <p>Pero ¿que pasa?, la mejor combinacion es grid+flex. Hay cosas que podemos hacer con flex que con grid no y cosas que podemos hacer con grid que no con flex, entonces se complementan perfectamente.</p>
+          <p>Las cajas flex y grid de por si son block, ahora, lo que esta dentro de la caja, las etiquetas hijas se comportan diferente.</p>
+          <p>Flexbox tiene varios conceptos que tenemos que entender antes de llevarlos a codigo. Flex necesita de dos cosas: un flex container (un contenedor) y un flex item (un hijo de este contenedor). El container es el que va a contener el o los flex items. Porque, a ver, si le damos por dar flex a un elemento sin hijos, va a comportarse simplemente como un block. Donde vamos a notar los cambios es adentro del contenedor, con los hijos.</p>
+          <p>Flexbox tiene dos ejes:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172070736-2cdb8022-4512-4da5-99ca-a22a89274ec5.png" alt="flexbox" title="flexbox"></p>
+          <p>Estos ejes poseen direcciones a las que se dirigen los flex items, algo como esto:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172070781-cd8fdc1e-c846-4ece-8d39-b70b314edac7.png" alt="flexbox" title="flexbox"></p>
+          <p>Lo que hacemos con CSS, para que te des una idea che, es cambiar el flujo de esto que esta aca. Por defecto, el flujo de los ejes es como en la imagen, es decir, el main es de izquierda a derecha y el cross de arriba a abajo.</p>
+          <p>Dale vamos a arrancar con codigo que seguro estas re manija 😂.</p>
+          <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-container"</span>&gt;</span>
+              Hola!
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+          </code></pre><p>y...</p>
+          <pre><code><span class="hljs-selector-class">.flex-container</span>{
+              <span class="hljs-attribute">display</span>: flex;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172070996-83fb7a4d-3711-4130-af9e-bd8e8fb9fd2e.png" alt="flexbox" title="flexbox"></p>
+          <p>Como pueden ver, no pasó nada inesperado. Esto es porque lo que hicimos es cambiar el display de un block a flex, pero sigue siendo bloque. ¿Que cambio? Bueno suponete que ahora tengo esto:</p>
+          <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-container"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span> Cajita 1 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span> Cajita 2 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+          </code></pre><p>y...</p>
+          <pre><code><span class="hljs-selector-class">.flex-container</span>{
+              <span class="hljs-attribute">display</span>: flex;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span> {
+              <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+              <span class="hljs-attribute">background-color</span>: brown;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172071120-d04e8526-2f62-4509-bf26-5dd85fe261bb.png" alt="flexbox" title="flexbox"></p>
+          <p>Lo que pasa es que los flex-items se colocan uno al lado del otro adaptandose al contenedor, pero la altura siempre es la misma, no hay problemas de altura! Mira:</p>
+          <pre><code><span class="hljs-selector-class">.flex-container</span>{
+              <span class="hljs-attribute">display</span>: flex;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span> {
+              <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+              <span class="hljs-attribute">background-color</span>: brown;
+              <span class="hljs-attribute">padding</span>: <span class="hljs-number">1em</span> <span class="hljs-number">3em</span>;
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">1em</span>;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172071249-9693f44a-2d57-4740-970a-c9cbd29c4e54.png" alt="flexbox" title="flexbox"></p>
+          <p>A pesar de agregar un margin y padding mira como lo agarra! esta propiedad es muy zarpada.</p>
+          <p>Ahora vamos a ver un ejemplo diferente para entender algo:</p>
+          <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-container"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span> Cajita 1 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span> Lorem ipsum... (mucho texto) <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+          </code></pre><p>Vamos a usar este HTML:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172071332-bc8b6c50-a01a-401b-bcb0-fefdba2345da.png" alt="flexbox" title="flexbox"></p>
+          <p>Como podes ver la altura se sigue manteniendo. Sucede que se ajusta el contenido ¿Porqué? para que la altura se mantenga. Esto es algo que pasa con flexbox, que en base al contenido, mantiene la altura.</p>
+          <h3 id="flex-direction">Flex direction</h3>
+          <p>Mira lo que vamos a hacer, tengo este codigo:</p>
+          <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-container"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+          </code></pre><p>y:</p>
+          <pre><code><span class="hljs-selector-class">.flex-container</span>{
+              <span class="hljs-attribute">display</span>: flex;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span> {
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">background-color</span>: chocolate;
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">10px</span>;
+          }
+          </code></pre><p>Obtengo esto:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172071574-1b9a7867-a22a-4fd9-b9b9-1e2efe3b72ee.png" alt="flexbox" title="flexbox"></p>
+          <p>Pero.. ¿Que pasa si quiero que las cajas vayan para abajo? Lo que tengo que hacer es cambiar la direccion del main axis, ahora debe pertenecer al eje y, y debemos hacer que apunte de arriba a abajo.</p>
+          <p>Esto se hace con la propiedad flex-direction, el cual tiene varios valores, el valor por defecto es row, que hace que el main axis sea de derecha a izquierda, como van las filas. Pero ademas de esta, tenemos column, row-reverse, column-reverse, todas funcionan para lo mismo, cambiar la direccion del main axis.</p>
+          <p>Column sirve para que el main axis vaya de arriba hacia abajo, row-reverse hace que el main axis vaya de izquierda a derecha, column-reverse hace que vaya de abajo hacia arriba.</p>
+          <p>Voy a hacer un ejemplo con el codigo anterior aplicando flex-direction: column:</p>
+          <pre><code><span class="hljs-selector-class">.flex-container</span>{
+              <span class="hljs-attribute">display</span>: flex;
+              <span class="hljs-attribute">flex-direction</span>: column;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span> {
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">background-color</span>: chocolate;
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">10px</span>;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172071769-9bb4d41d-fd7f-4bed-ae8c-899777289559.png" alt="flex-direction" title="flex direction"></p>
+          <h3 id="flex-wrap">Flex wrap</h3>
+          <p>Vamos a usar el mismo html de antes, pero mira estos estilos:</p>
+          <pre><code><span class="hljs-selector-class">.flex-container</span>{
+              <span class="hljs-attribute">display</span>: flex;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span> {
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">background-color</span>: brown;
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">10px</span>;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">:first-child</span>{ <span class="hljs-comment">/* Selecciono el primer hijo de .flex-container */</span>
+              <span class="hljs-attribute">background-color</span>: blueviolet;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">:last-child</span>{ <span class="hljs-comment">/* Selecciono el ultimo hijo de .flex-container */</span>
+              <span class="hljs-attribute">background-color</span>: yellow;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172071909-058e57de-6ec5-4503-80a9-2ade06d2f098.png" alt="flex-wrap" title="flex-wrap"></p>
+          <p>Si achico la web asi como muestro, los flex-items se ajustan y esta genial! Pero, suponete que yo no quiero que se ajusten, quiero que se vayan &quot;para abajo&quot; para que conserve su resolucion. Es tan simple como agregar este atributo:</p>
+          <pre><code><span class="hljs-selector-class">.flex-container</span>{
+              <span class="hljs-attribute">display</span>: flex;
+              <span class="hljs-attribute">flex-wrap</span>: wrap;
+          }
+          </code></pre><p>Flex wrap tiene tres valores: wrap, nowrap y wrap-reverse. Nowrap es el valor por defecto, despues wrap logra algo asi:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172072051-b317dd02-2494-40d1-97a7-863724052e4a.png" alt="flex-wrap" title="flex wrap"></p>
+          <p>Flex-wrap: wrap-reverse lo que hace es, en vez de tirar los elementos hacia abajo, los tira para arriba, asi:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172072100-c9f153ec-7e0e-4ed3-a93e-6f9fddd748e7.png" alt="flex-wrap-reverse" title="flex wrap reverse"></p>
+          <h3 id="alineacion-con-flex">Alineacion con flex</h3>
+          <p>Me encanta este tema. Suponete que tenemos unas cajas como estas:</p>
+          <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-container"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+          </code></pre><p>Daria algo asi:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172072405-1ae1e3c8-010f-4399-9b1f-6f2664cbe69c.png" alt="flex-align" title="flex align"></p>
+          <p>Ahora imaginate que queres centrar esas cajas. Podemos usar justify-content. Esta propiedad se aplica al flex container y tiene distintos valores:</p>
+          <p>Con center:</p>
+          <pre><code><span class="hljs-selector-class">.flex-container</span>{
+              <span class="hljs-attribute">display</span>: flex;
+              <span class="hljs-attribute">justify-content</span>: center;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172072644-662d87e4-d2d3-4ad2-8b2a-03c808578e54.png" alt="justify-content" title="justify content"></p>
+          <p>Con space-around:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172072769-2eee2401-8850-4a0f-a10f-0e498d824aa0.png" alt="justify-content" title="justify content"></p>
+          <p>Con space-between:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172072738-b2882c05-a27e-40a1-97e1-4ed8d67e7cb7.png" alt="justify-content" title="justify content"></p>
+          <p>Con space-evenly:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172072857-7ec8eb5f-8123-407d-8363-ffb5f3309daf.png" alt="justify-content" title="justify content"></p>
+          <p>Con flex-end:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172072904-f5a42ac8-8619-4ee0-a5ef-304963ad11d4.png" alt="justify-content" title="justify content"></p>
+          <p>Y flex-start es la propiedad por defecto.</p>
+          <p>Bueno, lo que hicimos hasta ahora es nada mas alinear en el main axis. ¿Como alineamos en el cross axis? Bueno depende, tenemos dos propiedades para hacer esto, align-items (Esta es para cuando hay solo una linea de flex-items) y align-content cuando hay mas de una. Primero lo primero, voy a darle un height a el flex-container para que ocupe toda la pantalla y podamos ver los cambios:</p>
+          <pre><code><span class="hljs-selector-class">.flex-container</span>{
+              <span class="hljs-attribute">display</span>: flex;
+              <span class="hljs-attribute">justify-content</span>: space-evenly;
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">100vh</span>;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span> {
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">background-color</span>: brown;
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">10px</span>;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">:first-child</span>{ <span class="hljs-comment">/* Selecciono el primer hijo de .flex-container */</span>
+              <span class="hljs-attribute">background-color</span>: blueviolet;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">:last-child</span>{ <span class="hljs-comment">/* Selecciono el ultimo hijo de .flex-container */</span>
+              <span class="hljs-attribute">background-color</span>: yellow;
+          }
+          </code></pre><p>Empecemos, esta es la propiedad que viene por defecto con align-items:</p>
+          <pre><code><span class="hljs-selector-class">.flex-container</span>{
+              <span class="hljs-attribute">display</span>: flex;
+              <span class="hljs-attribute">justify-content</span>: space-evenly;
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">100vh</span>;
+              <span class="hljs-attribute">align-items</span>: stretch;
+          }
+          </code></pre><p>Despues tenemos mas valores, como: center, flex-end, flex-start. Vamos a ver como se veria si le doy un align-items con un valor center:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172204976-69031512-0df3-4ebc-8b71-b6b6237cb34c.png" alt="align-items" title="align-items"></p>
+          <p>Como podes ver, basicamente se centra en el cross-axis.</p>
+          <p>Si le damos un flex-end pasa algo como esto:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172205295-bc4c64bc-0ec7-464d-acd8-0c0b0c8b5b62.png" alt="align-items" title="align-items"></p>
+          <p>Es decir, nos lo pone al final.</p>
+          <p>Finalmente si le damos un flex-start pasa esto:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172205693-04e59f5a-db1a-4a75-a0f0-f349e666961c.png" alt="align-items" title="align-items"></p>
+          <p>Y vos me diras, &quot;eu, pero no cambia nada respecto a stretch&quot;, pero si cambia, para visualizarlo vamos a hacer esto:</p>
+          <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-container"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>caja 1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>caja 2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>caja 3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+          </code></pre><p>y le sacamos el height a las cajas:</p>
+          <pre><code><span class="hljs-selector-class">.flex-container</span>{
+              <span class="hljs-attribute">display</span>: flex;
+              <span class="hljs-attribute">justify-content</span>: space-evenly;
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">100vh</span>;
+              <span class="hljs-attribute">align-items</span>: flex-start;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span> {
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">background-color</span>: brown;
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">10px</span>;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">:first-child</span>{ <span class="hljs-comment">/* Selecciono el primer hijo de .flex-container */</span>
+              <span class="hljs-attribute">background-color</span>: blueviolet;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">:last-child</span>{ <span class="hljs-comment">/* Selecciono el ultimo hijo de .flex-container */</span>
+              <span class="hljs-attribute">background-color</span>: yellow;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172206126-11b68eca-3cc8-4641-8e15-707cbd3e79a8.png" alt="align-items" title="align-items"></p>
+          <p>Esto pasa, pero si le ponemos stretch nuevamente al align-items pasa esto, mira:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172206299-beab96b3-22af-4cf2-938a-65eac3af48c9.png" alt="align-items" title="align-items"></p>
+          <p>Se nos estira por todo el cross-axis. Entonces, lo que hacemos para evitar esto es poner flex-start, de esta forma se ajusta la caja flexible a su contenido. </p>
+          <p>¿Y que pasa con el align-content? Vamos a ver. Voy a agregar un flex-wrap asi las cajas bajan y generan mas lineas.</p>
+          <pre><code><span class="hljs-selector-class">.flex-container</span>{
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">100vh</span>;
+              <span class="hljs-attribute">display</span>: flex;
+              <span class="hljs-attribute">justify-content</span>: space-evenly;
+              <span class="hljs-attribute">align-items</span>: flex-start;
+              <span class="hljs-attribute">flex-wrap</span>: wrap;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span> {
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">background-color</span>: brown;
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">10px</span>;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">:first-child</span>{ <span class="hljs-comment">/* Selecciono el primer hijo de .flex-container */</span>
+              <span class="hljs-attribute">background-color</span>: blueviolet;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">:last-child</span>{ <span class="hljs-comment">/* Selecciono el ultimo hijo de .flex-container */</span>
+              <span class="hljs-attribute">background-color</span>: yellow;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172207256-bff3b16a-ba5c-4be1-b984-c63b6df46e32.png" alt="align-content" title="align-content"></p>
+          <p>Como podes ver (agregue unas cajitas mas) cuando hay mas de una linea, funcionar sigue funcionando, se centran automaticamente, pero ese no es el efecto que queremos lograr. Voy a darle un height a las cajas para que lo apreciemos mejor y en vez de poner align-items voy a poner align-content:</p>
+          <pre><code><span class="hljs-selector-class">.flex-container</span>{
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">100vh</span>;
+              <span class="hljs-attribute">display</span>: flex;
+              <span class="hljs-attribute">justify-content</span>: space-evenly;
+              <span class="hljs-attribute">align-content</span>: flex-start;
+              <span class="hljs-attribute">flex-wrap</span>: wrap;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span> {
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">background-color</span>: brown;
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">10px</span>;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172207939-b1d48ba3-5d16-4db5-aa42-e3b67ab3de0e.png" alt="align-content" title="align-content"></p>
+          <p>Y asi de la misma manera funciona el flex-end y el center, centrando el conjunto de lineas de flex-items o poniendolos al final.</p>
+          <p>Bien! a lo largo de esta explicacion de flexbox hemos estado trabajando principalmente con el flex-container, con las propiedades que podemos darle a el, es decir, propiedades reservadas para el flex-container. Ahora vamos a empezar a ver propiedades reservadas para los flex-items, vamos!.</p>
+          <p>Lo primero que voy a hacer es modificar el codigo un poco y acondicionarlo para mostrar lo que quiero mostrar:</p>
+          <pre><code><span class="hljs-selector-class">.flex-container</span>{
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">100vh</span>;
+              <span class="hljs-attribute">display</span>: flex;
+              <span class="hljs-attribute">justify-content</span>: space-evenly;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span> {
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">background-color</span>: brown;
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">10px</span>;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">:first-child</span>{ <span class="hljs-comment">/* Selecciono el primer hijo de .flex-container */</span>
+              <span class="hljs-attribute">background-color</span>: blueviolet;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">:last-child</span>{ <span class="hljs-comment">/* Selecciono el ultimo hijo de .flex-container */</span>
+              <span class="hljs-attribute">background-color</span>: yellow;
+          }
+          </code></pre><p>Y en HTML voy a dejar unicamente cuatro cajas, nos quedamos con este resultado:</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172209652-94b61990-edd5-48fa-ae2a-14d7a6295018.png" alt="align-self" title="align-self"></p>
+          <p>Imaginate que queremos bajar unicamente la caja amarilla, ¿Como lo hacemos? facil, primero seleccionamos el flex item de la caja amarilla, el cual ya tenemos seleccionado, aca, mira:</p>
+          <pre><code><span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">:last-child</span>{ <span class="hljs-comment">/* Selecciono el ultimo hijo de .flex-container */</span>
+              <span class="hljs-attribute">background-color</span>: yellow;
+          }
+          </code></pre><p>Y le vamos a dar un align-self (acordate que esto es alineacion en el cross axis), por defecto como sabemos esta en stretch, pero le puedo dar los mismos valores que a align-items, mirá, te voy a mostrar un ejemplo con align-self: center:</p>
+          <pre><code><span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">:last-child</span>{ <span class="hljs-comment">/* Selecciono el ultimo hijo de .flex-container */</span>
+              <span class="hljs-attribute">background-color</span>: yellow;
+              <span class="hljs-attribute">align-self</span>: center;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172210318-17b8aa8c-fb3b-4a1e-a140-158a82f97686.png" alt="align-self" title="align-self"></p>
+          <p>Te invito a que intentes darle los distintos valores que le podes dar a align-self, juga con esta propiedad!</p>
+          <h3 id="flex-grow">Flex grow</h3>
+          <p>Flex grow, como dije, pertenece a propiedades de flex-items. Lo que hace es agarrar el espacio sobrante y lo reparte entre las cajas que quedan. Vamos a ver, voy a dejar tres cajas y voy a darles este estilo:</p>
+          <pre><code><span class="hljs-selector-class">.flex-container</span>{
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">100vh</span>;
+              <span class="hljs-attribute">display</span>: flex;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span> {
+              <span class="hljs-attribute">background-color</span>: brown;
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">:first-child</span>{ <span class="hljs-comment">/* Selecciono el primer hijo de .flex-container */</span>
+              <span class="hljs-attribute">background-color</span>: blueviolet;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">:last-child</span>{ <span class="hljs-comment">/* Selecciono el ultimo hijo de .flex-container */</span>
+              <span class="hljs-attribute">background-color</span>: yellow;
+          }
+          </code></pre><p>Nada nuevo ¿no?</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172212351-1788d048-f8fc-4230-8b83-820b4ff667b2.png" alt="flex-grow" title="flex-grow"></p>
+          <p>Y mira que pasa si hago este cambio:</p>
+          <pre><code><span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span> {
+              <span class="hljs-attribute">background-color</span>: brown;
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">flex-grow</span>: <span class="hljs-number">1</span>;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172212307-07714374-5048-465f-a411-b1d646b9e951.png" alt="flex-grow" title="flex-grow"></p>
+          <p>Esta buenisimo! Lo que hace es bueno, ¿cuantas cajas hay? ¿3? bueno, a cada una dales un pedacito del espacio total. Por ejemplo, si el espacio que queda es de 600px, dale 200px a cada caja.</p>
+          <p>Pero... ¿Esto se puede aplicar a flex-items de forma individual? Si! Mira, suponete que quiero darle el espacio sobrande a la caja violeta, entonces agarro la caja violeta y le doy el flex-grow:</p>
+          <pre><code><span class="hljs-selector-class">.flex-container</span>{
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">100vh</span>;
+              <span class="hljs-attribute">display</span>: flex;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span> {
+              <span class="hljs-attribute">background-color</span>: brown;
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">:first-child</span>{ <span class="hljs-comment">/* Selecciono el primer hijo de .flex-container */</span>
+              <span class="hljs-attribute">background-color</span>: blueviolet;
+              <span class="hljs-attribute">flex-grow</span>: <span class="hljs-number">1</span>;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">:last-child</span>{ <span class="hljs-comment">/* Selecciono el ultimo hijo de .flex-container */</span>
+              <span class="hljs-attribute">background-color</span>: yellow;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172213217-661f5226-f15f-4442-b88f-c60013c65c49.png" alt="flex-grow" title="flex-grow"></p>
+          <p>En este caso, si sobraran 600px, se los damos todos a la violeta.</p>
+          <p>Tambien puedo darle un pedazo al amarillo:</p>
+          <pre><code><span class="hljs-selector-class">.flex-container</span>{
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">100vh</span>;
+              <span class="hljs-attribute">display</span>: flex;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span> {
+              <span class="hljs-attribute">background-color</span>: brown;
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">:first-child</span>{ <span class="hljs-comment">/* Selecciono el primer hijo de .flex-container */</span>
+              <span class="hljs-attribute">background-color</span>: blueviolet;
+              <span class="hljs-attribute">flex-grow</span>: <span class="hljs-number">1</span>;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">:last-child</span>{ <span class="hljs-comment">/* Selecciono el ultimo hijo de .flex-container */</span>
+              <span class="hljs-attribute">background-color</span>: yellow;
+              <span class="hljs-attribute">flex-grow</span>: <span class="hljs-number">1</span>;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172214084-f27d6d9c-5044-49a0-a0da-095490c9baa7.png" alt="flex-grow" title="flex grow"></p>
+          <p>¿Y que pasa si le doy un flex-grow 2 a el primer hijo?</p>
+          <pre><code><span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">:first-child</span>{ <span class="hljs-comment">/* Selecciono el primer hijo de .flex-container */</span>
+              <span class="hljs-attribute">background-color</span>: blueviolet;
+              <span class="hljs-attribute">flex-grow</span>: <span class="hljs-number">2</span>;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172214638-2f467b52-37b2-47a9-9809-7fc9217dcccc.png" alt="flex-grow" title="flex-grow"></p>
+          <p>Ahora el espacio que sobro se va a dividir en tres y van a ir dos partes para el primer hijo (violeta) y una para el ultimo hijo (amarillo). En otras palabras, 1/3 del excedente para el ultimo y 2/3 para el primero.</p>
+          <h3 id="flex-shrink">Flex shrink</h3>
+          <p>Esta propiedad sirve para administrar cuanto espacio del main axis &quot;cede&quot; cada flex-item. Suponte que tenes un contenedor de 600px de ancho y tres flex item de 300px de ancho, es decir, que en total tienen un ancho de 900px, por tanto, a la hora de colocarse dentro del contenedor de 600px van a tener que ajustarse cediendo entre las tres 300px, que es lo que les falta. Ahora vos me diras, facil, se les quita 100px a cada caja y quedan entran las tres cajas con un ancho de 200px, si, pero esto puede modificarse.</p>
+          <p><img src="https://user-images.githubusercontent.com/84806140/172230681-bddea15c-f665-490d-bbc7-17f0838f5078.png" alt="flex-shrink" title="flex shrink"></p>
+          <p>Con flex shrink puedo modificar cuanto cede una caja a la hora de ajustarse a su contenedor, por ejemplo, vamos a hacer que la caja violeta ceda mas ancho a la hora de ajustarse:</p>
+          <pre><code><span class="hljs-selector-class">.flex-container</span>{
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">100vh</span>;
+              <span class="hljs-attribute">display</span>: flex;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span> {
+              <span class="hljs-attribute">background-color</span>: brown;
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">400px</span>;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">:first-child</span>{ <span class="hljs-comment">/* Selecciono el primer hijo de .flex-container */</span>
+              <span class="hljs-attribute">background-color</span>: blueviolet;
+              <span class="hljs-attribute">flex-shrink</span>: <span class="hljs-number">2</span>;
+          }
+          
+          <span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">:last-child</span>{ <span class="hljs-comment">/* Selecciono el ultimo hijo de .flex-container */</span>
+              <span class="hljs-attribute">background-color</span>: yellow;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172230996-9dd578dd-3039-4541-b549-5366078790b2.png" alt="flex-shrink" title="flex shrink"></p>
+          <p>Como pueden ver, a la hora de achicar el ancho, el que mas cede ancho es la caja violeta, eso es simplemente el flex shrink, la mejor forma de entender flex shrink es agarrar flex shrink y hacer pruebas y intentar cosas con esta propiedad. A medida que aumenta el numero de flex shrink, mas cede esa caja.</p>
+          <p>Ademas, como podemos hacer que las cajas cedan espacio, podemos hacer que una caja ceda menos, el valor por defecto de flex-shrink es 1, por tanto, si damos un valor menor a 1, estara entregando menos. Mira lo que pasa si le doy flex-shrink 0:</p>
+          <pre><code><span class="hljs-selector-class">.flex-container</span> <span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">:first-child</span>{ <span class="hljs-comment">/* Selecciono el primer hijo de .flex-container */</span>
+              <span class="hljs-attribute">background-color</span>: blueviolet;
+              <span class="hljs-attribute">flex-shrink</span>: <span class="hljs-number">0</span>;
+          }
+          </code></pre><p><img src="https://user-images.githubusercontent.com/84806140/172231614-c3a8718b-0f9f-4f79-bc48-e9911dbbd707.png" alt="flex-shrink" title="flex-shrink"></p>
+          <p>Fijate que egoista la caja violeta que no cede nada de su ancho, sigue teniendo los 400px de ancho que le di.</p>
+          `
       },
       {
           id:17,
