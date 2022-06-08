@@ -76,6 +76,7 @@
 .img-container{
     position: relative;
     transition: background-color 1s ease-in-out;
+    cursor: pointer;
 }
 
 .content-component-container img{
