@@ -1,4 +1,5 @@
 .landing-container-main{
+    position: relative;
     width: 100vw;
     height: 100vh;
     background: #ffffff;
