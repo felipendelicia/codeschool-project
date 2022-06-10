@@ -2099,7 +2099,731 @@ const themes = [
       {
           id:17,
           title:"📅 Grid",
-          content:`<h2>Todavia no disponible 💩</h2>`
+          content:`<h2 id="grid-">Grid 📅</h2>
+          <p>Para arrancar a trabajar con grid tenemos que revisar varios conceptos antes de arrancar. Buen, pero, para arrancar vamos a ver que es grid. Grid es una forma en la que se pueden maquetar las webs, al igual que flex. Es un nuevo display que tenemos. Lo que hacemos es trabajar el layout a traves de grillas (&quot;grid&quot;-&quot;grillas&quot;). Vamos a arrancar, ahora si, a ver conceptos referidos a grid:</p>
+          <h3 id="conceptos-basicos-de-grid">Conceptos basicos de grid</h3>
+          <p>Las grillas en CSS funcionan a traves de celdas, columnas, filas, tracks, etc. Para empezar veamos el primer concepto:</p>
+          <p><strong>Grid container</strong>, grid container es tal cual el flex container, es el que contiene nuestra grilla, en este caso, algo como esto:</p>
+          <p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/172475304-88dbfda5-32f7-4307-bb03-0b4a98850a41.png" alt="grid-container" title="grid-container"></p>
+          <p class="img-container">Lo mismo que pasa con flex, pasa con grid, cuando le damos grid a una etiqueta, le estamos cambiando la estructura, el comportamiento de los hijos de esa etiqueta, transformandose asi en <strong>grid items</strong>:</p>
+          <p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/172476298-ad8b13f4-aabc-4c0a-b4ab-26c06a2acc24.png" alt="grid-item" title="grid-item"></p>
+          <p>Hay que entender que, aunque haya 15 celdas en una grilla (<strong>grid-cells</strong>), por ejemplo, no necesariamente hay 15 grid items en esa grilla. Por ejemplo, en el ejemplo de la imagen, vos te imaginaras que hay una sola celda, ya que el div tiene un solo elemento, sin embargo, no necesariamente. Ese div podria tener 15 celdas independientemente de sus elementos.</p>
+          <p>Las <strong>grid-cells</strong> son las celdas de nuestra grilla:</p>
+          <p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173111011-0375b88d-3c1c-4ec2-9d05-77e5ddfdabf8.png" alt="grid-cells" title="grid-cells"></p>
+          <p>Esto es una grid-cell de nuestra grilla, por ejemplo. En total, la grilla presentada posee 9 grid-cells.</p>
+          <p>Despues de las grid-cells, existen los <strong>grid-tracks</strong>, pero estos pueden ser en forma de columna o en forma de fila. Empecemos con los tracks en fila, son algo como esto:</p>
+          <p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173111971-61e64b23-0bfb-4343-8aef-5ae2bbbcaa0a.png" alt="grid-trackRow" title="grid-track row"></p>
+          <p>Basicamente, son una fila. Despues tenemos los grid-tracks column que son como una columna, son algo asi:</p>
+          <p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173112226-3630a33f-152c-446e-9ca6-0690188ab999.png" alt="grid-trackColumn" title="grid-track column"></p>
+          <p>Despues de los tracks estan los <strong>grid-areas</strong> los cuales no vienen por defecto en una grilla que nosotros creemos, estos deben ser definidos por notrotros y a su vez deben ser consecutivas:</p>
+          <p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173113501-6a063440-052d-4812-8bd5-daca2d026d56.png" alt="grid-area" title="grid-area"></p>
+          <p>Esto seria un grid-area que puede ser definido, sin embargo, hay otras que no pueden serlo, por ejemplo, un grid-area en forma de cruz, de ele, etc. Los grid-area deben ser consecutivos, por ejemplo, este seria un uso erroneo de grid-area:</p>
+          <p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173113830-a31bbd46-88e4-4731-ae26-52fa057b06f5.png" alt="grid-area" title="grid-area"></p>
+          <p>El final y ultimo concepto de grid son las <strong>grid-lines</strong>. Las lines son las lineas divisorias entre las columnas y las filas, por lo tanto, hay dos tipos de grid-lines, las que dividen columnas y las que dividen filas. En el caso de nuestro ejemplo anterior, nuestra grilla posee 4 grid lines column y 4 grid lines row, mira:</p>
+          <p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173115172-01a109a3-cb8b-4bc4-8bdf-be6bc2b2c825.png" alt="grid-lines" title="grid-lines"></p>
+          <h3 id="primeros-pasos-con-grid">Primeros pasos con grid</h3>
+          <p>Vamos a arrancar a meter codigo grid! lee:</p>
+          <pre><code>&lt;body&gt;
+              &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-container"</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item"</span>&gt;<span class="hljs-number">1</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item"</span>&gt;<span class="hljs-number">2</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item"</span>&gt;<span class="hljs-number">3</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item"</span>&gt;<span class="hljs-number">4</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item"</span>&gt;<span class="hljs-number">5</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item"</span>&gt;<span class="hljs-number">6</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item"</span>&gt;<span class="hljs-number">7</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item"</span>&gt;<span class="hljs-number">8</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item"</span>&gt;<span class="hljs-number">9</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+              &lt;/<span class="hljs-keyword">div</span>&gt;
+          &lt;/body&gt;
+          </code></pre><p>Y mis estilos queridos:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">display</span>: grid;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173116437-ecf99ac2-1e2b-4bf9-b6e8-096e7bc9d63c.png" alt="displayGrid" title="grid"></p>
+          <p>Bueno, como veran, aparentemente no hay ningun cambio, de hecho, no lo hay. Vamos a ver, cuando damos un display grid, nosotros lo que queremos hacer es crear una grilla donde haya columnas y filas, sin embargo, grid, por defecto, tiene una unica columna y una unica fila.</p>
+          <p>Para definir la cantidad de columnas y filas en una grilla, se le aplican las siguientes propiedades al grid-container:</p>
+          <p><code>grid-template-columns</code></p>
+          <p>y</p>
+          <p><code>grid-template-rows</code></p>
+          <p>Voy a suponer en este ejemplo que queremos tener una grilla tal como la del ejemplo, es decir, de tres filas y tres columnas.</p>
+          <p>Ahora voy a definir que haya tres filas de 100px cada una, de la siguiente manera:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-number">100px</span> <span class="hljs-number">100px</span> <span class="hljs-number">100px</span>;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173118202-6da322af-367f-4ba5-8d80-aa3dc9c455d6.png" alt="grid-template-rows" title="grid-template-rows"></p>
+          <p>Y vos me vas a decir... &#39;No, para. Hay nueve filas.&#39; Bueno, no. Dentro del grid container tenemos 3 filas, el resto es grid <strong>implicito</strong>, es grid que no estamos programando. Pero para que esto quede bien, vamos a agregarle las columnas de 100px cada una tambien.</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-number">100px</span> <span class="hljs-number">100px</span> <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-number">100px</span> <span class="hljs-number">100px</span> <span class="hljs-number">100px</span>;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173118703-d4119637-24b4-426d-a4f5-d7286a38d692.png" alt="grid-template-columns" title="grid-template-columns"></p>
+          <p>De esta manera mira que hermoso lo que se nos armo.</p>
+          <h3 id="unidades-especiales-en-grid">Unidades especiales en grid</h3>
+          <p>Cuando trabajamos con grid de la manera que lo hicimos con la anterior grilla, nos queda una grilla muerta que si cambia la resolucion se mantiene como esta, no es responsiva. Sin embargo, hay un valor: fr, que dan vida a tus grillas.</p>
+          <p>Arranquemos con fr. Fr es algo parecido a lo que llamabamos flex-grow, agarra las columnas, por ejemplo, y todo el espacio que sobre se divide entre las columnas que tengan fr como unidad:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-number">100px</span> <span class="hljs-number">100px</span> <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-number">100px</span> <span class="hljs-number">100px</span> <span class="hljs-number">1</span>fr;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173119633-4032eb57-2d73-4913-b67c-2d1600393737.png" alt="grid-fr" title="fr"></p>
+          <p>Acordate que, al igual que en flex-grow, aca tambien podemos dividir el espacio con un valor diferente a 1, por ejemplo, si le doy a la segunda columna un fr de valor 1 y a la ultima un fr de valor 2, se va a dar 1/3 del espacio sobrante a la segunda columna y 2/3 del espacio sobrante a la ultima columna:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>; <span class="hljs-comment">/*Agregue margin pa' que se vea mejor*/</span>
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-number">100px</span> <span class="hljs-number">100px</span> <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-number">100px</span> <span class="hljs-number">1</span>fr <span class="hljs-number">2</span>fr;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173120367-f51989d0-ff0f-4678-84cd-897ba6a85277.png" alt="grid-fr" title="fr"></p>
+          <h3 id="grid-gap">grid gap</h3>
+          <p>Estas propiedades se le aplican al grid container. Son algo asi como un margin pero entre celdas.</p>
+          <p>Si queremos separar las filas, usamos &#39;grid-row-gap&#39;, de esta manera:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>; <span class="hljs-comment">/*Agregue margin pa' que se vea mejor*/</span>
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-number">100px</span> <span class="hljs-number">100px</span> <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-number">100px</span> <span class="hljs-number">100px</span> <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">grid-row-gap</span>: <span class="hljs-number">10px</span>;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173121237-d1f86a52-c410-4b18-bef0-bba39a0f4237.png" alt="grid-row-gap" title="grid-row-gap"></p>
+          <p>Si queremos separar las columnas, usamos &#39;grid-column-gap&#39;, de esta manera:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>; <span class="hljs-comment">/*Agregue margin pa' que se vea mejor*/</span>
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-number">100px</span> <span class="hljs-number">100px</span> <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-number">100px</span> <span class="hljs-number">100px</span> <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">grid-column-gap</span>: <span class="hljs-number">10px</span>;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173121624-8c917ff6-045f-4806-b0f1-e6048bd61ce7.png" alt="grid-column-gap" title="grid-column-gap"></p>
+          <h3 id="grid-row-y-grid-column">grid row y grid column</h3>
+          <p>Agarremos este codigo:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-number">100px</span> <span class="hljs-number">100px</span> <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-number">100px</span> <span class="hljs-number">100px</span> <span class="hljs-number">100px</span>;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173118703-d4119637-24b4-426d-a4f5-d7286a38d692.png" alt="grid row, column" title="grid row column"></p>
+          <p>Ahora imaginate que agarro la cajita numero 1 y quiero que ocupe en su fila lo que ocupa la cajita 1 y la 2, osea, el doble de su ancho. Esto se hace asi (seleccionando a la caja que queremos afectar):</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>; <span class="hljs-comment">/*Agregue margin pa' que se vea mejor*/</span>
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-number">100px</span> <span class="hljs-number">100px</span> <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-number">100px</span> <span class="hljs-number">100px</span> <span class="hljs-number">100px</span>;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span><span class="hljs-selector-pseudo">:first-child</span> { <span class="hljs-comment">/*Selecciono el primer hijo de .grid-container*/</span>
+              <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#999</span>;
+              <span class="hljs-attribute">grid-column</span>: <span class="hljs-number">1</span> / <span class="hljs-number">3</span>;
+          }
+          </code></pre><p>Basicamente, lo que hice fue decirle con la propiedad &#39;grid-column&#39; cuanto debe iniciar y finalizar la celda. En el primer numero le dije en que grid-line column debia iniciar y en el segundo le dije en cual debia acabar:</p>
+          <p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173129628-4a16a7f1-ee88-4abf-812c-3c48209597a6.png" alt="grid-column" title="grid column"></p>
+          <p>Si te fijas, ademas de pasar lo que te comente, tambien se creo una nueva fila donde se coloco el 9. Digamos que el 1 empujo al 2, el 2 al 3 y asi hasta que el 8 empujo al 9. </p>
+          <p>Ahora imaginate que tambien, ademas de ocupar dos &#39;cuadraditos&#39;(celdas) de ancho, quiero que ocupe dos &#39;cuadraditos&#39;(celdas) de alto:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>; <span class="hljs-comment">/*Agregue margin pa' que se vea mejor*/</span>
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-number">100px</span> <span class="hljs-number">100px</span> <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-number">100px</span> <span class="hljs-number">100px</span> <span class="hljs-number">100px</span>;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span><span class="hljs-selector-pseudo">:first-child</span> { <span class="hljs-comment">/*Selecciono el primer hijo de .grid-container*/</span>
+              <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#999</span>;
+              <span class="hljs-attribute">grid-column</span>: <span class="hljs-number">1</span> / <span class="hljs-number">3</span>;
+              <span class="hljs-attribute">grid-row</span>: <span class="hljs-number">1</span> / <span class="hljs-number">3</span>;
+          }
+          </code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173130303-0831216a-76b7-44e5-82aa-e2eb9b05fd9b.png" alt="grid-row" title="grid-row"></p>
+          <h3 id="repeat-">repeat()</h3>
+          <p>Ahora vamos a ver de que otra forma podemos crear columnas. Porque ahora nosotros estuvimos creando columnas que son repetitivas (100px 100px 100px), nosotros podemos abreviar esto. Muy facil, usamos la funcion repeat(), la cual recibe dos parametros (deberiamos ver lo que es en programacion), lo que significa que debe recibir dos datos, en este caso &#39;cantidad&#39;y &#39;magnitud&#39;. En nuestro caso, para reemplazar exactamente esto:</p>
+          <p><code>grid-template-rows: 100px 100px 100px;</code></p>
+          <p>Deberiamos usar el siguiente codigo:</p>
+          <p><code>grid-template-rows: repeat(3,100px);</code></p>
+          <p>basicamente, por si no lo entendiste, le estamos diciendo que repita 100px tres veces.</p>
+          <p>Ahora imaginate que quiero tener algo como esto:</p>
+          <p><code>grid-template-rows: 100px 1fr 100px 1fr;</code></p>
+          <p>Esto se puede lograr igualmente con repeat, de esta manera:</p>
+          <p><code>grid-template-rows: repeat(2, 100px 1fr)</code></p>
+          <p>Como podes ver, cualquie cosa que ponga como segundo parametro se va a repetir, no hay chance.</p>
+          <h3 id="grid-implicito-y-explicito">grid implicito y explicito</h3>
+          <p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173133980-61a30746-7263-450d-a72a-82b9178be134.png" alt="grid implicito" title="grid implicito"></p>
+          <p>Suponete que nosotros definimos una grilla con tres filas y tres columnas. Ahora suponete que tenes un item de mas y ese item se te pone como esta en la foto, este item va a pertenecer al grid implicito y va a tener determinadas cualidades.</p>
+          <p>El grid explicito es el que venimos programando hasta ahora, el que pertenece al grid que nosotros programamos.</p>
+          <p>Vamos a ir a codigo:</p>
+          <pre><code>&lt;body&gt;
+              &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-container"</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item"</span>&gt;<span class="hljs-number">1</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item"</span>&gt;<span class="hljs-number">2</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item"</span>&gt;<span class="hljs-number">3</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item"</span>&gt;<span class="hljs-number">4</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item"</span>&gt;<span class="hljs-number">5</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item"</span>&gt;<span class="hljs-number">6</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item"</span>&gt;<span class="hljs-number">7</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item"</span>&gt;<span class="hljs-number">8</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item"</span>&gt;<span class="hljs-number">9</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item"</span>&gt;<span class="hljs-number">10</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item"</span>&gt;<span class="hljs-number">11</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item"</span>&gt;<span class="hljs-number">12</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+              &lt;/<span class="hljs-keyword">div</span>&gt;
+          &lt;/body&gt;
+          </code></pre><p>y:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>; <span class="hljs-comment">/*Agregue margin pa' que se vea mejor*/</span>
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-number">100px</span> <span class="hljs-number">100px</span> <span class="hljs-number">100px</span>;
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-number">100px</span> <span class="hljs-number">100px</span> <span class="hljs-number">100px</span>;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173135019-06d3c2e9-8f78-4866-887b-5b21324f19a0.png" alt="grid-implicito" title="grid implicito"></p>
+          <p>Como pueden ver, nosotros programamos tres columnas y tres celdas, sin embargo, los elementos 10, 11 y 12 estan de mas, no forman parte de lo que queriamos hacer inicialmente.</p>
+          <p>Tambien podriamos verlo con un ejemplo como este:</p>
+          <blockquote>
+          <p>En HTML agregue un total de 21 cajas.</p>
+          </blockquote>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>; <span class="hljs-comment">/*Agregue margin pa' que se vea mejor*/</span>
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-built_in">repeat</span>(3, 100px);
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-built_in">repeat</span>(6, 100px);
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173135597-7675eb34-0807-4890-b3a2-dbe245b01e86.png" alt="grid-implicito" title="grid implicito"></p>
+          <p>Como podes ver, aca ademas de tener un excedente de celdas, tambien tengo un hueco que no se llena en la esquina inferior derecha.</p>
+          <p>Para trabajar con este tipo de grid se agregan tres propiedades nuevas. </p>
+          <p>Primero tenemos el grid-auto-rows y grid-auto-columns que funciona exactamente igual que el grid-template-rows y grid-template-columns respectivamente, nada mas que se usa para manejar el tema del grid implicito. Y grid-auto-flow, que ahora vamos a ver bien que es.</p>
+          <p>Empecemos! lo que voy a hacer es agregar esta propiedad al codigo:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>; <span class="hljs-comment">/*Agregue margin pa' que se vea mejor*/</span>
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-built_in">repeat</span>(3, 100px);
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-built_in">repeat</span>(6, 100px);
+              <span class="hljs-attribute">grid-auto-columns</span>: <span class="hljs-built_in">repeat</span>(3, 200px);
+          }
+          </code></pre><p>Ponelo en el codigo y fijate que pasa. Spoiler: no pasa nada, no hay ningun cambio. Esto pasa porque por defecto el excedente de un grid container se agrega como una fila, no como una columna. Lo que quiero que comprendas, es que, entonces para hacer esto, lo primero que tengo que hacer es configurar las filas implicitas, asi:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>; <span class="hljs-comment">/*Agregue margin pa' que se vea mejor*/</span>
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-built_in">repeat</span>(3, 100px);
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-built_in">repeat</span>(6, 100px);
+              <span class="hljs-attribute">grid-auto-rows</span>: <span class="hljs-number">150px</span>;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p>Lo primero que vas a decirme es &#39;Che Felipe, pone el repeat&#39;, pero no, porque no estamos definiendo cuanto va a medir la fila que vamos a crear, sino las que se salgan del grid explicito:</p>
+          <p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173137275-d568a47f-4fdb-4460-924f-27691ed2761b.png" alt="grid-implicito" title="grid implicito"></p>
+          <p>Ahora imaginate que quiero que se comporte como una columna y no como una fila pedorra, lo hago asi, graba:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>; <span class="hljs-comment">/*Agregue margin pa' que se vea mejor*/</span>
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-built_in">repeat</span>(3, 100px);
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-built_in">repeat</span>(6, 100px);
+              <span class="hljs-attribute">grid-auto-rows</span>: <span class="hljs-number">150px</span>;
+              <span class="hljs-attribute">grid-auto-flow</span>: column;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p>Con el queridisimo auto-flow.</p>
+          <p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173137649-47e5fbd0-a156-437c-8674-b76ad54e8eac.png" alt="grid-auto-flow" title="grid-auto-flow"></p>
+          <p>Ahora si, vamos a configurar las columnas:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>; <span class="hljs-comment">/*Agregue margin pa' que se vea mejor*/</span>
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-built_in">repeat</span>(3, 100px);
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-built_in">repeat</span>(6, 100px);
+              <span class="hljs-attribute">grid-auto-columns</span>: <span class="hljs-number">150px</span>;
+              <span class="hljs-attribute">grid-auto-flow</span>: column;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173137806-d32e84cc-0a75-4e01-9c4a-033b6ac99067.png" alt="grid-implicito" title="grid implicito"></p>
+          <h3 id="grid-dinamico">grid dinamico</h3>
+          <p>Arranquemos con el min-content y el max-content. Vamos a poner un codigo:</p>
+          <pre><code>&lt;body&gt;
+              &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-container"</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item"</span>&gt;<span class="hljs-number">1</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item"</span>&gt;<span class="hljs-number">2</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item"</span>&gt;Hola! Soy un programador&lt;/<span class="hljs-keyword">div</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item"</span>&gt;<span class="hljs-number">4</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item"</span>&gt;<span class="hljs-number">5</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item"</span>&gt;<span class="hljs-number">6</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item"</span>&gt;<span class="hljs-number">7</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item"</span>&gt;<span class="hljs-number">8</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item"</span>&gt;<span class="hljs-number">9</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+              &lt;/<span class="hljs-keyword">div</span>&gt;
+          &lt;/body&gt;
+          </code></pre><p>y:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>; <span class="hljs-comment">/*Agregue margin pa' que se vea mejor*/</span>
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-built_in">repeat</span>(3, 200px);
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-built_in">repeat</span>(3, 300px);
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173140511-6b937ca4-afb3-414b-9637-25770bcb035b.png" alt="grid-dinamico" title="grid dinamico"></p>
+          <p>Mira, ahora voy a hacer que las columnas se ajusten al contenido minimo que tenga la celda, asi:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>; <span class="hljs-comment">/*Agregue margin pa' que se vea mejor*/</span>
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-built_in">repeat</span>(3, 200px);
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-built_in">repeat</span>(3, min-content);
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173140792-a6d67730-7534-43d4-8ce0-3692616abf57.png" alt="grid-min-content" title="grid min-content"></p>
+          <p>Ves, ahora las columnas que tenemos ahi van a valer el minimo contenido que tenga la celda. Y si...</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>; <span class="hljs-comment">/*Agregue margin pa' que se vea mejor*/</span>
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-built_in">repeat</span>(3, 200px);
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-built_in">repeat</span>(3, max-content);
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173141053-be28e344-86b7-4502-b7e0-7c9fe8dee44f.png" alt="grid-max-content" title="grid-max-content"></p>
+          <p>Ahora vamos a trabajar con la funcion minmax(). Esta funcion sirve para definir cuanto de minimo tiene que medir algo y cuanto de maximo:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>; <span class="hljs-comment">/*Agregue margin pa' que se vea mejor*/</span>
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-built_in">repeat</span>(3, 200px);
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-built_in">repeat</span>(3, minmax(100px,300px));
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p>De esta manera, las columnas tendran como minimo 100px, mas chiquitas que eso imposible, y tendran 300px como maximo, no se estiraran mas. Te invito a que hagas la prueba.</p>
+          <p>Y esto nos va a venir bien para algo:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>; <span class="hljs-comment">/*Agregue margin pa' que se vea mejor*/</span>
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-built_in">repeat</span>(3, 200px);
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-built_in">repeat</span>(3, minmax(min-content,300px));
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p>De esta manera, no se va a achicar mas de lo que el contenido permita.</p>
+          <p>Ahora vamos a ver la propiedad auto-fill que lo que hace es rellenar, en el caso del ejemplo que voy a dar, las columnas.</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>; <span class="hljs-comment">/*Agregue margin pa' que se vea mejor*/</span>
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#f00</span>;
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-built_in">repeat</span>(3, 100px);
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-built_in">repeat</span>(auto-fill, minmax(100px,1fr));
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p>Como podes ver le agregue un borde al container para que se aprecie mejor y le dije a grid-template-columns que repita tantas columnas como pueda, es decir, lo que hace grid-template-columns es preguntarse si puede entrar otra celda que cumpla el minimo y maximo que estas pueden tener:</p>
+          <p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173143525-f5dd8bb8-7ce3-4cb2-8ca5-01c0d4df6c03.png" alt="grid-auto-fill" title="auto-fill"></p>
+          <p>Ahora mismo todos los elementos se me hacen columna porque si los 9 elementos miden 100px siguen cabiendo en una sola fila. Ahhh pero si le damos un minimo mas alto ni ahi, mira:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>; <span class="hljs-comment">/*Agregue margin pa' que se vea mejor*/</span>
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#f00</span>;
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-built_in">repeat</span>(3, 100px);
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-built_in">repeat</span>(auto-fill, minmax(300px,1fr));
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173143018-08e2af3f-96ad-4497-9814-158d53dabfd4.png" alt="grid-auto-fill" title="auto-fill"></p>
+          <p>Che, mira lo que pasa cuando hacemos esto:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>; <span class="hljs-comment">/*Agregue margin pa' que se vea mejor*/</span>
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#f00</span>;
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-built_in">repeat</span>(3, 100px);
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-built_in">repeat</span>(auto-fill, minmax(100px,1fr));
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173143525-f5dd8bb8-7ce3-4cb2-8ca5-01c0d4df6c03.png" alt="grid-auto-fit" title="auto-fit"></p>
+          <p>Como podes ver, pasa lo que ya explique, pero si quiero hacer que se escale al ancho del grid-container, se hace asi:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>; <span class="hljs-comment">/*Agregue margin pa' que se vea mejor*/</span>
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#f00</span>;
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-built_in">repeat</span>(3, 100px);
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-built_in">repeat</span>(auto-fit, minmax(100px,1fr));
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173143770-7d11e465-74a1-4586-9bb9-e2a85176f269.png" alt="grid-auto-fit" title="auto-fit"></p>
+          <p>Esto lo logre usando, en vez de, auto-fill, auto-fit.</p>
+          <h3 id="alineacion-y-control-de-flujo-con-grid">Alineacion y control de flujo con grid</h3>
+          <p>Para empezar vamos a ver que onda la diferencia que hay entre flex y grid. Como sabemos, con flex nosotros alineabamos en el main y cross axis. Aca en grid tenemos el alineamiento general de todos los items (se aplica al contenedor), el alineamiento de una columna o fila en particular (se aplica al contenedor) y el de una celda particular (se aplica a un elemento).</p>
+          <p>Como esto es dificil de explicar solo en palabras, vamos a ponerlo en practica.</p>
+          <blockquote>
+          <p>Tenemos 9 cajas en HTML!</p>
+          </blockquote>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>; <span class="hljs-comment">/*Agregue margin pa' que se vea mejor*/</span>
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#f00</span>;
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-built_in">repeat</span>(3, 200px);
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-built_in">repeat</span>(3, minmax(120px,1fr));
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2em</span>;
+              <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.5em</span>;
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173145536-17d8df0c-239c-4d8f-9296-8069a340938b.png" alt="grid-align" title="grid Align"></p>
+          <p>Por ahora nada raro, mira si hacemos esto:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>; <span class="hljs-comment">/*Agregue margin pa' que se vea mejor*/</span>
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#f00</span>;
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-built_in">repeat</span>(3, 200px);
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-built_in">repeat</span>(3, minmax(120px,1fr));
+              <span class="hljs-attribute">justify-items</span>: center;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2em</span>;
+              <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.5em</span>;
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173145699-afdbcf90-8fbd-4a33-b4b7-17bd484169c1.png" alt="grid-justify-items" title="grid justify-items"></p>
+          <p>Tambien podemos darle el valor start:</p>
+          <p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173145914-5c0dc367-97a0-4f92-ac31-560ab15e7791.png" alt="grid-justify-items" title="grid justify-content"></p>
+          <p>Y tenemos end que es lo mismo nada mas que al final, te invito a intentarlo.</p>
+          <p>Ahora bien, ademas de centrarlo hacia los costados, lo podemos centrar verticalmente con align-items:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>; <span class="hljs-comment">/*Agregue margin pa' que se vea mejor*/</span>
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#f00</span>;
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-built_in">repeat</span>(3, 200px);
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-built_in">repeat</span>(3, minmax(120px,1fr));
+              <span class="hljs-attribute">justify-items</span>: center;
+              <span class="hljs-attribute">align-items</span>: center;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2em</span>;
+              <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.5em</span>;
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173146257-0e7f2a0d-ea62-4828-a07b-ea1cca5ff544.png" alt="grid-align-items" title="align-items"></p>
+          <p>Como podes ver, ahora tenemos todo centrado en los dos ejes, tambien funciona el start y el end al igual que en justify items.</p>
+          <p>Los valores por defecto de estas dos propiedades es stretch. Mira, vamos a ver dos casos:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>; <span class="hljs-comment">/*Agregue margin pa' que se vea mejor*/</span>
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#f00</span>;
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-built_in">repeat</span>(3, 200px);
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-built_in">repeat</span>(3, minmax(120px,1fr));
+              <span class="hljs-attribute">justify-items</span>: stretch;
+              <span class="hljs-attribute">align-items</span>: center;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2em</span>;
+              <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.5em</span>;
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p>Para que lo veas primero te voy a mostrar como se veria si pongo solo el justify-items como stretch:</p>
+          <p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173146569-82be37a1-26d0-4851-ac93-7281fb5b366a.png" alt="stretch" title="stretch"></p>
+          <p>Y despues el align-items:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>; <span class="hljs-comment">/*Agregue margin pa' que se vea mejor*/</span>
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#f00</span>;
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-built_in">repeat</span>(3, 200px);
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-built_in">repeat</span>(3, minmax(120px,1fr));
+              <span class="hljs-attribute">justify-items</span>: center;
+              <span class="hljs-attribute">align-items</span>: stretch;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2em</span>;
+              <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.5em</span>;
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173146711-1784abc7-d4b6-47b1-9804-8b51ddec0456.png" alt="stretch" title="stretch"></p>
+          <p>Ahora despues de ver como alinear todos los elementos vamos a hablar de otra cosa: justify-content y align-content. </p>
+          <p>Vamos a arrancar con el justify-content, primero que nada vamos a arrancar con este codigo:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>; <span class="hljs-comment">/*Agregue margin pa' que se vea mejor*/</span>
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#f00</span>;
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-built_in">repeat</span>(3, 200px);
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-built_in">repeat</span>(3, minmax(120px,300px));
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2em</span>;
+              <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.5em</span>;
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p>Como podes ver, lo unico que hice es sacarle el fr y poner una medida fija para que se pueda apreciar mejor:</p>
+          <p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173147227-5fa1a01a-08ac-4f8a-8cc4-211dd2833511.png" alt="justify-content" title="justify-content"></p>
+          <p>Ahora vamos a centrar de esta manera el contenido, mira:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>; <span class="hljs-comment">/*Agregue margin pa' que se vea mejor*/</span>
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#f00</span>;
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-built_in">repeat</span>(3, 200px);
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-built_in">repeat</span>(3, minmax(120px,300px));
+              <span class="hljs-attribute">justify-content</span>: center;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2em</span>;
+              <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.5em</span>;
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173147423-547f1b4a-614a-490b-a424-0434047537e7.png" alt="justify-content" title="justify-content"></p>
+          <p>Como ves, se me ajusto el contenido al centro, tambien con el valor end se podria colocar al final, te invito a probarlo.</p>
+          <p>Ahora vamos a alinearlo en el eje y, de la siguiente manera:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">8vh</span>;
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#f00</span>;
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-built_in">repeat</span>(3, 100px);
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-built_in">repeat</span>(3, 100px);
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">80vh</span>;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2em</span>;
+              <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.5em</span>;
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p>Primero voy a agrandar y hacer mas grande el contenedor de los items para que se vea bien:</p>
+          <p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173147952-0d415620-7ca9-4e4b-9757-2c2ef10678f8.png" alt="align-content" title="align-content"></p>
+          <p>Ahora si lo vamos a centrar en el eje y:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">8vh</span>;
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#f00</span>;
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-built_in">repeat</span>(3, 100px);
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-built_in">repeat</span>(3, 100px);
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">80vh</span>;
+              <span class="hljs-attribute">align-content</span>: center;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2em</span>;
+              <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.5em</span>;
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          </code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173148070-0bffbfb0-40c3-4174-ba6e-05a3112d3fe1.png" alt="align-content" title="align-content"></p>
+          <p>Obviamente como te digo siempre, proba ponerle el end, se va a poner al final del eje y.</p>
+          <p>Aclaro que los valores space-evenly, space-beetwen y space-around estan disponibles para justify-content y para align-content.</p>
+          <p>Ahora vamos a posicionar a los elementos particularmente, a las celdas. Voy a usar este codigo:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">8vh</span>;
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#f00</span>;
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-built_in">repeat</span>(3, 1fr);
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-built_in">repeat</span>(3, 1fr);
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">80vh</span>;
+              <span class="hljs-attribute">justify-items</span>: center;
+              <span class="hljs-attribute">align-items</span>: center;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2em</span>;
+              <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.5em</span> <span class="hljs-number">1em</span>;
+              <span class="hljs-attribute">background-color</span>: chocolate;
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          </code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173150305-fdbe1073-2023-44a1-9441-572dbb8e3325.png" alt="align-self" title="align self"></p>
+          <p>Las alineaciones verticales se hacen como dijimos con align, en este caso, align-self para un solo elemento y las horizontales con justify, en este caso justify-self.</p>
+          <p>Por lo tanto, para ver como funcionaria esto, vamos a ver como hariamos para que quede algo como esto:</p>
+          <p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173150868-3156fa5d-0a40-46cc-b757-8a882dbaa8b6.png" alt="maqueta" title="maqueta"></p>
+          <p>Lo que hariamos de esta manera:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">8vh</span>;
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#f00</span>;
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-built_in">repeat</span>(3, 1fr);
+              <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-built_in">repeat</span>(3, 1fr);
+              <span class="hljs-attribute">height</span>: <span class="hljs-number">80vh</span>;
+              <span class="hljs-attribute">justify-items</span>: center;
+              <span class="hljs-attribute">align-items</span>: center;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2em</span>;
+              <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.5em</span> <span class="hljs-number">1em</span>;
+              <span class="hljs-attribute">background-color</span>: chocolate;
+              <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span><span class="hljs-selector-pseudo">:first-child</span>{
+              <span class="hljs-attribute">align-self</span>: start;
+              <span class="hljs-attribute">justify-self</span>: start;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span><span class="hljs-selector-pseudo">:nth-child(3)</span>{
+              <span class="hljs-attribute">align-self</span>: start;
+              <span class="hljs-attribute">justify-self</span>: end;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span><span class="hljs-selector-pseudo">:nth-child(4)</span>{
+              <span class="hljs-attribute">justify-self</span>: end;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span><span class="hljs-selector-pseudo">:nth-child(6)</span>{
+              <span class="hljs-attribute">justify-self</span>: start;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span><span class="hljs-selector-pseudo">:nth-child(7)</span>{
+              <span class="hljs-attribute">align-self</span>: end;
+              <span class="hljs-attribute">justify-self</span>: start;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span><span class="hljs-selector-pseudo">:last-child</span>{
+              <span class="hljs-attribute">align-self</span>: end;
+              <span class="hljs-attribute">justify-self</span>: end;
+          }
+          </code></pre><p>Primero aclarar un detalle, el selector :nth-child(numero) selecciona el numero de hijo que se le indique en el numero, por ejemplo, si quiero seleccionar el cuarto hijo, se hace asi: :nth-child(4).</p>
+          <p>Por ejemplo, con el primer hijo, lo que hice fue decirle que en el eje y (align-self) vaya al inicio y en el eje x (justify-self) al inicio tambien. Y asi con los demas elementos.</p>
+          <p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173154063-1fbeaafd-f55c-48b5-b234-3f38f6066351.png" alt="rta" title="rta"></p>
+          <h3 id="grid-areas">grid areas</h3>
+          <p>Ya estamos preparados para comprender el funcionamiento de los grid areas. Ahora vamos a ver como hacer unas areas, mira, suponte algo asi:</p>
+          <pre><code>&lt;body&gt;
+              &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-container"</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item header"</span>&gt;header&lt;/<span class="hljs-keyword">div</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item aside"</span>&gt;aside&lt;/<span class="hljs-keyword">div</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item main"</span>&gt;main&lt;/<span class="hljs-keyword">div</span>&gt;
+                  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"grid-item footer"</span>&gt;footer&lt;/<span class="hljs-keyword">div</span>&gt;
+              &lt;/<span class="hljs-keyword">div</span>&gt;
+          &lt;/body&gt;
+          </code></pre><p>y:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#444</span>;
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">10px</span>;
+              <span class="hljs-attribute">display</span>: grid;
+          }
+          
+          <span class="hljs-selector-class">.grid-item</span>{
+              <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+          }
+          
+          <span class="hljs-selector-class">.header</span>{
+              <span class="hljs-attribute">background-color</span>: green;
+          }
+          
+          <span class="hljs-selector-class">.aside</span>{
+              <span class="hljs-attribute">background-color</span>: red;
+          }
+          
+          <span class="hljs-selector-class">.footer</span>{
+              <span class="hljs-attribute">background-color</span>: blue;
+          }
+          
+          <span class="hljs-selector-class">.main</span>{
+              <span class="hljs-attribute">background-color</span>: orange;
+          }
+          </code></pre><p>Por ahora no tenemos nada:</p>
+          <p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173156511-3b45cfa7-a15a-45be-a164-4f01ef9e60e1.png" alt="grid-area" title="grid area"></p>
+          <p>Ahora vamos a laburar con areas. Se labura con grid-template-areas. Se divide en areas como si fueran nombres, algo asi:</p>
+          <pre><code><span class="hljs-selector-class">.grid-container</span>{
+              <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#444</span>;
+              <span class="hljs-attribute">margin</span>: <span class="hljs-number">10px</span>;
+              <span class="hljs-attribute">display</span>: grid;
+              <span class="hljs-attribute">grid-template-areas</span>: 
+              <span class="hljs-string">'header header header'</span>
+              <span class="hljs-string">'aside main main'</span>
+              <span class="hljs-string">'aside main main'</span>
+              <span class="hljs-string">'aside main main'</span>
+              <span class="hljs-string">'aside main main'</span>
+              <span class="hljs-string">'footer footer footer'</span>;
+          }
+          </code></pre><p>Ahora si vemos los resultados, no paso nada. Esto porque debemos vincular los nombres de las areas con sus respectivas areas:</p>
+          <pre><code><span class="hljs-selector-class">.header</span>{
+              <span class="hljs-attribute">background-color</span>: green;
+              <span class="hljs-attribute">grid-area</span>: header;
+          }
+          
+          <span class="hljs-selector-class">.aside</span>{
+              <span class="hljs-attribute">background-color</span>: red;
+              <span class="hljs-attribute">grid-area</span>: aside;
+          }
+          
+          <span class="hljs-selector-class">.footer</span>{
+              <span class="hljs-attribute">background-color</span>: blue;
+              <span class="hljs-attribute">grid-area</span>: footer;
+          }
+          
+          <span class="hljs-selector-class">.main</span>{
+              <span class="hljs-attribute">background-color</span>: orange;
+              <span class="hljs-attribute">grid-area</span>: main;
+          }
+          </code></pre><p>Y ahora si, mire:</p>
+          <p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/173156947-cf33095c-36c7-4af2-b3d7-4c3d3ea9d76e.png" alt="grid-area" title="grid-area"></p>
+          `
       },
       {
           id:18,
