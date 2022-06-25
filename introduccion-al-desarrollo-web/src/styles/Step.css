@@ -1,5 +1,6 @@
 .step-container-main{
-    display: flex;
+    display: grid;
+    grid-template-columns: 70% 30%;
 }
 
 .step-see-modal{
@@ -7,12 +8,10 @@
 }
 
 .step-content-container{
-    width: 70vw;
     padding: 2em 3em;
 }
 
 .step-titles-container{
-    width: 30vw;
     padding: 2em 2em;
 }
 

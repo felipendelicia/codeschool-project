@@ -2828,27 +2828,378 @@ const themes = [
       {
           id:18,
           title:"🌓🌔 Transition",
-          content:`<h2>Todavia no disponible 💩</h2>`
+          content:`
+          <h2 id="transition-">Transition 🌓🌔</h2>
+<p>Para arrancar vamos a aclarar un par de cosas... ¿Que es transition? Transition es una propiedad que lo que nos permite es realizar transiciones dentro de los elementos.</p>
+<p>Transition es un shorthand (una propiedad acortada), sin embargo, vamos a ver todas las propiedades por separado. </p>
+<p>Para usar transition, como minimo hay que darle dos valores a dos de sus propiedades, primero que nada hay que darle una propiedad a la que vamos a transicionar, por ejemplo, imaginate que le queremos hacer hover a un elemento y que pase de ser un texto azul a uno rojo, entonces la propiedad seria &#39;color&#39; che!</p>
+<p>Despues, la segunda propiedad que hay que poner y no te queda otra, es la duracion de la transicion que vamos a realizar!</p>
+<p>Bueno che, para explicar este temita que tenemos aca, voy a agarrar y a usar este codigo HTML:</p>
+<pre><code>&lt;body&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"container"</span>&gt;
+        &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"caja"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/body&gt;
+</code></pre><p>Y voy a usar estos estilos:</p>
+<pre><code><span class="hljs-selector-class">.container</span>{
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">300px</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f00</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">1em</span>;
+}
+
+<span class="hljs-selector-class">.caja</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f99</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+}
+
+<span class="hljs-selector-class">.caja</span><span class="hljs-selector-pseudo">:hover</span> {
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#025</span>;
+}
+</code></pre><p>Si tenes un poco de idea de lo que venimos haciendo en esta introduccion, sabras que tenemos dos div, uno dentro del otro. Lo que pasa es que al pasar el cursor sobre el que esta dentro (.caja) cambia de color a un color mas azulado:</p>
+<p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/175751659-b96f72cf-4e23-4dfc-bb59-bc76abe1a3e1.gif" alt="hover" title="hover"></p>
+<p>Empece a implemetar gifs eh, que calidad.</p>
+<p>Volviendo al tema de hacer transiciones, estariamos queriendo hacer que esto ocurra, que transicione pero de manera mas suave, que muestre todos los pasos (o frames) entre el color ese rojo clarito y el azul ¿Como lo hacemos? En este caso, demosle una propiedad la cual transicionar y un tiempo que durará la transicion:</p>
+<pre><code><span class="hljs-selector-class">.caja</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f99</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">transition-property</span>: background-color;
+    <span class="hljs-attribute">transition-duration</span>: <span class="hljs-number">1s</span>;
+}
+
+<span class="hljs-selector-class">.caja</span><span class="hljs-selector-pseudo">:hover</span> {
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#025</span>;
+}
+</code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/175758086-b08e3c37-745c-4e2b-8ddf-27f2cde46c20.gif" alt="background-transition" title="background transition"></p>
+<p>Esas dos propiedades son OBLIGATORIAS a la hora de usar el transition.</p>
+<p>Sin embargo, tenemos otras propiedades a pesar de esto. Por ejemplo, transition delay. Sirve para que la animacion se ejecute despues de x tiempo (delay) y desaparece despues de ese mismo tiempo tambien:</p>
+<pre><code><span class="hljs-selector-class">.caja</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f99</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">transition-property</span>: background-color;
+    <span class="hljs-attribute">transition-duration</span>: <span class="hljs-number">1s</span>;
+    <span class="hljs-attribute">transition-delay</span>: <span class="hljs-number">1s</span>;
+}
+
+<span class="hljs-selector-class">.caja</span><span class="hljs-selector-pseudo">:hover</span> {
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#025</span>;
+}
+</code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/175758461-c984c5f2-7c0f-4252-92f1-c122b84242dd.gif" alt="delay" title="delay"></p>
+<p>Y finalmente, y el mas dificil, el transition timing function que basicamente nos dice la curva del tiempo que va a tardar en realizar la animacion, son los frames en funcion del tiempo. Te recomiendo que los mires en <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function">developer mozilla</a> para conocer todos los valores que podes darle, yo te voy a mostrar este ejemplo:</p>
+<pre><code><span class="hljs-selector-class">.caja</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f99</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">transition-property</span>: background-color;
+    <span class="hljs-attribute">transition-duration</span>: <span class="hljs-number">2s</span>;
+    <span class="hljs-attribute">transition-delay</span>: <span class="hljs-number">0.2s</span>;
+    <span class="hljs-attribute">transition-timing-function</span>: ease-in;
+}
+
+<span class="hljs-selector-class">.caja</span><span class="hljs-selector-pseudo">:hover</span> {
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#025</span>;
+}
+</code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/175758835-251a1d9f-a1ae-49a2-b182-c3dc14f4d900.gif" alt="timing function" title="timing function"></p>
+<p>Ahora, como les dije, esto es un shorthand, asi que, ¿Como hago para poner todo en una sola propiedad? Bueno:</p>
+<p><code>transition: background-color 2s ease-in 2s</code></p>
+<p>Te quedaria primero la propiedad, despues la duracion, la timing-function y el delay.</p>
+`
       },
       {
           id:19,
           title:"🎮 Animation",
-          content:`<h2>Todavia no disponible 💩</h2>`
+          content:`
+          <h2 id="animation-">Animation 🎮</h2>
+<p>Ahora vamos a ver el tema de las animaciones que es muy similar al de las transiciones. Lo que las diferencia a las animaciones es que ellas dependen de una regla:</p>
+<p><code>@keyframes</code></p>
+<p>Vamos a quedarnos con este codigo CSS:</p>
+<pre><code><span class="hljs-selector-class">.container</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f00</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">1em</span>;
+}
+
+<span class="hljs-selector-class">.caja</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f99</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+}
+</code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/175759264-8949516e-f4ed-42ab-9a91-9a294c74c6e7.png" alt="animation" title="Animation"></p>
+<p>Ahora suponete que tenemos graves problemas psicologicos y queremos que ese cubito este constantemente rondando de izquierda a derecha y viceversa.</p>
+<p>Para empezar hice algo asi, mira:</p>
+<pre><code><span class="hljs-selector-class">.caja</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f99</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">position</span>: relative;
+    <span class="hljs-attribute">animation-name</span>: desplazarse;
+    <span class="hljs-attribute">animation-duration</span>: <span class="hljs-number">3s</span>;
+}
+
+@<span class="hljs-keyword">keyframes</span> desplazarse {
+    0%{
+        <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">background-color</span>: blue;
+    }
+    100%{
+        <span class="hljs-attribute">left</span>: <span class="hljs-number">80%</span>;
+        <span class="hljs-attribute">background-color</span>: aqua;
+    }
+}
+</code></pre><p>Primero defini un keyframe, que es una especie de funcion en la que indique que al inicio de la animacion la posicion sea left 0 y al final sea 80% y que al inicio tenga un color azul y al final un color agua.</p>
+<p>Esta animacion se la aplique a la caja con la propiedad animation-name y le di un tiempo de ejecucion de 3 segundos:</p>
+<p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/175759501-13f1709f-1978-402e-9b9e-a66490970574.gif" alt="initial animation"></p>
+<p>A esto tambien le podemos agregar timing-functions como en las transiciones:</p>
+<pre><code><span class="hljs-selector-class">.caja</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f99</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">position</span>: relative;
+    <span class="hljs-attribute">animation-name</span>: desplazarse;
+    <span class="hljs-attribute">animation-timing-function</span>: ease-out;
+    <span class="hljs-attribute">animation-duration</span>: <span class="hljs-number">3s</span>;
+}
+</code></pre><p>A esto, tambien le podemos decir cuantas veces quiero que se repita la animacion, asi mira pibe:</p>
+<pre><code><span class="hljs-selector-class">.caja</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f99</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">position</span>: relative;
+    <span class="hljs-attribute">animation-name</span>: desplazarse;
+    <span class="hljs-attribute">animation-timing-function</span>: ease-out;
+    <span class="hljs-attribute">animation-iteration-count</span>: <span class="hljs-number">3</span>;
+    <span class="hljs-attribute">animation-duration</span>: <span class="hljs-number">3s</span>;
+}
+</code></pre><p>Ahi le dije &#39;Ejecutate tres veces!&#39;. Che Felipe, perooo ¿si quiero que se ejecute de forma infinita mi animacion? Asi mira:</p>
+<pre><code><span class="hljs-selector-class">.caja</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f99</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">position</span>: relative;
+    <span class="hljs-attribute">animation-name</span>: desplazarse;
+    <span class="hljs-attribute">animation-timing-function</span>: ease-out;
+    <span class="hljs-attribute">animation-iteration-count</span>: infinite;
+    <span class="hljs-attribute">animation-duration</span>: <span class="hljs-number">3s</span>;
+}
+</code></pre><p>Otra propiedad interesante que nos queda y con la que vamos a lograr nuestro cometido de hacer el cubo que va y viene es el siguiente:</p>
+<pre><code><span class="hljs-selector-class">.caja</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f99</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">position</span>: relative;
+    <span class="hljs-attribute">animation-name</span>: desplazarse;
+    <span class="hljs-attribute">animation-timing-function</span>: ease-out;
+    <span class="hljs-attribute">animation-iteration-count</span>: <span class="hljs-number">3</span>;
+    <span class="hljs-attribute">animation-duration</span>: <span class="hljs-number">3s</span>;
+    <span class="hljs-attribute">animation-direction</span>: normal;
+}
+</code></pre><p>De esta manera le dije que siga el flujo normal de la animacion, es decir, de 0% a 100%. Si le pongo:</p>
+<pre><code><span class="hljs-selector-class">.caja</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f99</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">position</span>: relative;
+    <span class="hljs-attribute">animation-name</span>: desplazarse;
+    <span class="hljs-attribute">animation-timing-function</span>: ease-out;
+    <span class="hljs-attribute">animation-iteration-count</span>: <span class="hljs-number">3</span>;
+    <span class="hljs-attribute">animation-duration</span>: <span class="hljs-number">3s</span>;
+    <span class="hljs-attribute">animation-direction</span>: reverse;
+}
+</code></pre><p>El flujo de ejecucion seria al reves, del 100% al 0%. Y finalmente:</p>
+<pre><code><span class="hljs-selector-class">.caja</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f99</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">position</span>: relative;
+    <span class="hljs-attribute">animation-name</span>: desplazarse;
+    <span class="hljs-attribute">animation-timing-function</span>: ease-out;
+    <span class="hljs-attribute">animation-iteration-count</span>: <span class="hljs-number">3</span>;
+    <span class="hljs-attribute">animation-duration</span>: <span class="hljs-number">3s</span>;
+    <span class="hljs-attribute">animation-direction</span>: alternate;
+}
+</code></pre><p>El cual alterna la direccion del keyframe, de tal manera que vaya y venga, en nuestro caso. Seria ir del 0% al 100% y volver al 0%:</p>
+<p>Finalmente, mi codigo es este:</p>
+<pre><code><span class="hljs-selector-class">.caja</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f99</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">position</span>: relative;
+    <span class="hljs-attribute">animation-name</span>: desplazarse;
+    <span class="hljs-attribute">animation-timing-function</span>: ease-out;
+    <span class="hljs-attribute">animation-iteration-count</span>: infinite;
+    <span class="hljs-attribute">animation-duration</span>: <span class="hljs-number">1s</span>;
+    <span class="hljs-attribute">animation-direction</span>: alternate;
+}
+
+@<span class="hljs-keyword">keyframes</span> desplazarse {
+    0%{
+        <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">background-color</span>: blue;
+    }
+    50%{
+        <span class="hljs-attribute">background-color</span>: black;
+    }
+    100%{
+        <span class="hljs-attribute">left</span>: <span class="hljs-number">90%</span>;
+        <span class="hljs-attribute">background-color</span>: aqua;
+    }
+}
+</code></pre><p>Fijate que le agregue un 50%, lo que hace es que en la mitad de la animacion pone nuestra caja con un fondo negro, mira:</p>
+<p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/175759755-882a9d17-a29b-496e-b574-8d4a79355b7c.gif" alt="final animation"></p>
+<blockquote>
+<p>Tambien se le puede agregar un animation-delay con la misma finalidad que las transiciones</p>
+</blockquote>
+`
       },
       {
           id:20,
           title:"💧🍷 Transform",
-          content:`<h2>Todavia no disponible 💩</h2>`
+          content:`
+          <h2 id="transform-">Transform 💧🍷</h2>
+<p>Transform es una propiedad que nos permite cambiar el elemento (literal todas las propiedades se explican solas con el nombre). Las transformaciones reciben funciones.</p>
+<p>Mira el codigo HTML:</p>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"caja"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>GitHub<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</code></pre><p>Y el codigo CSS:</p>
+<pre><code><span class="hljs-selector-class">.container</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f00</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">1em</span>;
+}
+
+<span class="hljs-selector-class">.caja</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f99</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">80px</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">80px</span>;
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>;
+    <span class="hljs-attribute">display</span>: flex;
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+}
+
+<span class="hljs-selector-tag">b</span>{
+    <span class="hljs-attribute">margin</span>: auto;
+}
+</code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/175759929-1d50fcca-3667-41bd-aad8-e30dcdf38244.png" alt="transform"></p>
+<p>Vamos a arrancar con el valor traslate:</p>
+<pre><code><span class="hljs-selector-class">.caja</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f99</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">80px</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">80px</span>;
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>;
+    <span class="hljs-attribute">display</span>: flex;
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateX</span>(100px);
+}
+</code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/175759995-b72137f8-119a-4645-9e90-37e886d76442.png" alt="traslate"></p>
+<p>Aca le agregue la funcion traslateX y le di 100px, facilmente vemos que se mueve 100px a la derecha, si lo quisiesemos mover a la izquierda, simplemente le damos -100px. Esto funciona de la misma manera para traslateY.</p>
+<p>Tambien podemos usar una funcion que me traslade en ambos ejes, asi:</p>
+<p><code>transform: traslate(100px, 100px)</code></p>
+<p>Este valor trasladaria el elemento 100px a la derecha y 100px abajo.</p>
+<p>Ahora vamos a ver scale(). Veamos esto:</p>
+<pre><code><span class="hljs-selector-class">.caja</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f99</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">80px</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">80px</span>;
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>;
+    <span class="hljs-attribute">display</span>: flex;
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">scale</span>(1)
+}
+</code></pre><p>Si pones esto en el codigo no va a pasar nada, te lo digo yo, porque el elemento ya estaba por defecto en escala 1, sin embargo, si ponemos:</p>
+<p><code>transform: scale(2)</code></p>
+<p>Pasa algo asi:</p>
+<p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/175760160-b4a05350-84ad-49a5-abe1-7f386cd61c48.png" alt="scale"></p>
+<p>Simplemente se escala al numero que vos le indiques ahi. &quot;dos veces el elemento&quot; le dije, el doble del elemento. Tambien podemos darle mas escala en un solo eje con scaleX y scaleY.</p>
+<p>Ahora skew(). Skew vos lo lees y te quedas como &quot;que carajo es esto&quot;, es muy simple, quedate tranquilo. Skew lo que es es deformar el elemento y toma como parametro una cantidad de grados (deg), por ejemplo esto:</p>
+<pre><code><span class="hljs-selector-class">.caja</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f99</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">80px</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">80px</span>;
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>;
+    <span class="hljs-attribute">display</span>: flex;
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">skew</span>(45deg)
+}
+</code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/175760267-1ef41875-6825-44c5-8a36-3f36479579e6.png" alt="skew"></p>
+<p>Como podes ver se inclina digamos 40 grados el elemento. Como te imaginaras, se puede realizar para un solo eje tambien.</p>
+<blockquote>
+<p>Hay varios valores mas para el transform, te recomiendo que los mires en <a href="https://www.w3schools.com/cssref/css3_pr_transform.asp">W3Schools</a></p>
+</blockquote>
+`
       },
       {
           id:21,
           title:"🔴 Background",
-          content:`<h2>Todavia no disponible 💩</h2>`
-      },
-      {
-          id:22,
-          title:"💖 Filter",
-          content:`<h2>Todavia no disponible 💩</h2>`
+          content:`
+          <h2 id="background-">Background 🔴</h2>
+<p>Background es un shorthand de un monton de propiedades, por ejemplo, de la propiedad background-color que tanto usamos. Vamos a ver background-image que a mi me encanta:</p>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</code></pre><p>Y los estilos:</p>
+<pre><code><span class="hljs-selector-class">.container</span>{
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">300px</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">300px</span>;
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">40px</span>;
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(https://cloudfront-us-east-1.images.arcpublishing.com/infobae/5OQRLMSKNVB2NHS4R5JULXC4D4.jpg);
+}
+</code></pre><p>Como veran, le pasamos una funcion url con la url de nuestra imagen, y vos diras, Felipe!¿Que es esa imagen? Es un artista que me encanta que se llama Leo Mattioli.</p>
+<p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/175760738-12535b91-fcc0-4194-a9e4-84307a610750.png" alt="background-img"></p>
+<p>Se ve asi porque la imagen es enorme comparado a nuestra pequeña caja de 300x300.</p>
+<p>Si queremos que el tamaño de la imagen sea del 100% lo podemos hacer con la propiedad background-size:</p>
+<pre><code><span class="hljs-selector-class">.container</span>{
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">300px</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">300px</span>;
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">40px</span>;
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(https://cloudfront-us-east-1.images.arcpublishing.com/infobae/5OQRLMSKNVB2NHS4R5JULXC4D4.jpg);
+    <span class="hljs-attribute">background-size</span>: <span class="hljs-number">100%</span>;
+}
+</code></pre><p>El tema esta en que se repite la imagen:</p>
+<p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/175760772-939bf04a-b84a-495f-8b1b-c0c634c41cf1.png" alt="background-size"></p>
+<p>Tambien podriamos darle un:</p>
+<p><code>background-size: 100% 100%</code></p>
+<p>Lo que haria que ocupe toda la caja pero con la consecuencia de que se estiraria horriblemente la imagen. Finalmente tenemos la opcion de trabajarla como si fuera un object-fit, con la propiedad cover:</p>
+<pre><code><span class="hljs-selector-class">.container</span>{
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">300px</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">300px</span>;
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">40px</span>;
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(https://cloudfront-us-east-1.images.arcpublishing.com/infobae/5OQRLMSKNVB2NHS4R5JULXC4D4.jpg);
+    <span class="hljs-attribute">background-size</span>: cover;
+}
+</code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/175760832-51380377-a80e-4b33-af26-3d1fd598348b.png" alt="cover"></p>
+<p>Igual quiero mostrar algo, supongamos que volvemos al background-size: 100%, ¿Recordas que se repetia? Imaginate que no quiero que se repita, hago asi, mira:</p>
+<pre><code><span class="hljs-selector-class">.container</span>{
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">300px</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">300px</span>;
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">40px</span>;
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(https://cloudfront-us-east-1.images.arcpublishing.com/infobae/5OQRLMSKNVB2NHS4R5JULXC4D4.jpg);
+    <span class="hljs-attribute">background-size</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">background-repeat</span>: no-repeat;
+}
+</code></pre><p>Y no se va a repetir.</p>
+<p>Ahora, volvamos al presente:</p>
+<pre><code><span class="hljs-selector-class">.container</span>{
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">300px</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">300px</span>;
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">40px</span>;
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(https://cloudfront-us-east-1.images.arcpublishing.com/infobae/5OQRLMSKNVB2NHS4R5JULXC4D4.jpg);
+    <span class="hljs-attribute">background-size</span>: cover;
+}
+</code></pre><p>¿Como hago para centrarlo a Leito? Hago algo similar a cuando alineabamos el object-fit con la propiedad background-position:</p>
+<pre><code><span class="hljs-selector-class">.container</span>{
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">300px</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">300px</span>;
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">40px</span>;
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(https://cloudfront-us-east-1.images.arcpublishing.com/infobae/5OQRLMSKNVB2NHS4R5JULXC4D4.jpg);
+    <span class="hljs-attribute">background-size</span>: cover;
+    <span class="hljs-attribute">background-position</span>: center;
+}
+</code></pre><p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/175760975-9edc4a04-a206-4c4e-b1bf-a77191198fed.png" alt="background-position"></p>
+`
       }
     ],
   },
