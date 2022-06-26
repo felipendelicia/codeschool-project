@@ -3208,12 +3208,376 @@ const themes = [
     contents: [
       {
         id: 0,
-        title: "🤕🤒 No hay contenido",
+        title: "🧑‍🏫 Principios básicos de programación",
         content: `
-              <h2>No la hice capo 😎</h2>
-              <p>Proximamente vas a poder gozar de esta parte😈🧠.</p>
-              `,
+        <h2 id="principios-b-sicos-de-programaci-n-">Principios básicos de programación 🧑‍🏫</h2>
+        <p>En este primer apartado vamos a empezar a asentar las bases donde nosotros vamos a construir el resto de nuestros conocimientos en programacion, asi que pilas. Los principios que vamos a ver son identicos en todos los lenguajes, sea cual sea el lenguaje que aprendas, los siguientes principios hacen parte del mismo.</p>
+        <p>Uno de los principios basicos de la programacion es la <strong>logica</strong>, lo cual es tener una idea del camino mas simple y facil que escogemos para lograr nuestro objetivo o solucionar un problema, algo que ocurre constantemente en la programacion debido a que hay que buscar las formas mas faciles y eficientes para solucionar problemas y gastar la menor cantidad de recursos.</p>
+        <p>El siguiente concepto es <strong>programa</strong>. ¿Que es un programa? Un programa es un conjunto de instrucciones que al ser ejecutadas logran un objetivo. Cuando nosotros programamos un codigo, no estamos haciendo mas que generando una serie de instrucciones que haran parte de nuestro programa.</p>
+        <p>El ultimo concepto de este apartado es la <strong>programacion</strong>. ¿Que es la programacion? Como lo vine diciendo antes, programar es dar una serie de instrucciones o pasos a la computadora para dar solucion a un problema.</p>
+        `,
       },
+      {
+        id: 1,
+        title: "💾 Datos e información",
+        content: `
+        <h2 id="datos-e-informaci-n-">Datos e información 💾</h2>
+        <p>Los datos son una representacion simbolica (alfanumerica, numerica, espacial, etc.) de una variable cuantitativa o cualitativa. Por ejemplo, supongamos que recibimos la siguiente <strong>informacion</strong>: &quot;Javier es un joven de 24 años, ingeniero informatico que le gusta el futbol y la programacion.&quot;. Con esto, nos indico varios datos acerca de Javier, por ejemplo:</p>
+        <table>
+        <thead>
+        <tr>
+        <th>Variable</th>
+        <th>Dato</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>Nombre</td>
+        <td>Javier</td>
+        </tr>
+        <tr>
+        <td>Edad</td>
+        <td>24</td>
+        </tr>
+        <tr>
+        <td>Profesion</td>
+        <td>Ingeniero informatico</td>
+        </tr>
+        <tr>
+        <td>Gustos</td>
+        <td>Futbol y programacion</td>
+        </tr>
+        </tbody>
+        </table>
+        <p>Por lo que podemos deducir que, la informacion es un conjunto organizado de datos procesados que constituyen un mensaje.</p>
+        <p>Sin embargo, cabe aclarar que no basta con decir &quot;Javier es joven&quot;, no podemos catalogar &quot;joven&quot; dentro de alguna variable debido a la <strong>ambiguedad</strong> de este dato, debido a que quizas en otros paises y culturas es considerada diferente la vejez respecto a mi pais, Argentina.</p>
+        <p class="img-container"><img src="https://caymansseo.com/wp-content/uploads/2018/05/diferencia-entre-datos-e-informacion.jpg" alt="datos e informacion"></p>
+        `,
+      },
+      {
+        id: 2,
+        title: "💿📀 Tipos de datos",
+        content: `
+        <h2 id="tipos-de-datos-">Tipos de datos 💿📀</h2>
+        <blockquote>
+        <p>⛔ AVISO: Los siguientes tipos de datos son validos para Javascript, otros lenguajes poseen distintos tipos de datos o los mismos tipos con distintos nombres o subtipos.</p>
+        </blockquote>
+        <h3 id="undefined-">Undefined 🚫</h3>
+        <p>Cuando definimos una variable sin expresar su valor en Javascript, se le asigna el tipo <strong>undefined</strong> (indefinido).</p>
+        <p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/175782802-5dc9e234-d226-4a69-b97d-bc4342c9fa29.png" alt="undefined"></p>
+        <h3 id="null-">Null ❌</h3>
+        <p>Ahora, cuando queremos definir una variable con un valor nulo de manera intencional y explicita, podemos utilizar el tipo <strong>null</strong>.</p>
+        <p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/175782834-8b7385f7-3a86-47a3-9d66-f31f1cc18236.png" alt="null"></p>
+        <h3 id="number-">Number 🔢</h3>
+        <p>Podemos querer tambien expresar cantidades numericas. Javascript lo hace simple, enteros, decimales, positivos y negativos. Todos son del tipo <strong>number</strong> (Otros lenguajes utilizan el tipo float, int, etc. Segun los distintos numeros de bits).</p>
+        <p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/175782896-9170a207-a22f-4566-affc-291ace480329.png" alt="number"></p>
+        <h3 id="string-">String 🔠</h3>
+        <p>Es el tipo de dato de toda cadena de caracteres, es decir, pueden incluir caracteres especiales, numeros y letras, lo que sea.</p>
+        <p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/175782957-84181295-131a-4cd0-8cd9-faa8fe902e1a.png" alt="string"></p>
+        <h3 id="boolean-">Boolean 🦬</h3>
+        <p>Ni si, ni no, ni blanco, ni negro. Los datos booleanos (en honor a George Boole) son datos logicos que solamente pueden ser verdaderos (true) o falses (false).</p>
+        <p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/175782993-5f4ec3f9-9fc1-4776-9582-207466924d02.png" alt="boolean"></p>
+        <h3 id="array-">Array 🗒</h3>
+        <p>Ahora arrancamos con los datos compuestos o no primitivos.</p>
+        <p>Los <strong>arrays</strong> son listas ordenadas de datos. Estos datos pueden ser de cualquier tipo de dato (incluso de otros arrays). Estos datos tienen posiciones ordinales o indices que se comienzan a contar desde el numero 0.</p>
+        <p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/175783128-8ea3aef5-85d4-4bff-894c-b4aabd9f1bbc.png" alt="array"></p>
+        <h3 id="object-">Object ☕</h3>
+        <p>Un <strong>objeto</strong> es una colección de propiedades, y una propiedad es una asociación entre un nombre (o clave) y un valor. El valor de una propiedad puede ser una función, en cuyo caso la propiedad es conocida como un método. </p>
+        <p>Los objetos, como en tantos otros lenguajes de programación, se pueden comparar con objetos de la vida real. El concepto de Objetos se puede entender con objetos tangibles de la vida real.</p>
+        <p>Un objeto es un entidad independiente con propiedades y tipos. Compáralo con una taza, por ejemplo. Una taza es un objeto con propiedades. Una taza tiene un color, un diseño, un peso, un material del que está hecha, etc. Del mismo modo, los objetos pueden tener propiedades que definan sus características.</p>
+        <p class="img-container"><img src="https://user-images.githubusercontent.com/84806140/175783219-fbdcb861-de0f-4a65-9185-263d5d863020.png" alt="object"></p>
+        <p>Mas adelante vamos a retomar el concepto de objetos cuando veamos programacion orientada a objectos (POO).</p>
+        <p class="img-container"><img src="https://www.cursosgis.com/wp-content/uploads/javascript-data-types-primitive-and-non-primitive.png" alt="data types"></p>
+        `,
+      },
+      {
+        id: 3,
+        title: "🧺🕳 Variables y constantes",
+        content: `
+            <h2 id="variables-y-constantes-">Variables y constantes 🧺🕳</h2>
+            <h3 id="variables">Variables</h3>
+            <p>Una variable es algo que varia o cambia, en la programacion, son lugares de almacenamiento que pueden contener datos de distintos tipos, como los mencionados en el anterior apartado.</p>
+            <p>Una variable es un espacio en la memoria de la computadora que permite almacenar temporalmente este dato y su contenido puede cambiar durante la ejecucion del programa.</p>
+            <p>Una analogia re comun a la hora de explicar acerca de variables es la de un deposito donde hay cajas. Imaginate que creo una variable con el valor &quot;Boca Junior&quot;, en nuestra analogia equivaldria a escribir en una hoja de papel ese texto y colocarlo dentro de una caja, el nombre de la variable elegida seria, por ejemplo, &quot;elMasGrande&quot;, y esta caja con ese nombre se guardaria en una estanteria debidamente tabulada. Por lo tanto, si quisieramos acceder al valor de &quot;elMasGrande&quot; deberiamos ver donde se encuentra nuestra querida variable.</p>
+            <p class="img-container"><img src="https://www.cursosgis.com/wp-content/uploads/2-54.jpg" alt="variable"></p>
+            <h3 id="constantes">Constantes</h3>
+            <p>Por otro lado tenemos las constantes. Una constante al igual que las variables puede contener un dato, pero con la diferencia que se mantiene constante durante la ejecucion del programa.</p>
+            `,
+      },
+      {
+        id: 4,
+        title: "🔣 Operadores",
+        content: `
+        <h2 id="operadores-">Operadores 🔣</h2>
+        <p>En programacion existen diferentes tipos de operadores. Los operadores sirven para justamente operar entre datos. Existen operadores aritmeticos, de asignacion, comparativos y logicos.</p>
+        <h3 id="operadores-aritmeticos">Operadores aritmeticos</h3>
+        <p>Los operadores aritmeticos son los de toda la vida. La suma, resta, multiplicacion, division, etc. Sin embargo, se suma algun operador extra, como el &quot;resto de la division entera&quot;.</p>
+        <p>En la programacion, la sintaxis de estos operadores es asi:</p>
+        <table>
+        <thead>
+        <tr>
+        <th>Operacion</th>
+        <th>Sintaxis</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>suma</td>
+        <td>+</td>
+        </tr>
+        <tr>
+        <td>resta</td>
+        <td>-</td>
+        </tr>
+        <tr>
+        <td>multiplicacion</td>
+        <td>*</td>
+        </tr>
+        <tr>
+        <td>division</td>
+        <td>/</td>
+        </tr>
+        <tr>
+        <td>resto de division entera</td>
+        <td>%</td>
+        </tr>
+        </tbody>
+        </table>
+        <p>Ahora... ¿Que es esto de division entera? Es el resto de una division de enteros, mira unos ejemplos:</p>
+        <p>Si hacemos <strong>15 % 5</strong> nos va a dar un output <strong>0</strong> ya que la division de 15 entre 5 da como resto 0.</p>
+        <p>Ahora bien, si hacemos esta operacion: <strong>13 % 5</strong> nos va a dar un output de <strong>3</strong> porque la division entera de 13 entre 5 da un resto de 3.</p>
+        <h3 id="operadores-de-asignacion">Operadores de asignacion</h3>
+        <p>En el contexto de la asignacion, tenemos a nuestro operador por asignacion por excelencia, el &quot;<strong>=</strong>&quot;, el cual se usa para cambiar el valor o dato que lleva dentro una variable o asignarselo a fin de cuentas.</p>
+        <p>En algunos lenguajes de programacion (como javacript) se usa tambien a veces operadores del tipo compuesto como este &quot;+=&quot;, este &quot;-=&quot; y otros como estos &quot;*=&quot;, &quot;/=&quot; y &quot;%=&quot;.</p>
+        <p>Los cuales serian algo como esto:</p>
+        <table>
+        <thead>
+        <tr>
+        <th>Sentencia</th>
+        <th>Equivalencia</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>a += b</td>
+        <td>a = a + b</td>
+        </tr>
+        <tr>
+        <td>a -= b</td>
+        <td>a = a - b</td>
+        </tr>
+        <tr>
+        <td>a *= b</td>
+        <td>a = a * b</td>
+        </tr>
+        <tr>
+        <td>a /= b</td>
+        <td>a = a / b</td>
+        </tr>
+        <tr>
+        <td>a %= b</td>
+        <td>a = a % b</td>
+        </tr>
+        </tbody>
+        </table>
+        <blockquote>
+        <p>Notese que los operadores de asignacion deben ir seguidos asi: &quot;+=&quot; y no asi: &quot;+ =&quot; (con un espacio entre medio).</p>
+        </blockquote>
+        <h3 id="operadores-comparativos">Operadores comparativos</h3>
+        <p>Los operadores comparativos sirven para comprar dos datos, expresiones o variables. Tienen la particularidad de que el resultado de la comparacion es booleana (true-false).</p>
+        <p>Si escribo una sentencia como esta: &quot;2 &lt; 5&quot; (dos es menor que cinco) voy a tener un output <strong>true</strong> debido a que la sentencia se cumple.</p>
+        <p>Los operadores mas utilizados en la programacion son:</p>
+        <table>
+        <thead>
+        <tr>
+        <th>Operacion</th>
+        <th>Sintaxis</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>&gt;</td>
+        <td>mayor que</td>
+        </tr>
+        <tr>
+        <td>&gt;=</td>
+        <td>mayor o igual que</td>
+        </tr>
+        <tr>
+        <td>&lt;</td>
+        <td>menor que</td>
+        </tr>
+        <tr>
+        <td>&lt;=</td>
+        <td>menor o igual que</td>
+        </tr>
+        <tr>
+        <td>==</td>
+        <td>igual que</td>
+        </tr>
+        <tr>
+        <td>!=</td>
+        <td>distinto que</td>
+        </tr>
+        </tbody>
+        </table>
+        <p>Cabe aclarar que cuando queremos comparar no se utiliza el &quot;=&quot; a secas, ya que es un operador de asignacion, no comparativos. En su lugar, se usa el operador comparativo &quot;==&quot;.</p>
+        <p>Este tipo de operadores son los que se utilizan en las sentencias condicionales para verificar una condicion.</p>
+        <h3 id="operadores-logicos">Operadores logicos</h3>
+        <p>Estos operadores voy a dejarlos para mas adelante, los voy a explicar cuando toque hablar acerca de las sentencias condicionales ya que sirven para unir condiciones.</p>
+        `,
+      },
+      {
+        id: 5,
+        title: "❓🚧 Control de flujo condicional",
+        content: `
+        <h2 id="control-de-flujo-condicional-">Control de flujo condicional ❓🚧</h2>
+        <h3 id="introduccion">Introduccion</h3>
+        <p>Tanto las estructuras de control condicional, como las de iteracion sirven para alterar la estructura secuencial. El flujo condicional hace que se analice una condicion y si es afirmativa ejecute ciertas intrucciones y sino otras.</p>
+        <p>En Javascript (y en la mayoria de lenguajes) podemos utilizar estos tipos de sentencias condicionales:</p>
+        <table>
+        <thead>
+        <tr>
+        <th>Tipos</th>
+        <th>Sintaxis</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>Simple</td>
+        <td>if</td>
+        </tr>
+        <tr>
+        <td>Ampliada</td>
+        <td>if - else</td>
+        </tr>
+        <tr>
+        <td>Anidada</td>
+        <td>if - else if - ... - else</td>
+        </tr>
+        </tbody>
+        </table>
+        <h3 id="control-condicional-simple">Control condicional simple</h3>
+        <p>Es una sentencia en la que se evalua una condicion y, solo si es verdad, se ejecuta un conjunto de instrucciones asociadas.</p>
+        <pre><code><span class="hljs-function"><span class="hljs-title">if</span><span class="hljs-params">(condicion)</span></span>{
+            bloque de intrucciones
+        }
+        </code></pre><h3 id="control-condicional-ampliado">Control condicional ampliado</h3>
+        <p>La forma ampliada permite ejecutar dos bloques de sentencias distintas dependiendo de que se cumpla la condicion o no.</p>
+        <pre><code><span class="hljs-keyword">if</span>(condicion){
+            bloque <span class="hljs-keyword">de</span> intrucciones 1
+        } <span class="hljs-keyword">else</span> {
+            bloque <span class="hljs-keyword">de</span> intrucciones 2
+        }
+        </code></pre><h3 id="control-condicional-anidado">Control condicional anidado</h3>
+        <p>En muchas ocasiones, interesa evaluar de forma anidada varias expresiones condicionales de arriba a abajo. Cuando aparece una condicion verdadera, ejecutar las intrucciones asociadas y salta el resto de sentencias condicionales sin necesidad de evaluarlas. </p>
+        <p>Normalmente existe un bloque <strong>else</strong> al final de las sentencias condicionales por si no entra en ninguna.</p>
+        <pre><code><span class="hljs-keyword">if</span>(condicion){
+            bloque <span class="hljs-keyword">de</span> instrucciones 1
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(condicion){
+            bloque <span class="hljs-keyword">de</span> instrucciones 2
+        } <span class="hljs-keyword">else</span> {
+            bloque <span class="hljs-keyword">de</span> intrucciones 3
+        }
+        </code></pre><p>Cabe aclarar que puede haber mas sentencias <strong>else if</strong>.</p>
+        <h3 id="aplicacion-operadores-logicos">Aplicacion operadores logicos</h3>
+        <p>Al igual que las comparativas tendra un resultado true o false segun los datos involucrados. La evaluacion de operadores logicos se realiza de izquierda a derecha y se interrumpe en cuanto se haya asegurado el resultado.</p>
+        <blockquote>
+        <p>⛔ AVISO: Voy a utilizar la sintaxis de javascript para ejemplificar su uso, la cual varia segun el lenguaje.</p>
+        </blockquote>
+        <table>
+        <thead>
+        <tr>
+        <th>Operador</th>
+        <th>Descripcion</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>&amp;&amp;</td>
+        <td><strong>Y</strong>, devuelve true unicamente cuando todas las sentencias relacionadas sean true</td>
+        </tr>
+        <tr>
+        <td>&#124;&#124;</td>
+        <td><strong>O</strong>, devuelve true cuando al menos una sentencia sea verdadera</td>
+        </tr>
+        <tr>
+        <td>!</td>
+        <td><strong>NO</strong>, devuelve true cuando la expresion a la que afecta devuelve false</td>
+        </tr>
+        </tbody>
+        </table>
+        <p>Si aplicamos estos operadores a una condicion simple, por ejemplo, nos quedaria algo como esto:</p>
+        <pre><code>if(<span class="hljs-number">2</span> &gt; <span class="hljs-number">3</span> &amp;&amp; <span class="hljs-number">1</span> != <span class="hljs-number">2</span>){
+            bloque de instrucciones
+        }
+        </code></pre><p>En este caso, el bloque de instrucciones no se ejecutara, ya que la primera comparacion es falsa y la segunda verdadera, sin embargo, al estas comparaciones ser relacionadas con un comparador logico, va a ser falso. Esto porque una relacion logica del tipo &quot;&amp;&amp;&quot; devuelve true si y solo si todas sus sentencias son verdaderas.</p>
+        <pre><code>if(<span class="hljs-number">2</span> &gt; <span class="hljs-number">3</span> || <span class="hljs-number">1</span> != <span class="hljs-number">2</span>){
+            bloque de instrucciones
+        }
+        </code></pre><p>En este caso, si se ejecutara el bloque, ya que al utilizar un comparador logico como &quot;||&quot; aseguramos que si al menos una sentencia es verdadera, devuelva true.</p>
+        <pre><code><span class="hljs-function"><span class="hljs-title">if</span><span class="hljs-params">(!( <span class="hljs-number">2</span> &gt; <span class="hljs-number">3</span> )</span></span>){
+            bloque de instrucciones
+        }
+        </code></pre><p>En este caso, se ejecuta el bloque tambien. Esto porque si bien la condicion en falsa, al tener el operador &quot;!&quot; es como si se &quot;invirtiese&quot;.</p>
+        `,
+      },
+      {
+        id: 6,
+        title: "🎬 Control de flujo iterativo",
+        content: `
+        <h2 id="control-de-flujo-iterativo-">Control de flujo iterativo 🎬</h2>
+        <h3 id="introduccion">Introduccion</h3>
+        <p>Las sentencias repetitivas o iterativas permiten repetir una secuencia de instrucciones en tanto no deje de cumplirse una condición. Estas estructuras se denominan también bucles (loops).</p>
+        <p>En el momento que la condición pasa a ser falsa, la ejecución del programa continúa en la línea que sigue al bucle.</p>
+        <p>Los bucles mas comunes son: el bucle <strong>while</strong>, <strong>do - while</strong> y <strong>for</strong>.</p>
+        <h3 id="bucle-while">Bucle while</h3>
+        <p>Un bucle while tiene asociado un bloque de sentencias que se ejecutarán secuencialmente mientras la condición de entrada al bucle sea cierta.</p>
+        <p>La condición se evalúa al comienzo de la estructura. Esto supone que el bloque de instrucciones puede no ejecutarse ninguna vez si la condición es inicialmente falsa.</p>
+        <pre><code><span class="hljs-function"><span class="hljs-title">while</span><span class="hljs-params">(condicion)</span></span>{
+            bloque de instrucciones
+        }
+        </code></pre><h3 id="bucle-do-while">Bucle do while</h3>
+        <p>Es una variante especial del bucle while. Al contrario que el bucle while, que comprueba la condición antes de entrar en el bucle, el bucle do - while la evalúa al final del bucle. Esto implica que el bucle se ejecutará al menos una vez.</p>
+        <pre><code><span class="hljs-keyword">do</span> {
+            bloque <span class="hljs-keyword">de</span> instrucciones
+        } <span class="hljs-keyword">while</span>(condicion)
+        </code></pre><h3 id="bucle-for">Bucle for</h3>
+        <p>El bucle for está concebido fundamentalmente para ejecutar sus sentencias asociadas un número fijo de veces.</p>
+        <p>El bucle for está concebido fundamentalmente para ejecutar sus sentencias asociadas un número fijo de veces.</p>
+        <p>El diseño sintáctico de la sentencia compuesta for es la de integrar un contador, con su valor inicial, su valor final y un valor fijo de incremento.</p>
+        <pre><code>for(inicializacion<span class="hljs-comment">; condicion; incremento){</span>
+            <span class="hljs-keyword">bloque </span>de <span class="hljs-keyword">instrucciones
+        </span>}
+        </code></pre>`,
+      },
+      {
+        id: 7,
+        title: "👨‍🔧 Funciones",
+        content: `
+        <h2 id="funciones-">Funciones 👨‍🔧</h2>
+        <p>Las funciones de alguna manera nos permiten dividir el trabajo que hace nuestro programa en tareas mas pequeñas. </p>
+        <p>Por ejemplo, imaginate que estas desarrollando una calculadora, una funcion valida que deberia incluir tu programa seria algo como esto:</p>
+        <pre><code><span class="hljs-keyword">function</span> <span class="hljs-title">suma</span>(numero1, numero2){
+            <span class="hljs-keyword">return</span> <span class="hljs-type">numero1</span> + numero2
+        }
+        </code></pre><p>Como podes ver aca, cree una funcion que puede funcionar de forma independiente al programa y tiene la gran ventaja de que es reutilizable lo que nos ahorra escribir codigo, ya que, tenga los numeros que tenga, con esta funcion los podre sumar.</p>
+        <p>Ahora explicare como es el tema de las funciones, esa funcion <strong>&quot;suma&quot;</strong> lo que hace es recibir dos parametros <strong>&quot;numero1&quot;</strong> y <strong>&quot;numero2&quot;</strong> que si ven, los devuelve en la sentencia:</p>
+        <p><code>return numero1 + numero2</code></p>
+        <p>Cabe aclarar que no necesariamente debemos utilizar parametros en funciones ni deben obligatoriamente devolver algo.</p>
+        `,
+      },
+      {
+        id: 8,
+        title: "📝💼 ¿Que es un algoritmo?",
+        content: `
+        <h2 id="-que-es-un-algoritmo-">¿Que es un algoritmo? 📝💼</h2>
+        <p>Un <strong>algoritmo</strong> es una herramienta muy util a todos los programadores. Por lo general, se crean los algoritmos antes de programarlos en si. Antes de escribirlos en cualquier leguaje de programacion, pensamos cuales son los pasos que debemos pensar para solucionar el problema.</p>
+        <blockquote>
+        <p>Un algoritmo es una serie de pasos o instrucciones finitas y ordenadas que sirven para dar solucion a un problema.</p>
+        </blockquote>
+        `,
+      }
     ],
   },
   {
