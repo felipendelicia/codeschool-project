@@ -1,7 +1,7 @@
 .changemd-component-container{
     margin: 2em auto 0;
     padding-top: 2em;
-    border-top: 1px solid #4ed159;
+    border-top: 1px solid var(--main-text-color);
 }
 
 .changemd-component-container p{
@@ -13,12 +13,12 @@
 }
 
 .changemd-component-container p:hover{
-    color: #4ed159;
+    color: var(--main-text-color);
     font-size: 1.25em;
 }
 
 #content-theme-active{
-    color: #4ed159;
+    color: var(--main-text-color);
     font-size: 1.25em;
 }
 

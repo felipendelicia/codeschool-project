@@ -1,9 +1,9 @@
 .button-component-container{   
-    background-color: #4ed159;
+    background-color: var(--main-text-color);
     color: #ffffff;
     font-weight: 800;
     font-size: 1.2em;
-    border-radius: 12px;
+    border-radius: var(--main-border-radius);
     padding: 0.25em 1em;
 }
 

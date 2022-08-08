@@ -1,15 +1,15 @@
 .content-component-container h2{
-    color: #4ed159;
+    color: var(--main-text-color);
     font-weight: 800;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 2.3em;
+    font-family: var(--main-title-font), sans-serif;
+    font-size: 2.2em;
     margin-bottom: 0.5em;
 }
 
 .content-component-container h3{
-    color: #4ed159;
+    color: var(--main-text-color);
     font-weight: 700;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: var(--main-title-font), sans-serif;
     font-size: 1.5em;
     margin-bottom: 0.5em;
 }
@@ -20,17 +20,17 @@
 }
 
 .content-component-container pre{
-    background-color: #4ed159;
+    background-color: var(--main-text-color);
     padding: 1em 2em;
-    border-radius: 12px;
+    border-radius: var(--main-border-radius);
     margin-bottom: 1em;
     overflow-x: auto;
 }
 
 .content-component-container p code{
-    background-color: #4ed159;
+    background-color: var(--main-text-color);
     padding: 0.2em 1em;
-    border-radius: 12px;
+    border-radius: var(--main-border-radius);
     margin-bottom: 1em;
     color: #ffffff;
     font-size: 1em;
@@ -43,7 +43,7 @@
 }
 
 .content-component-container a{
-    color: #4ed159;
+    color: var(--main-text-color);
     font-weight: 600;
     text-decoration: underline ;
     transition: all 200ms ease-in-out;
@@ -69,7 +69,7 @@
 
 .content-component-container blockquote{
     padding-left: 0.5em;
-    border-left: 2px solid #4ed159;
+    border-left: 2px solid var(--main-text-color);
     font-weight: 700;
 }
 
@@ -83,7 +83,7 @@
     display: block;
     width: 100%;
     margin-bottom: 0.5em;
-    border-radius: 12px;
+    border-radius: var(--main-border-radius);
 }
 
 .content-component-container .img-container:active {
@@ -125,7 +125,7 @@
         display: block;
         width: 100%;
         margin-bottom: 0.5em;
-        border-radius: 12px;
+        border-radius: var(--main-border-radius);
         transition: none
     }
     

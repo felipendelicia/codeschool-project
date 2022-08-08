@@ -8,14 +8,14 @@
 }
 
 .title-component-container p:hover{
-    color: #4ed159;
+    color: var(--main-text-color);
     font-size: 1.25em;
 }
 
 .title-component-container #content-title-active{
-    border-left: 2px solid #4ed159;
+    border-left: 2px solid var(--main-text-color);
     font-weight: 700;
-    color: #4ed159;
+    color: var(--main-text-color);
 }
 
 .title-component-container #content-title-active:hover{font-size: 1.2em;}
@@ -32,9 +32,9 @@
     }
     
     .title-component-container #content-title-active{
-        border-left: 2px solid #4ed159;
+        border-left: 2px solid var(--main-text-color);
         font-weight: 700;
-        color: #4ed159;
+        color: var(--main-text-color);
     }
     
     .title-component-container #content-title-active:hover{font-size: 2em;}

@@ -1,8 +1,8 @@
 .bigtitle-component-container{
-    color: #4ed159;
+    color: var(--main-text-color);
     font-weight: 800;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 2.3em;
+    font-family: var(--main-title-font), sans-serif;
+    font-size: 2.2em;
 }
 
 @media (max-width: 1000px){

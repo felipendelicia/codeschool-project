@@ -13,7 +13,7 @@
 }
 
 .content-component-controls span:hover{
-    color: #4ed159;
+    color: var(--main-text-color);
     font-size: 1.25em;
 }
 
@@ -23,7 +23,7 @@
     }
     
     .content-component-controls span:hover{
-        color: #4ed159;
+        color: var(--main-text-color);
         font-size: 2.2em;
     }
 }

@@ -1,7 +1,7 @@
 .modal-container{
     width: 90vw;
     height: 80vh;
-    border-radius: 12px;
+    border-radius: var(--main-border-radius);
     margin: auto;
     padding: 2em 0em;
     display: flex;
