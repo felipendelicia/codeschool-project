@@ -1,0 +1,42 @@
+h1 {
+    color: var(--main-title-color);
+    font-family: var(--main-title-font), sans-serif;
+}
+
+h2 {
+    color: var(--secundary-title-color)
+}
+
+p {
+    font-size: 1em;
+}
+
+a {
+    color: var(--main-bold-text-color);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+blockquote {
+    border-left: 2px solid var(--main-border-color);
+    padding-left: 1em;
+    color: var(--main-bold-text-color);
+    font-weight: bold;
+}
+
+code {
+    font-family: var(--main-code-font), monospace;
+    color:var(--main-code-color);
+    padding: 0.5em 0em;
+}
+
+img {
+    width: 100%;
+    border-radius: var(--main-border-radius);
+}
+
+pre {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+}

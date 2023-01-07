@@ -1,0 +1,9 @@
+.content-component-container {
+    margin: 1em 2em;
+}
+
+.article-content-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}

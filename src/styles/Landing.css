@@ -1,0 +1,14 @@
+.landing-container-main{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing-container{
+    width: 50vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

@@ -1,0 +1,12 @@
+:root{
+    --main-title-color: #2622ff;
+    --main-border-color: #2622ff;
+    --main-bg-color: #4e4bff;
+    --secundary-title-color: #4e4bff;
+    --main-bold-text-color: #4e4bff;
+    --main-code-color: #4e4bff;
+    --main-button-bg-color: #4e4bff;
+    --main-code-font: 'Fira Code';
+    --main-title-font: 'Segoe UI';
+    --main-border-radius: 10px
+}

@@ -1,0 +1,14 @@
+.button-component-container{
+    cursor:pointer;
+    background-color: var(--main-button-bg-color);
+    padding: 1em 2em;
+    border-radius: var(--main-border-radius);
+    color: #ffffff;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+}
+
+.button-component-container:hover{
+    transform: scale(1.1);
+}
+

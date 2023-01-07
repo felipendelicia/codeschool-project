@@ -1,0 +1,40 @@
+.intro-content-container{
+    width: 50vw;
+    margin: 1em auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tech-stack-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tech-cards-langs{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 20px;
+}
+
+.tech-cards-fundamentals{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tech-card{
+    background-color: var(--main-bg-color);
+    border-radius: var(--main-border-radius);
+    color: #ffffff;
+    padding: 2em 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tech-card h3{
+    color: #ffffff;
+    text-decoration: underline;
+}
