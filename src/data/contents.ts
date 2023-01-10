@@ -6,7 +6,6 @@ const themes = [
         id: 0,
         title: "✍️ Instalacion del editor de texto",
         content: `
-          <h1>Editor de texto ✍️</h1>
           <p>
             Todos los editores de texto tienen utilidades básicas similares. Ofrecen un
             lugar para trabajar con el texto y muchos tienen una opción de resaltado de
@@ -45,7 +44,6 @@ const themes = [
         id: 0,
         title: "🧱👷 Introducción al HTML",
         content: `
-          <h1>Introducción al HTML 🧱👷</h1>
           <h2>¿Qué carajo es HTML?</h2>
           <p>
             HTML, o "HyperText Markup Language" en inglés, es un lenguaje de marcado de
@@ -112,7 +110,6 @@ const themes = [
         id: 1,
         title: "🏠 Estructura basica en HTML",
         content: `
-          <h1>Estructura básica HTML 🏠</h1>
           <p>
             En Visual Studio Code (VSC), hay una serie de "atajos" o atajos de teclado que
             se pueden utilizar para facilitar la tarea de escribir código. Por ejemplo,
@@ -196,7 +193,6 @@ const themes = [
         id: 2,
         title: "👅 Introducción al HTML semantico",
         content: `
-        <h1>Introducción al HTML semantico 👅</h1>
         <p>
           El HTML semántico se refiere a la práctica de utilizar etiquetas HTML de
           manera apropiada y coherente para describir el contenido y propósito de una
@@ -229,7 +225,6 @@ const themes = [
         id: 3,
         title: "🏷️1️⃣ Tipos de etiquetas",
         content: `
-        <h1>Tipos de etiquetas 1️⃣🏷️</h1>
         <h2>Titulos</h2>
         <p>Tenemos distintos tipos de titulos...</p>
         <pre>
@@ -277,7 +272,6 @@ const themes = [
         id: 4,
         title: "🖥️ Display por defecto de los elementos",
         content: `
-        <h1>Display por defecto de algunas etiquetas 🖥️</h1>
         <p>
           Si has estado escribiendo y probando el código que hemos ido creando, te darás
           cuenta de que hay algunas etiquetas que aparecen "unas al lado de otras" de
@@ -314,7 +308,6 @@ const themes = [
         id: 5,
         title: "🏷️2️⃣ Tipos de etiquetas",
         content: `
-        <h1>Tipos de etiquetas 2️⃣🏷️</h1>
         <h2>Enlaces</h2>
         <p>
           Esta es una etiqueta de texto que es importante. Esta etiqueta lo que hace es
@@ -625,7 +618,6 @@ const themes = [
         id: 6,
         title: "❌ Errores comunes en HTML",
         content: `
-        <h1>Errores comunes en HTML ❌</h1>
         <h2>Confundir CSS con HTML</h2>
         <p>
           HTML (HyperText Markup Language) es un lenguaje de marcado que se utiliza para
@@ -696,7 +688,61 @@ const themes = [
       {
         id: 0,
         title: "🎨🍭 Introducción a CSS",
-        content: "",
+        content: `
+        <h2>¿Qué es CSS?</h2>
+        <p>
+          CSS con siglas en inglés de Cascading Style Sheets, en español &quot;Hojas de
+          estilo en cascada.
+        </p>
+        <h2>¿Para qué sirve CSS?</h2>
+        <p>
+          Ahora CSS nos sirve para darle vida a eso que ya habiamos empezado en HTML,
+          vamos a agarrar esas etiquetas y vamos a darles su propio estilo. Vamos a
+          agarrar un por ejemplo un parrafo y le vamos a dar un color, un color de
+          fondo, un borde, etcetera.
+        </p>
+        <h2>¿Cómo arrancar a trabajar con CSS?</h2>
+        <p>
+          Primero tenemos que tener un archivo HTML al cual estilizar, al crear este
+          archivo, deberemos crear un segundo archivo con extension CSS para empezar a
+          crear nuestra hoja de estilos y relacionarla con el archivo html. Ahora bien,
+          ¿Como se hace eso?
+        </p>
+        <p>Supongamos que en mi carpeta &quot;workspace&quot; tengo estos archivos:</p>
+        <pre>
+          <code>index.html</code>
+          <code>styles.css</code>
+        </pre>
+        <p>
+          Lo que debo hacer en el archivo html para arrancar a relacionar estos dos
+          archivos es agregar una etiqueta link en el head del mismo, de la siguiente
+          manera:
+        </p>
+        <code>
+          &lt;link rel=&quot;stylesheet&quot; href=&quot;./styles.css&quot;&gt;
+        </code>
+        <p>
+          En href como sabemos va la ruta al archivo de estilos desde el archivo HTML.
+        </p>
+        <h2>Estructura de los estilos en CSS</h2>
+        <p>Basicamente en css los estilos se resuelven de la siguiente manera:</p>
+        <pre>
+          <code>selector {</code>
+          <code>        propiedad: valor;</code>    
+          <code>                }</code>
+        </pre>
+        <p>
+          El selector es el o los elementos que estoy seleccionando. Cuando tenemos
+          seleccionado lo que queremos cambiar ¿Que le vamos a cambiar? El color por
+          ejemplo:
+        </p>
+        <pre>
+          <code>selector {</code>
+          <code>        color: red;</code>
+          <code>                }</code>
+        </pre>
+        
+        `,
       },
       {
         id: 1,
