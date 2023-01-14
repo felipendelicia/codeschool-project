@@ -22,6 +22,7 @@ export default function Learn(props: ILearnProps) {
           changeSubtopicPage={changeSubtopicPage}
         />
         <Content
+          contents={subject.contents}
           subtopic={subject.contents[currentSubtopicPage]}
           currentSubtopicPage={currentSubtopicPage}
           changeSubtopicPage={changeSubtopicPage}
