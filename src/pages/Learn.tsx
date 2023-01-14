@@ -4,12 +4,15 @@ import Content from "../components/Content";
 import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
 import "../styles/Learn.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import goUp from "../handle/goUp";
 
 export default function Learn(props: ILearnProps) {
   const [currentSubtopicPage, setCurrentSubtopicPage] = useState(0);
-  const subject = contents.find((element) => element.name === props.subject)!;
 
+  useEffect(goUp, [currentSubtopicPage])
+
+  const subject = contents.find((element) => element.name === props.subject)!;
   const changeSubtopicPage = (page: number) => setCurrentSubtopicPage(page);
 
   return (
