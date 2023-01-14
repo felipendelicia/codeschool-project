@@ -7,3 +7,12 @@
     flex-direction: column;
     gap: 1em;
 }
+
+.subtopic-change{
+    display: flex;
+    font-size: 1.1em;
+    justify-content: space-between;
+    font-weight: bold;
+    color: var(--main-bold-text-color);
+    margin: 2em 2em;
+}

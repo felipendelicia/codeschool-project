@@ -1,0 +1,52 @@
+<h2>¿Qué es CSS?</h2>
+<p>
+  CSS con siglas en inglés de Cascading Style Sheets, en español &quot;Hojas de
+  estilo en cascada.
+</p>
+<h2>¿Para qué sirve CSS?</h2>
+<p>
+  Ahora CSS nos sirve para darle vida a eso que ya habiamos empezado en HTML,
+  vamos a agarrar esas etiquetas y vamos a darles su propio estilo. Vamos a
+  agarrar un por ejemplo un parrafo y le vamos a dar un color, un color de
+  fondo, un borde, etcetera.
+</p>
+<h3>¿Cómo arrancar a trabajar con CSS?</h3>
+<p>
+  Primero tenemos que tener un archivo HTML al cual estilizar, al crear este
+  archivo, deberemos crear un segundo archivo con extension CSS para empezar a
+  crear nuestra hoja de estilos y relacionarla con el archivo html. Ahora bien,
+  ¿Como se hace eso?
+</p>
+<p>Supongamos que en mi carpeta &quot;workspace&quot; tengo estos archivos:</p>
+<pre>
+  <code>index.html</code>
+  <code>styles.css</code>
+</pre>
+<p>
+  Lo que debo hacer en el archivo html para arrancar a relacionar estos dos
+  archivos es agregar una etiqueta link en el head del mismo, de la siguiente
+  manera:
+</p>
+<code>
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;./styles.css&quot;&gt;
+</code>
+<p>
+  En href como sabemos va la ruta al archivo de estilos desde el archivo HTML.
+</p>
+<h3>Estructura de los estilos en CSS</h3>
+<p>Basicamente en css los estilos se resuelven de la siguiente manera:</p>
+<pre>
+  <code>selector {</code>
+  <code>        propiedad: valor;</code>    
+  <code>                }</code>
+</pre>
+<p>
+  El selector es el o los elementos que estoy seleccionando. Cuando tenemos
+  seleccionado lo que queremos cambiar ¿Que le vamos a cambiar? El color por
+  ejemplo:
+</p>
+<pre>
+  <code>selector {</code>
+  <code>        color: red;</code>
+  <code>                }</code>
+</pre>
