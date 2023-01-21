@@ -10,6 +10,7 @@ const NextSubtopic = (props: IChangeSubtopic) => {
     return (
       <p
         onClick={() => props.changeSubtopicPage(props.currentSubtopicPage + 1)}
+        className='handlechange-subtopic'
       >
         {nextSubtopic.title + " 👉"}
       </p>
@@ -25,6 +26,7 @@ const PrevSubtopic = (props: IChangeSubtopic) => {
     return (
       <p
         onClick={() => props.changeSubtopicPage(props.currentSubtopicPage - 1)}
+        className='handlechange-subtopic'
       >
         {"👈 " + prevSubtopic.title}
       </p>
