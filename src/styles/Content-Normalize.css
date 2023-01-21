@@ -27,7 +27,7 @@ blockquote {
 code {
     font-family: var(--main-code-font), monospace;
     color:var(--main-code-color);
-    padding: 0.5em 0em;
+    padding: 0.3em 0em;
 }
 
 img {
@@ -39,4 +39,5 @@ pre {
     display: flex;
     flex-direction: column;
     padding-left: 1em;
+    overflow: scroll;
 }
