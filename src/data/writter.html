@@ -1,52 +1,205 @@
-<h2>¿Qué es CSS?</h2>
-<p>
-  CSS con siglas en inglés de Cascading Style Sheets, en español &quot;Hojas de
-  estilo en cascada.
-</p>
-<h2>¿Para qué sirve CSS?</h2>
-<p>
-  Ahora CSS nos sirve para darle vida a eso que ya habiamos empezado en HTML,
-  vamos a agarrar esas etiquetas y vamos a darles su propio estilo. Vamos a
-  agarrar un por ejemplo un parrafo y le vamos a dar un color, un color de
-  fondo, un borde, etcetera.
-</p>
-<h3>¿Cómo arrancar a trabajar con CSS?</h3>
-<p>
-  Primero tenemos que tener un archivo HTML al cual estilizar, al crear este
-  archivo, deberemos crear un segundo archivo con extension CSS para empezar a
-  crear nuestra hoja de estilos y relacionarla con el archivo html. Ahora bien,
-  ¿Como se hace eso?
-</p>
-<p>Supongamos que en mi carpeta &quot;workspace&quot; tengo estos archivos:</p>
+<h2>Selectores en CSS 🙋👈</h2>
+<p>Veamos cuales son nuestras maneras de seleccionar elementos en CSS</p>
+<h2>Universal</h2>
+<p>Para comenzar, está el selector universal. ¿Qué es el selector universal? Este selector selecciona todos los
+  elementos en una página y se representa con un asterisco (*).</p>
 <pre>
-  <code>index.html</code>
-  <code>styles.css</code>
+<code>* { </code>
+<code>        propiedad: valor;</code>
+<code>}</code>
 </pre>
-<p>
-  Lo que debo hacer en el archivo html para arrancar a relacionar estos dos
-  archivos es agregar una etiqueta link en el head del mismo, de la siguiente
-  manera:
-</p>
-<code>
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;./styles.css&quot;&gt;
-</code>
-<p>
-  En href como sabemos va la ruta al archivo de estilos desde el archivo HTML.
-</p>
-<h3>Estructura de los estilos en CSS</h3>
-<p>Basicamente en css los estilos se resuelven de la siguiente manera:</p>
+<p>Por ejemplo, si quisiera que el color de texto de todo el documento sea rojo, usaria esta sintaxis:</p>
 <pre>
-  <code>selector {</code>
-  <code>        propiedad: valor;</code>    
-  <code>                }</code>
+<code>* { </code>
+<code>        color: red;</code>
+<code>}</code>
 </pre>
-<p>
-  El selector es el o los elementos que estoy seleccionando. Cuando tenemos
-  seleccionado lo que queremos cambiar ¿Que le vamos a cambiar? El color por
-  ejemplo:
+<p>Más adelante verán que en realidad no se debe especificar el color en términos generales, sino hacer uso de códigos
+  de color hexadecimales. En el caso del rojo, éste puede ser:</p>
+<pre>
+<code>* { </code>
+<code>        color: #f00;</code>
+<code>}</code>
+</pre>
+<p>¿Cuál es la diferencia entre usar una forma implícita de especificar un color y los códigos hexadecimales? Los
+  códigos hexadecimales proporcionan una definición precisa del color deseado, mientras que si se especifica un color
+  como "red" se utilizará la interpretación predeterminada de ese color en el navegador, lo que puede dar como resultado
+  una variación en el tono del color en diferentes navegadores. Por ejemplo, el rojo puede ser más claro en un navegador
+  que en otro.</p>
+<p>Supongamos que tenemos el siguiente documento <b>index.html</b></p>
+<pre>
+<code>&lt;body&gt;</code>
+<code>        &lt;h1&gt; Aprendiendo CSS &lt;/h1&gt;</code>
+<code>        &lt;p&gt; Estamos aprendiendo css para hacer nuestras paginas mas lindas &lt;/p&gt;</code>
+<code>&lt;/body&gt;</code>
+</pre>
+<p>Y la hoja de estilos enlazada con este documento tiene el siguiente estilo:</p>
+<pre>
+<code>* { </code>
+<code>        color: #f00;</code>
+<code>}</code>
+</pre>
+<p>Tendriamos el siguiente resultado:</p>
+<img src="https://user-images.githubusercontent.com/84806140/170365771-8702a490-e494-44bb-9d1b-931be7e80cf6.png">
+<p>Es decir, todos los elementos del documento pasan a ser rojos.</p>
+<h2>Por tipo</h2>
+<p>La selección por tipo es sencilla. Consiste en elegir solo los elementos de un tipo específico, como por ejemplo los
+  elementos 'p'.</p>
+<pre>
+<code>p { </code>
+<code>        color: #f00;</code>
+<code>}</code>
+</pre>
+<p>Tendriamos un resultado asi:</p>
+<img src="https://user-images.githubusercontent.com/84806140/170386969-7e8827ab-93fd-44ab-b766-4049e12a9a6c.png">
+<p>Lo mismo pasa si cambio la etiqueta p por una etiqueta h1 como selector:</p>
+<pre>
+<code>h1 { </code>
+<code>        color: #f00;</code>
+<code>}</code>
+</pre>
+<p>El titulo se volveria rojo.</p>
+<h2>Por clases</h2>
+<p>Para seleccionar un elemento por clase en HTML, es necesario asignarle una clase personalizada al elemento que se
+  desea estilizar. Esto es fácil de hacer y puede ser realizado de manera sencilla.</p>
+<pre>
+<code>&lt;body&gt;</code>
+<code>        &lt;h1 class="titulo texto"&gt; Aprendiendo CSS &lt;/h1&gt;</code>
+<code>        &lt;p class="parrafo texto"&gt; Estamos aprendiendo css para hacer nuestras paginas mas lindas &lt;/p&gt;</code>
+<code>&lt;/body&gt;</code>
+</pre>
+<p>En mi código HTML, he asignado la clase 'título' al elemento 'h1' y la clase 'párrafo' al elemento 'p'. Ambos
+  elementos pertenecen a la clase 'texto'. Para hacer referencia a estas clases en el archivo CSS, debo utilizar un
+  punto (.) antes del nombre de la clase, como se muestra a continuación:</p>
+<pre>
+<code>.titulo { </code>
+<code>        color: red;</code>
+<code>}</code>
+<code>.parrafo { </code>
+<code>        color: blue;</code>
+<code>}</code>
+<code>.texto { </code>
+<code>        font-family: sans-serif;</code>
+<code>}</code>
+</pre>
+<p>En consecuencia, en mi hoja de estilos CSS, establezco que los elementos con la clase 'texto' tengan una fuente
+  'sans-serif', los elementos con la clase 'título' tengan un color rojo y los elementos con la clase 'párrafo' tengan
+  un color azul.</p>
+<img src="https://user-images.githubusercontent.com/84806140/170387912-b9d30fb0-75b0-40fd-ad6b-08684b6742a5.png">
+<h2>Por ID</h2>
+<p>La diferencia principal entre un ID y una clase es en su selección y uso. Para seleccionar un ID en CSS, se utiliza
+  el carácter "#", también conocido como el numeral o almohadilla. Es importante tener en cuenta que los ID deben ser
+  únicos en un documento HTML, ya que su función es identificar de manera exclusiva a un elemento específico. A
+  diferencia de las clases, que pueden ser asignadas a varios elementos diferentes. En resumen, un ID es como un DNI que
+  identifica de manera única a un elemento, mientras que una clase es una etiqueta que puede ser compartida por varios
+  elementos.</p>
+<pre>
+<code>&lt;body&gt;</code>
+<code>        &lt;h1 id="titulo-piola"&gt; Aprendiendo CSS &lt;/h1&gt;</code>
+<code>        &lt;p&gt; Estamos aprendiendo css para hacer nuestras paginas mas lindas &lt;/p&gt; </code>
+<code>&lt;/body&gt;</code>
+</pre>
+<p>Para identificar un elemento específico en HTML, se le asigna el atributo ID con su valor correspondiente. En la hoja
+  de estilos CSS, se utiliza el carácter "#" seguido del valor del ID para seleccionar y aplicar estilos específicos a
+  ese elemento.</p>
+<pre>
+<code>#titulo-piola { </code>
+<code>        color: #F47C7C;</code>
+<code>}</code>
+</pre>
+<p>Nos da un resultado como este:</p>
+<img src="https://user-images.githubusercontent.com/84806140/170402127-6e753403-74f6-4893-8d94-485dcfb9431c.png">
+<h2>Por atributo</h2>
+<p>La selección de elementos por atributo-valor consiste en elegir elementos en función de un atributo específico y su
+  valor correspondiente. Veamos un ejemplo para ilustrarlo mejor:
 </p>
 <pre>
-  <code>selector {</code>
-  <code>        color: red;</code>
-  <code>                }</code>
+<code>&lt;body&gt;</code>
+<code>        &lt;h1 lala='lele'&gt; Aprendiendo CSS &lt;/h1&gt;</code>
+<code>        &lt;p&gt; Estamos aprendiendo css para hacer nuestras paginas mas lindas &lt;/p&gt;</code>
+<code>&lt;/body&gt;</code>
 </pre>
+<p>Con el siguiente código HTML, donde se incluyen atributos específicos, como "lala" con su valor "lele", podemos
+  seleccionar ese elemento utilizando el siguiente código CSS:</p>
+<pre>
+<code>[lala="lele"] { </code>
+<code>        color: #F47C7C;</code>
+<code>}</code>
+</pre>
+<p>Y de esta manera obtenemos nuestro h1:</p>
+<img src="https://user-images.githubusercontent.com/84806140/170402127-6e753403-74f6-4893-8d94-485dcfb9431c.png">
+<blockquote>Vale aclarar que no debe ser un atributo especifico, puede ser cualquier cosa.</blockquote>
+<h2>Por Descendiente</h2>
+<p>En este caso, se selecciona uno o varios elementos mediante la descendencia entre elementos. Supongamos por ejemplo
+  este codigo:</p>
+<pre>
+<code>&lt;body&gt;</code>
+<code>        &lt;div&gt;</code>
+<code>                &lt;p&gt; Hola mundo! &lt;/p&gt;</code>
+<code>        &lt;/div&gt;</code>
+<code>        &lt;p&gt; Adios mundo cruel &lt;/p&gt;</code>
+<code>&lt;/body&gt;</code>
+</pre>
+<p>Ahora bien, imaginemos que queremos darle un estilo a las etiquetas p, facil, con un estilo por elemento:</p>
+<pre>
+<code>p { </code>
+<code>        color: #f00;</code>
+<code>}</code>
+</pre>
+<p>Si deseamos aplicar estilos solo a los elementos 'p' que se encuentran dentro de un 'div' (es decir, que son
+  descendientes de un 'div'), debemos modificar nuestro codigo CSS de la siguiente manera:</p>
+<pre>
+<code>div p { </code>
+<code>        color: #f00;</code>
+<code>}</code>
+</pre>
+<p>De esta manera tendriamos el resultado esperado:</p>
+<img src="https://user-images.githubusercontent.com/84806140/170505343-37b6c86a-05b0-4220-9491-095659849661.png">
+<p>De la misma manera puede hacerse pero utilizando clases, algo tal que asi:</p>
+<pre>
+<code>&lt;body&gt;</code>
+<code>        &lt;div class='container'&gt;</code>
+<code>                &lt;p&gt; Hola mundo! &lt;/p&gt;</code>
+<code>        &lt;/div&gt;</code>
+<code>        &lt;p&gt; Adios mundo cruel &lt;/p&gt;</code>
+<code>&lt;/body&gt;</code>
+</pre>
+<p>Y en la hoja de estilos:</p>
+<pre>
+<code>.container p { </code>
+<code>        color: #f00;</code>
+<code>}</code>
+</pre>
+<p>Y ocurriria exactamente lo mismo.</p>
+<h2>Por pseudo-clases</h2>
+<p>Este selector lo exploraremos más a fondo a lo largo de esta introducción, sin embargo, quiero explicar con la
+  pseudo-clase más conocida para que al menos entiendas el concepto. Una pseudo-clase es cuando se genera una selección
+  en un evento. Por ejemplo, consideremos el siguiente código:</p>
+<pre>
+<code>&lt;body&gt;</code>
+<code>        &lt;h1&gt; Aprendiendo CSS &lt;/h1&gt;</code>
+<code>        &lt;p&gt; Estamos aprendiendo css para hacer nuestras paginas mas lindas &lt;/p&gt;</code>
+<code>&lt;/body&gt;</code>
+</pre>
+<p>y supongamos la siguiente hoja de estilos:</p>
+<pre>
+<code>p { </code>
+<code>        color: #f00;</code>
+<code>}</code>
+</pre>
+<p>El resultado no seria ningun misterio:</p>
+<img src="https://user-images.githubusercontent.com/84806140/170386969-7e8827ab-93fd-44ab-b766-4049e12a9a6c.png">
+<p>Pero, si queremos por ejemplo, que cuando pasemos el mouse por encima del parrafo se vuelva azul, deberiamos
+  hacerlo mediante pseudo-clases, en este caso, 'hover', se aplican de esta manera:</p>
+<pre>
+<code>p { </code>
+<code>        color: #f00;</code>
+<code>}</code>
+<code>p:hover { </code>
+<code>        color: blue;</code>
+<code>}</code>
+</pre>
+<img src="https://user-images.githubusercontent.com/84806140/170512247-71074006-4be7-4338-8ebd-0f285655b1b2.png">
+<p>( No se si se aprecia en la imagen, sin embargo, creeme estoy pasandole el mouse :) )</p>
+<blockquote>Hay más formas de seleccion, sin embargo, por ahora, en esta introduccion nos quedamos con las mas basicas.
+  <a href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors">Ver todos los selectores.</a></blockquote>
