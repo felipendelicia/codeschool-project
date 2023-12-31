@@ -1,5 +1,5 @@
 import "../styles/DropdownMenu.css";
-import contentsRouting from "../data/contentsRouting";
+import contentsRouting from "../data/subjects-routes";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { IDropdownMenu } from "../types/PropTypes";

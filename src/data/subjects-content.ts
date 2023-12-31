@@ -1,7 +1,7 @@
 const themes = [
   {
     name: "editor_de_texto",
-    contents: [
+    subtopics: [
       {
         id: 0,
         title: "✍️ Instalacion del editor de texto",
@@ -39,7 +39,7 @@ const themes = [
   },
   {
     name: "html",
-    contents: [
+    subtopics: [
       {
         id: 0,
         title: "🧱👷 Introducción al HTML",
@@ -684,7 +684,7 @@ const themes = [
   },
   {
     name: "css",
-    contents: [
+    subtopics: [
       {
         id: 0,
         title: "🎨🍭 Introducción a CSS",
@@ -1059,7 +1059,7 @@ const themes = [
   },
   {
     name: "fundamentos_de_programacion",
-    contents: [
+    subtopics: [
       {
         id: 0,
         title: "🧑‍🏫 Principios básicos de programación",
@@ -1109,7 +1109,7 @@ const themes = [
   },
   {
     name: "javascript",
-    contents: [
+    subtopics: [
       {
         id: 0,
         title: "👾📓 Introduccion a javascript",
@@ -1124,7 +1124,7 @@ const themes = [
   },
   {
     name: "bases_de_datos",
-    contents: [
+    subtopics: [
       {
         id: 0,
         title: "🤕🤒 No hay contenido",
@@ -1134,7 +1134,7 @@ const themes = [
   },
   {
     name: "nodejs",
-    contents: [
+    subtopics: [
       {
         id: 0,
         title: "🤕🤒 No hay contenido",
@@ -1144,7 +1144,7 @@ const themes = [
   },
   {
     name: "express",
-    contents: [
+    subtopics: [
       {
         id: 0,
         title: "🤕🤒 No hay contenido",
@@ -1154,7 +1154,7 @@ const themes = [
   },
   {
     name: "react",
-    contents: [
+    subtopics: [
       {
         id: 0,
         title: "🤕🤒 No hay contenido",
@@ -1164,7 +1164,7 @@ const themes = [
   },
   {
     name: "typescript",
-    contents: [
+    subtopics: [
       {
         id: 0,
         title: "🤕🤒 No hay contenido",

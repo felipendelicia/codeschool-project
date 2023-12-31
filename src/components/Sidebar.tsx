@@ -2,32 +2,22 @@ import { ISidebarProps } from "../types/PropTypes";
 import "../styles/Sidebar.css";
 
 export default function Sidebar(props: ISidebarProps) {
-  return (
+  return(
     <div className="sidebar-component-container">
-      {props.contents.map((content, i) => {
-        if (content.id === props.currentSubtopicPage) {
+      {
+        props.subtopics.map((subtopic, i)=>{
           return (
             <p
               key={i}
-              id="current-subtopic"
+              id={subtopic.id === props.currentSubtopicPageIndex ? "current-subtopic" : ""}
               className="sidebar-subtopic"
-              onClick={() => props.changeSubtopicPage(content.id)}
+              onClick={() => props.changeSubtopicPageIndex(subtopic.id)}
             >
-              {content.title}
+              {subtopic.title}
             </p>
           );
-        } else {
-          return (
-            <p
-              key={i}
-              onClick={() => props.changeSubtopicPage(content.id)}
-              className="sidebar-subtopic"
-            >
-              {content.title}
-            </p>
-          );
-        }
-      })}
+        })
+      }
     </div>
-  );
+  )
 }

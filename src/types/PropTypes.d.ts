@@ -1,18 +1,17 @@
-export interface ILearnProps {
+export interface ISubjectPageProps {
     subject: string
 }
 
 export interface IContentProps {
-    contents: {id:number, title:string, content:string}[],
-    subtopic: {id:number, title:string, content:string},
-    currentSubtopicPage:number,
-    changeSubtopicPage:(page:number)=>void
+    subtopics: {id:number, title:string, content:string}[],
+    currentSubtopicPageIndex:number,
+    changeSubtopicPageIndex:(page:number)=>void
 }
 
 export interface ISidebarProps {
-    contents: {id:number, title:string, content:string}[],
-    currentSubtopicPage:number,
-    changeSubtopicPage:(page:number)=>void
+    subtopics: {id:number, title:string, content:string}[],
+    currentSubtopicPageIndex:number,
+    changeSubtopicPageIndex:(page:number)=>void
 }
 
 export interface IDropdownMenu {
@@ -21,8 +20,8 @@ export interface IDropdownMenu {
 }
 
 export interface IChangeSubtopic {
-    contents: {id:number, title:string, content:string}[],
-    changeSubtopicPage:(page:number)=>void,
-    currentSubtopicPage: number,
+    subtopics: {id:number, title:string, content:string}[],
+    changeSubtopicPageIndex:(page:number)=>void,
+    currentSubtopicPageIndex: number,
 
 }
