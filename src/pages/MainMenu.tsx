@@ -1,6 +1,5 @@
 import { ReactElement } from "react";
 import { Link } from "react-router-dom";
-import Navbar from "../components/Navbar";
 import { other_fundamentals, project_stack } from "../data/project-stack-intro";
 import "../styles/Intro.css";
 
@@ -22,10 +21,9 @@ const TechCards = (props: {
   );
 };
 
-export default function Intro() {
+export default function MainMenu() {
   return (
     <div>
-      <Navbar />
       <div className="intro-content-container">
         <h1>CodeSchool Project </h1>
         <p>

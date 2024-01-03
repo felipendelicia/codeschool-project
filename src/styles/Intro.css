@@ -38,3 +38,34 @@
     color: #ffffff;
     text-decoration: underline;
 }
+
+@media (max-width: 1000px){
+    .intro-content-container{
+        width: 75vw;
+        margin: 40px auto;
+        gap: 1.5em
+    }
+    .intro-content-container p{
+        font-size: 2em;
+    }
+    .intro-content-container h1{
+        font-size: 3em;
+    }
+    .tech-card{
+        background-color: var(--main-bg-color);
+        border-radius: var(--main-border-radius);
+        color: #ffffff;
+        padding: 2em 1em;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .tech-card h3{
+        font-size: 2em;
+    }
+    .tech-cards-langs{
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 20px;
+    }
+}

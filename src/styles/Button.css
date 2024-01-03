@@ -13,6 +13,11 @@
     transform: scale(1.1);
 }
 
+.button-component-container:active {
+    transform: scale(0.9);
+}
+
+
 @media (max-width: 1000px){
     .button-component-container {
         font-size: 2em;

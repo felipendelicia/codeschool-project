@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPaperclip, faStar } from "@fortawesome/free-solid-svg-icons";
+import { faPaperclip } from "@fortawesome/free-solid-svg-icons";
 import "../styles/Navbar.css";
 import { useState } from "react";
 import DropdownMenu from "./DropdownMenu";
@@ -15,17 +15,12 @@ export default function Navbar() {
       <div className="navbar-component-container">
         <div className="navbar-brand-name">
           <Link to="/intro">
-            <p>CodeSchool Project</p>
+            <p>CodeSchool</p>
           </Link>
         </div>
         <div className="navbar-items">
-          <Link to="/intro">
-            <p className="navbar-item">
-              <FontAwesomeIcon icon={faStar} /> Acerca del proyecto
-            </p>
-          </Link>
           <p className="navbar-item" onClick={handleClick}>
-            <FontAwesomeIcon icon={faPaperclip} /> Aprende!
+            <FontAwesomeIcon icon={faPaperclip} /> Tutoriales
           </p>
         </div>
       </div>

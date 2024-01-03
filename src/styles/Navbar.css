@@ -24,3 +24,15 @@
     cursor: pointer;
     color: #fff;
 }
+
+@media (max-width: 1000px){
+    .navbar-brand-name{
+        font-size: 3em;
+    }
+    .navbar-items{
+        font-size: 3em;
+    }
+    .navbar-component-container{
+        padding: 1em 0;
+    }
+}
