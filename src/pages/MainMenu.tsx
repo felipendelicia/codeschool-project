@@ -48,6 +48,19 @@ export default function Intro() {
           muy utilizadas en la actualidad que pueden ayudar a formar a un buen
           desarrollador full stack. Estas tecnologías incluyen:
         </p>
+        <div className="tech-cards-fundamentals">
+          {other_fundamentals.map((fundamental, i) => {
+              return (
+                <TechCards
+                  key={i}
+                  title={fundamental.title}
+                  description={fundamental.description}
+                  icon={fundamental.icon}
+                  path={fundamental.path}
+                />
+              );
+            })}
+          </div>
         <div className="tech-stack-cards">
           <div className="tech-cards-langs">
             {project_stack.map((tech, i) => {
@@ -58,19 +71,6 @@ export default function Intro() {
                   description={tech.description}
                   icon={tech.icon}
                   path={tech.path}
-                />
-              );
-            })}
-          </div>
-          <div className="tech-cards-fundamentals">
-          {other_fundamentals.map((fundamental, i) => {
-              return (
-                <TechCards
-                  key={i}
-                  title={fundamental.title}
-                  description={fundamental.description}
-                  icon={fundamental.icon}
-                  path={fundamental.path}
                 />
               );
             })}

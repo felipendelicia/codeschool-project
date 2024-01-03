@@ -4,7 +4,7 @@
     align-items: center;
     font-weight: bold;
     padding: 1em 0;
-    background-color: #2622ff;
+    background-color: var(--main-title-color);
     color: #fff;
 }
 

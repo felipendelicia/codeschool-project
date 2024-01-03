@@ -1,11 +1,11 @@
 :root{
-    --main-title-color: #2622ff;
-    --main-border-color: #2622ff;
-    --main-bg-color: #4e4bff;
-    --secundary-title-color: #4e4bff;
-    --main-bold-text-color: #4e4bff;
-    --main-code-color: #4e4bff;
-    --main-button-bg-color: #4e4bff;
+    --main-title-color: #4F6F52;
+    --main-border-color: #4F6F52;
+    --main-bg-color: #41703f;
+    --secundary-title-color: #41703f;
+    --main-bold-text-color: #41703f;
+    --main-code-color: #41703f;
+    --main-button-bg-color: #41703f;
     --main-code-font: 'Fira Code';
     --main-title-font: 'sans-serif';
     --main-border-radius: 10px

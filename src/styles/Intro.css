@@ -1,6 +1,6 @@
 .intro-content-container{
     width: 50vw;
-    margin: 1em auto;
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
