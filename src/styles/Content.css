@@ -1,5 +1,7 @@
 .content-component-container {
     margin: 1em 2em;
+    width: 50%;
+    justify-self: center;
 }
 
 .article-content-container{
