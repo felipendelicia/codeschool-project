@@ -6,9 +6,9 @@
 }
 
 .landing-container{
-    width: 50vw;
+    width: 50em;
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 3em;
 }

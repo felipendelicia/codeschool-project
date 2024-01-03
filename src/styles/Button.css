@@ -6,9 +6,15 @@
     color: #ffffff;
     font-weight: bold;
     transition: transform 0.2s ease-in-out;
+    font-size: 1em;
 }
 
 .button-component-container:hover{
     transform: scale(1.1);
 }
 
+@media (max-width: 1000px){
+    .button-component-container {
+        font-size: 2em;
+    }
+}
